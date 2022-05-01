@@ -13,7 +13,7 @@ Creating custom [cost-view.md](fundamentals/cost-view.md "mention") can help you
 
 *   See the breakdown of your costs by various dimensions to understand top spending categories
 
-*   [drill-down.md](fundamentals/drill-down.md "mention") from the Cost View into cloud spend to identify root cause analysis for the spike in costs you see
+*   [cost-drill-down.md](fundamentals/cost-drill-down.md "mention") from the Cost View into cloud spend to identify root cause analysis for the spike in costs you see
 
     *   Check out [performing-root-cause-analysis.md](fundamentals/performing-root-cause-analysis.md "mention") guide to learn more
 
