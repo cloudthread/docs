@@ -15,11 +15,11 @@ Creating custom [cost-view.md](fundamentals/cost-view.md "mention") can help you
 
 *   [cost-drill-down.md](fundamentals/cost-drill-down.md "mention") from the Cost View into cloud spend to identify root cause analysis for the spike in costs you see
 
-    *   Check out [performing-root-cause-analysis.md](fundamentals/performing-root-cause-analysis.md "mention") guide to learn more
+    *   Check out [performing-root-cause-analysis.md](guides/performing-root-cause-analysis.md "mention") guide to learn more
 
 *   Set up reports and alerts for the Cost View, so that you can be notified on important changes in your cloud spend
 
-    *   Check out [setting-up-alerts-and-reports.md](fundamentals/setting-up-alerts-and-reports.md "mention")  guide to learn more
+    *   Check out [setting-up-alerts-and-reports.md](guides/setting-up-alerts-and-reports.md "mention")  guide to learn more
 {% endhint %}
 
 ## Detailed instructions
