@@ -23,12 +23,12 @@ This Video downloaded and hosted on YouTube:
 
 Follow our handy guides to get started on the basics as quickly as possible:
 
-{% content-ref url="guides/creating-custom-cost-view.md" %}
-[creating-custom-cost-view.md](guides/creating-custom-cost-view.md)
+{% content-ref url="guides/creating-custom-cost-views.md" %}
+[creating-custom-cost-views.md](guides/creating-custom-cost-views.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/creating-custom-unit-metric.md" %}
-[creating-custom-unit-metric.md](guides/creating-custom-unit-metric.md)
+{% content-ref url="guides/creating-custom-unit-metrics.md" %}
+[creating-custom-unit-metrics.md](guides/creating-custom-unit-metrics.md)
 {% endcontent-ref %}
 
 {% content-ref url="guides/setting-up-alerts-and-reports.md" %}
@@ -47,26 +47,26 @@ Follow our handy guides to get started on the basics as quickly as possible:
 
 Learn the fundamentals of Cloudthread to get a deeper understanding of our main features:
 
-{% content-ref url="fundamentals/libraries.md" %}
-[libraries.md](fundamentals/libraries.md)
+{% content-ref url="fundamentals/library.md" %}
+[library.md](fundamentals/library.md)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/unit-metrics.md" %}
-[unit-metrics.md](fundamentals/unit-metrics.md)
+{% content-ref url="fundamentals/unit-metrics/" %}
+[unit-metrics](fundamentals/unit-metrics/)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/cost-views.md" %}
-[cost-views.md](fundamentals/cost-views.md)
+{% content-ref url="fundamentals/cost-transparency/cost-view.md" %}
+[cost-view.md](fundamentals/cost-transparency/cost-view.md)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/cost-drill-down.md" %}
-[cost-drill-down.md](fundamentals/cost-drill-down.md)
+{% content-ref url="fundamentals/drill-down.md" %}
+[drill-down.md](fundamentals/drill-down.md)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/reports.md" %}
-[reports.md](fundamentals/reports.md)
+{% content-ref url="fundamentals/notifications/reports.md" %}
+[reports.md](fundamentals/notifications/reports.md)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/alerts.md" %}
-[alerts.md](fundamentals/alerts.md)
+{% content-ref url="fundamentals/notifications/alerts.md" %}
+[alerts.md](fundamentals/notifications/alerts.md)
 {% endcontent-ref %}

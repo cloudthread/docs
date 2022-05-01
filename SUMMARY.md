@@ -6,22 +6,29 @@
 ## 🗺 Guides
 
 * [Connecting AWS Account](guides/connecting-aws-account.md)
-* [Managing Account and Team](guides/managing-account-and-team.md)
-* [Creating custom Cost View](guides/creating-custom-cost-view.md)
-* [Creating custom Unit Metric](guides/creating-custom-unit-metric.md)
+* [Creating custom Cost Views](guides/creating-custom-cost-views.md)
+* [Creating custom Unit Metrics](guides/creating-custom-unit-metrics.md)
 * [Performing Root Cause Analysis](guides/performing-root-cause-analysis.md)
 * [Setting up Alerts and Reports](guides/setting-up-alerts-and-reports.md)
+* [Managing Account and Team](guides/managing-account-and-team.md)
 
 ## 📘 Fundamentals
 
-* [Unit Metrics](fundamentals/unit-metrics.md)
-* [Cost Views](fundamentals/cost-views.md)
-* [Cost Drill-Down](fundamentals/cost-drill-down.md)
-* [Libraries](fundamentals/libraries.md)
-* [Alerts](fundamentals/alerts.md)
-* [Integrations](fundamentals/integrations.md)
-* [Reports](fundamentals/reports.md)
-* [Account Permissions](fundamentals/account-permissions.md)
+* [Cost Transparency](fundamentals/cost-transparency/README.md)
+  * [Cost View](fundamentals/cost-transparency/cost-view.md)
+  * [Cost View Library](fundamentals/cost-transparency/cost-view-library.md)
+  * [Costs Overview](fundamentals/cost-transparency/costs-overview.md)
+* [Unit Metrics](fundamentals/unit-metrics/README.md)
+  * [Unit Metric](fundamentals/unit-metrics/unit-metric.md)
+  * [Unit Metrics Library](fundamentals/unit-metrics/unit-metrics-library.md)
+  * [Unit Metrics Lab](fundamentals/unit-metrics/unit-metrics-lab.md)
+* [Notifications](fundamentals/notifications/README.md)
+  * [Alerts](fundamentals/notifications/alerts.md)
+  * [Reports](fundamentals/notifications/reports.md)
+  * [Slack Integration](fundamentals/notifications/slack-integration.md)
+* [Library](fundamentals/library.md)
+* [Drill-Down](fundamentals/drill-down.md)
+* [Account & Team Management](fundamentals/account-and-team-management.md)
 
 ## 📗 Use Cases
 
@@ -34,4 +41,4 @@
 
 ## Extras
 
-* [Keyboard Shortcuts](extras/keyboard-shortcuts.md)
+* [FinOps Resources](extras/finops-resources.md)
