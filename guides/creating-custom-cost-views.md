@@ -18,4 +18,21 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
 
 ## Detailed instructions
 
-In order to create your first Cost View, you need to navigate to Cost Transparency section of the app
+1. Choose Costs Transparency section in the menu to the right, then choose Cost Overview item
+   * You will see a page with Total Cost View – a default Cost View representing all the spend from added accounts, will no filters applied
+2. Adjust Date filter at the top-right of the window as needed
+   * By default the dates are shown for the last 7 days
+3. Open Filter pane at the top-right of the window and add necessary filters
+   * This is where you introduce all necessary conditions for absolute cloud spend filtering
+   * The filter allows for 4 dimensions: Account, Region, Service and Tag
+   * You can add filter conditions in buckets, where each bucket represents AND condition for lines of different dimensions inside, and separate buckets are connected by OR condition
+   * Click "Apply" button to apply the filters
+4. Check the charts if they represent the data you were looking for
+   * Top chart shows total filtered spend for chosen period and the period of same size right before
+   * Bottom chart is a "breakdown", it shows same spend by one of the four dimensions: Account, Region, Service and Operation
+5. Click "Save as New" at top pane right near the default Cost View name
+6. Put a descriptive name and click save
+7. See your saved Cost View in the Library
+
+![Creating a custom Cost View](<../.gitbook/assets/Screen Cast 2022-05-01 at 10.45.05 PM.gif>)
+

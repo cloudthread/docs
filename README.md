@@ -8,7 +8,7 @@ coverY: 707.2806255430061
 {% hint style="success" %}
 **Cloudthread** is an **analytics platform** aimed at helping engineering teams **build in the cloud** with **cost**  and **environmental efficiency**.
 
-Don't have an account yet? Click [here](https://cloudthread.io/signup) to set one up!
+Don't have an account yet? Click [here](https://app.core.cloudthread.io/login) to set one up!
 {% endhint %}
 
 ![Cloudthread platform](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/ed9fqLkBoXv4cBkZW9kGZ\_cost-overview.png)
