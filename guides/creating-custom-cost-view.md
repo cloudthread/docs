@@ -1,11 +1,11 @@
 # Creating custom Cost Views
 
-Once your AWS account is connected, Cloudthread is ready to serve you cost insights. You might want to start with exploring the absolute spend your environment has generated, and create custom [cost-view.md](fundamentals/cost-view.md "mention") using our [cost-transparency.md](fundamentals/cost-transparency.md "mention") feature.
+Once your AWS account is connected, Cloudthread is ready to serve you cost insights. You might want to start with exploring the absolute spend your environment has generated, and create custom  using our  feature.
 
 ## What do I need it for?
 {% hint style="info" %}
 
-Creating custom [cost-view.md](fundamentals/cost-view.md "mention") can help you to:
+Creating custom  can help you to:
 
 *   Find out answers to the questions like "How much did my** team **spend in total on **EC2 **(S3, RDS, etc.) last **week** (month, yers, etc.), and how is this spend distributed across AWS **regions **(accounts, operations, etc.)?"
 
@@ -13,7 +13,7 @@ Creating custom [cost-view.md](fundamentals/cost-view.md "mention") can help you
 
 *   See the breakdown of your costs by various dimensions to understand top spending categories
 
-*   [cost-drill-down.md](fundamentals/cost-drill-down.md "mention") from the Cost View into cloud spend to identify root cause analysis for the spike in costs you see
+*   from the Cost View into cloud spend to identify root cause analysis for the spike in costs you see
 
     *   Check out [performing-root-cause-analysis.md](guides/performing-root-cause-analysis.md "mention") guide to learn more
 
