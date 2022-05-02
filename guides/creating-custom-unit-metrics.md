@@ -7,30 +7,23 @@
 {% hint style="info" %}
 Creating custom [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") can help you to:
 
-* Find out answers to the questions like "?"
-* See the **trends** for your absolute cloud spend
-* See the breakdown of your costs by various dimensions to understand top spending categories
-* [drill-down.md](../fundamentals/drill-down.md "mention") from the Cost View into cloud spend to identify root cause of the spike in costs you see
-  * Check out [performing-root-cause-analysis.md](performing-root-cause-analysis.md "mention") guide to learn more
-* Set up reports and alerts for the Cost View, so that you can be notified on important changes in your cloud spend
+* Find out answers to the questions like "How much does my **team** really pays AWS for **every** Lambda **invocation** in **us-east-1** region?"
+* See the **trends** for your unit metric
+* Set up reports and alerts for the Unit Metric, so that you can be notified on important changes in your cloud cost efficiency
   * Check out [setting-up-alerts-and-reports.md](setting-up-alerts-and-reports.md "mention") guide to learn more
 {% endhint %}
 
 ## Detailed instructions
 
-1. Choose Costs Transparency section in the menu to the right, then choose Cost Overview item
-   * You will see a page with Total Cost View – a default Cost View representing all the spend from added accounts, will no filters applied
+1. Choose Unit Metrics section in the menu to the right, then choose Unit Metrics Overview item
+   * You will see a page with charts for a default metric prebuilt for you by Cloudthread
 2. Adjust Date filter at the top-right of the window as needed
    * By default the dates are shown for the last 7 days
-3. Open Filter pane at the top-right of the window and add necessary filters
-   * This is where you introduce all necessary conditions for absolute cloud spend filtering
-   * The filter allows for 4 dimensions: Account, Region, Service and Tag
-   * You can add filter conditions in buckets, where each bucket represents AND condition for lines of different dimensions inside, and separate buckets are connected by OR condition
-   * Click "Apply" button to apply the filters
-4. Check the charts if they represent the data you were looking for
-   * Top chart shows total filtered spend for chosen period and the period of same size right before
-   * Bottom chart is a "breakdown", it shows same spend by one of the four dimensions: Account, Region, Service and Operation
-5. Click "Save as New" at top pane right near the default Cost View name
-6. Put a descriptive name and click save
-7. See your saved Cost View in the Library
+3. Click "Create New Metric" button at the top-right of the window and add necessary filters for Numerator (cost) and Denominator (CloudWatch units) in the constructor section
+   * This is where you introduce all necessary conditions for custom unit metric dimensions
+4. Input constructor conditions for Numerator and Denominator
+5. Put a descriptive name and click save
+6. See your saved Unit Metric in the Library
+
+![](<../.gitbook/assets/Screen Cast 2022-05-01 at 11.05.47 PM.gif>)
 
