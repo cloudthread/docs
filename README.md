@@ -8,7 +8,7 @@ coverY: 707.2806255430061
 {% hint style="success" %}
 **Cloudthread** is an **analytics platform** aimed at helping engineering teams **build in the cloud** with **cost**  and **environmental efficiency**.
 
-Don't have an account yet? Click [here](https://app.core.cloudthread.io/login) to set one up!
+Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up) to set one up!
 {% endhint %}
 
 ![Cloudthread platform](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/ed9fqLkBoXv4cBkZW9kGZ\_cost-overview.png)
@@ -33,7 +33,7 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 ## Starting takes just 10 min
 
-You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://cloudthread.io/signup) and refer to [Broken link](broken-reference "mention") section for a fast onboarding experience.
+You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [Broken link](broken-reference "mention") section for a fast onboarding experience.
 
 {% hint style="warning" %}
 Cloudthread is supporting only **AWS** at the moment. If you are using other cloud providers, please let us know [here](https://www.cloudthread.io/contact-us).
