@@ -1,11 +1,11 @@
 # Performing Root Cause Analysis
 
-Root Cause Analysis (RCA)​ is an important part of dealing with cloud costs: identifying the reason of cost spikes efficiently is essential. Cloudthread's [drill-down.md](../fundamentals/drill-down.md "mention") feature empowers you to do it with the depth of AWS resource level.
+Root Cause Analysis (RCA)​ is an important part of dealing with cloud costs: identifying the reason of cost spikes efficiently is essential. Cloudthread's [drill-down.md](../fundamentals/cost-transparency/drill-down.md "mention") feature empowers you to do it with the depth of AWS resource level.
 
 ## What do I need it for? <a href="#what-do-i-need-it-for" id="what-do-i-need-it-for"></a>
 
 {% hint style="info" %}
-Using [drill-down.md](../fundamentals/drill-down.md "mention") feature for RCA can help you to:
+Using [drill-down.md](../fundamentals/cost-transparency/drill-down.md "mention") feature for RCA can help you to:
 
 * Find out answers to the questions like "Which AWS **resource** is behind the increase in cost of my **team's** cloud infrastructure?"
 * See the **breakdown** of specific parts of you spend by Account, Region, Service,, Usage Type, Operation and Resource.
@@ -26,4 +26,4 @@ Using [drill-down.md](../fundamentals/drill-down.md "mention") feature for RCA c
    * You can change levels from the control line as you go
    * Going level back is also done through control line by deleting the latest level
 
-![](<../.gitbook/assets/Screen Cast 2022-05-03 at 2.25.34 PM.gif>)
+![](<../.gitbook/assets/Screen Cast 2022-05-03 at 2.25.34 PM (1).gif>)

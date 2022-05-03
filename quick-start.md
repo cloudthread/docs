@@ -53,12 +53,12 @@ Learn the fundamentals of Cloudthread to get a deeper understanding of our main 
 [notifications](fundamentals/notifications/)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/library.md" %}
-[library.md](fundamentals/library.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/drill-down.md" %}
-[drill-down.md](fundamentals/drill-down.md)
+{% content-ref url="fundamentals/cost-transparency/drill-down.md" %}
+[drill-down.md](fundamentals/cost-transparency/drill-down.md)
 {% endcontent-ref %}
 
 {% content-ref url="fundamentals/account-and-team-management.md" %}

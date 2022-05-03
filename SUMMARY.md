@@ -10,24 +10,23 @@
 * [Creating custom Unit Metrics](guides/creating-custom-unit-metrics.md)
 * [Performing Root Cause Analysis](guides/performing-root-cause-analysis.md)
 * [Setting up Alerts and Reports](guides/setting-up-alerts-and-reports.md)
-* [Managing Account and Team](guides/managing-account-and-team.md)
+* [Adding new Users](guides/managing-account-and-team.md)
 
 ## 📘 Fundamentals
 
 * [Cost Transparency](fundamentals/cost-transparency/README.md)
-  * [Cost View](fundamentals/cost-transparency/cost-view.md)
+  * [Cost Views](fundamentals/cost-transparency/cost-view.md)
   * [Cost View Library](fundamentals/cost-transparency/cost-view-library.md)
   * [Costs Overview](fundamentals/cost-transparency/costs-overview.md)
-* [Unit Metrics](fundamentals/unit-metrics/README.md)
-  * [Unit Metric](fundamentals/unit-metrics/unit-metric.md)
+  * [Drill-Down](fundamentals/cost-transparency/drill-down.md)
+* [Unit Economics](fundamentals/unit-metrics/README.md)
+  * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)
   * [Unit Metrics Library](fundamentals/unit-metrics/unit-metrics-library.md)
   * [Unit Metrics Lab](fundamentals/unit-metrics/unit-metrics-lab.md)
 * [Notifications](fundamentals/notifications/README.md)
   * [Alerts](fundamentals/notifications/alerts.md)
   * [Reports](fundamentals/notifications/reports.md)
   * [Slack Integration](fundamentals/notifications/slack-integration.md)
-* [Library](fundamentals/library.md)
-* [Drill-Down](fundamentals/drill-down.md)
 * [Account & Team Management](fundamentals/account-and-team-management.md)
 
 ## 📗 Use Cases
