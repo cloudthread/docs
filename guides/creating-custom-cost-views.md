@@ -10,7 +10,7 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
 * Find out answers to the questions like "How much did my **team** spend in total on **EC2** (S3, RDS, etc.) last **week** (month, yers, etc.), and how is this spend distributed across AWS **regions** (accounts, operations, etc.)?"
 * See the **trends** for your absolute cloud spend
 * See the breakdown of your costs by various dimensions to understand top spending categories
-* [drill-down.md](../fundamentals/cost-transparency/drill-down.md "mention") from the Cost View into cloud spend to identify root cause of the spike in costs you see
+* [drill-down.md](../fundamentals/drill-down.md "mention") from the Cost View into cloud spend to identify root cause of the spike in costs you see
   * Check out [performing-root-cause-analysis.md](performing-root-cause-analysis.md "mention") guide to learn more
 * Set up reports and alerts for the Cost View, so that you can be notified on important changes in your cloud spend
   * Check out [setting-up-alerts-and-reports.md](setting-up-alerts-and-reports.md "mention") guide to learn more

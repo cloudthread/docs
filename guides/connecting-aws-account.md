@@ -19,28 +19,13 @@ Cloudthread is using a delegated access role to read data from your account into
   * To read saved CUR files
 
 {% hint style="info" %}
-#### Cloudthread AWS access policy in detail
+In more detail, Cloudthread needs roughly 5 sets of permissions / actions:
 
-**\[Thomas to fill in]**
-
-Example from CloudZero:
-
-_CloudZero is a different type of Cloud Cost Management solution and requires permissions beyond the typical cost and usage data. By using metadata on how your AWS environment is operating, the services that you are using, and how they are being used CloudZero can boost tag coverage, identify more complex anomalies and highlight the specific resources and changes that are responsible for cost changes in your environment._
-
-_**All of CloudZero's permissions are Read-Only**_\* We have no access to data except where explicitly authorized (for example the S3 bucket where your cost and usage report is stored)\*
-
-_**Summary of Permissions:**_
-
-* _Management Account_
-  * _Our access is required to function_
-  * _Access to the Cost and Usage, Billing and Organizations API_
-  * _Access to the Cost and Usage S3 bucket where reports are stored_
-  * _Access to CloudWatch Metrics, and list/read-only metadata service API's_
-* _Resource (member) Accounts_
-  * _Our access is optional, required for waste and root cause analysis_
-  * _Access to CloudWatch Metrics, and list/read-only metadata service API's_
-
-_Note: If you have resources (in your AWS cloud) in any regions for which STS is not active by default (e.g. ap-east-1 or eu-south-1), make sure you activate those regions following the_ [_Managing AWS STS in an AWS Region_](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_temp\_enable-regions.html) _guide._
+1. CUR bucket creation, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
+2. Listing organization root ids to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics
+3. Cloudwatch read access to list metrics and collect Cloudwatch data
+4. Cost Explorer complete access to power the first 24 hours of the tool and trusted advisor maintenance
+5. CUR report complete access to create a cur report and help maintain existing ones
 {% endhint %}
 
 {% hint style="warning" %}
@@ -109,5 +94,3 @@ Once the CUR file is ready Cloudthread will notify you, and you will be able to 
 
 _Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to backfill it._
 {% endhint %}
-
-\[We need to explicitly outline what Cost Explorer data does not provide – Thomas]

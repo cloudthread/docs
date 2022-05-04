@@ -57,8 +57,8 @@ Learn the fundamentals of Cloudthread to get a deeper understanding of our main 
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/cost-transparency/drill-down.md" %}
-[drill-down.md](fundamentals/cost-transparency/drill-down.md)
+{% content-ref url="fundamentals/drill-down.md" %}
+[drill-down.md](fundamentals/drill-down.md)
 {% endcontent-ref %}
 
 {% content-ref url="fundamentals/account-and-team-management.md" %}
