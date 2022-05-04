@@ -15,6 +15,10 @@ Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up)
 
 Whether you're just getting started with Cloud Financial Management or you're a veteran that's looking to contribute to a mature FinOps process, we're excited to help. Our success is measured by your engineering team's confidence in their cloud cost efficiency.
 
+{% content-ref url="quick-start.md" %}
+[quick-start.md](quick-start.md)
+{% endcontent-ref %}
+
 {% hint style="info" %}
 If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financial Management), the best place to learn about the topic is [**FinOps Foundation**](https://www.finops.org). They have all necessary resources to kickstart you as well as passionate community to support your efforts.
 
