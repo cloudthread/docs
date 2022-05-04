@@ -6,4 +6,4 @@
 Unit metric is **Cost** divided by certain **Usage** unit. Example: $ per Lambda Invocation.
 {% endhint %}
 
-![Unit Metric View](<../../.gitbook/assets/image (9).png>)
+![Unit Metric View](<../../.gitbook/assets/image (11).png>)

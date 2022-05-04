@@ -11,19 +11,19 @@ This is top pane of the page that includes:
 * [unit-metrics-library.md](unit-metrics-library.md "mention")
 * [#date-picker](unit-metrics-lab.md#date-picker "mention") and [#undefined](unit-metrics-lab.md#undefined "mention")
 
-![Unit Metrics Control Pane](<../../.gitbook/assets/image (6).png>)
+![Unit Metrics Control Pane](<../../.gitbook/assets/image (8).png>)
 
 #### Date Picker
 
 This is functionality for setting the dates for the cost efficiency insights.
 
-![Date Picker](<../../.gitbook/assets/image (10).png>)
+![Date Picker](<../../.gitbook/assets/image (12).png>)
 
 #### New Metric Constructor
 
 Constructor allows for [creating-custom-unit-metrics.md](../../guides/creating-custom-unit-metrics.md "mention") by defining Numerator and Denominator.
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (7).png>)
 
 #### Unit Metric Chart
 
@@ -37,7 +37,7 @@ Unit Metric cost chart with **current** and **previous** period spend vs. time l
 
 Unit metrics chart also allows for [#alerts](../../guides/setting-up-alerts-and-reports.md#alerts "mention") setup.
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (10).png>)
 
 #### Unit Metric Numerator Chart
 

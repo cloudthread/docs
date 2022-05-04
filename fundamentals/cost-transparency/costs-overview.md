@@ -39,7 +39,7 @@ This chart also has a data table attached to see the breakdown in more convenien
 
 This is functionality for setting the dates for the cost insights.
 
-![Date Picker](<../../.gitbook/assets/image (10).png>)
+![Date Picker](<../../.gitbook/assets/image (12).png>)
 
 #### Filter Pane
 
