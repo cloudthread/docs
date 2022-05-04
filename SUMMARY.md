@@ -22,7 +22,7 @@
 * [Unit Economics](fundamentals/unit-metrics/README.md)
   * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)
   * [Unit Metrics Library](fundamentals/unit-metrics/unit-metrics-library.md)
-  * [Unit Metrics Lab](fundamentals/unit-metrics/unit-metrics-lab.md)
+  * [Unit Metrics Overview](fundamentals/unit-metrics/unit-metrics-lab.md)
 * [Notifications](fundamentals/notifications/README.md)
   * [Alerts](fundamentals/notifications/alerts.md)
   * [Reports](fundamentals/notifications/reports.md)

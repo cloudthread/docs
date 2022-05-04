@@ -6,7 +6,7 @@
 
 #### Cost View Control Pane
 
-This is top pane of the page that includes:2
+This is top pane of the page that includes:
 
 * Cost View name
 * Filter indicator
@@ -39,11 +39,11 @@ This chart also has a data table attached to see the breakdown in more convenien
 
 This is functionality for setting the dates for the cost insights.
 
-![Date Picker](<../../.gitbook/assets/image (5).png>)
+![Date Picker](<../../.gitbook/assets/image (10).png>)
 
 #### Filter Pane
 
-Filter pane is designed for a convenient filtering of AWS cost data.
+Filter pane is designed for a convenient filtering of AWS cost data and [creating-custom-cost-views.md](../../guides/creating-custom-cost-views.md "mention").
 
 {% hint style="success" %}
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
