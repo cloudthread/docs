@@ -28,16 +28,3 @@
   * [Reports](fundamentals/notifications/reports.md)
   * [Slack Integration](fundamentals/notifications/slack-integration.md)
 * [Account & Team Management](fundamentals/account-and-team-management.md)
-
-## 📗 Use Cases
-
-* [For Engineers](use-cases/for-engineers/README.md)
-  * [Figma Integration](use-cases/for-engineers/figma-integration.md)
-* [For Engineering Managers](use-cases/for-engineering-managers/README.md)
-  * [GitHub Integration](use-cases/for-engineering-managers/github-integration.md)
-* [For FinOps Practitioners](use-cases/for-finops-practitioners/README.md)
-  * [Intercom Integration](use-cases/for-finops-practitioners/intercom-integration.md)
-
-## Extras
-
-* [FinOps Resources](extras/finops-resources.md)
