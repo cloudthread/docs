@@ -68,4 +68,8 @@ Currently only one report type is available: **General Cost Report** is delivere
    * For Slack you need to supply webhooks data for channels you want the alerts be delivered to – see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for more details on how to obtain webhook IDs
 8. Save the report – it should appear in the list above the form, and you will be getting the report on schedule specified in report description (see [reports.md](../fundamentals/notifications/reports.md "mention") for more details)
 
+{% hint style="success" %}
+By default a report for **Total Cost** view is created as part of **onboarding** process. After you set up an account, you will be receiving a weekly report to your inbox, no action needed.
+{% endhint %}
+
 ![](<../.gitbook/assets/Screen Cast 2022-05-03 at 6.29.38 PM.gif>)

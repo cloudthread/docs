@@ -1,5 +1,5 @@
 # Cost Views
 
-{% hint style="info" %}
-**Good to know:** Splitting your product into fundamental concepts, objects, or areas can be a great way to let readers deep dive into the concepts that matter most to them.
-{% endhint %}
+**Cost View** is the base logical entity of Cost Transparency feature. It represents filtered absolute spend that can be **saved** and that alerts and reports can be **applied** to.
+
+![Cost View](<../../.gitbook/assets/image (4).png>)

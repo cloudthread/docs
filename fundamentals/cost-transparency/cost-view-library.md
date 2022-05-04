@@ -1,5 +1,5 @@
 # Cost View Library
 
-{% hint style="info" %}
-**Good to know:** Splitting your product into fundamental concepts, objects, or areas can be a great way to let readers deep dive into the concepts that matter most to them.
-{% endhint %}
+**Cost View Library** is the section of the app where you can see all the saved [cost-view.md](cost-view.md "mention") listed: both custom and predefined ones. It is a convenient entry point into absolute cost analysis.
+
+![](<../../.gitbook/assets/image (2).png>)
