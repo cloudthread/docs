@@ -7,7 +7,7 @@ Connecting AWS account is an **essential** part of Cloudthread onboarding proces
 {% hint style="success" %}
 We are very careful with the access to your AWS environment, you can always see and adjust the policy templates we use in your accounts. Our policies are **read-only**, except for the billing S3 bucket we setup for you with your permission.
 
-[Cloudthread Policy](https://github.com/cloudthread/docs/blob/8cfaabccf3bc45d21b10f7aaea3a9a9fd1da950e/policy_cfn_cldthrd.yaml)
+[Cloudthread Policy](https://github.com/cloudthread/docs/blob/main/policy_cfn_cldthrd.yaml)
 {% endhint %}
 
 Cloudthread is using a delegated access role to read data from your account into the application This role has read access only to the resources necessary for generating the insights – AWS cost and usage data. This includes but not limited to:
