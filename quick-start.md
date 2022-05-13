@@ -9,10 +9,6 @@ In order to start with Cloudthread, follow these 2 steps:
 
 ## Getting Started
 
-Check out a short video overview of our product to get started:
-
-{% embed url="https://app.claap.io/cloudthread/c-VJg9QidOQO-NqXGNnQTPTI4" %}
-
 ### Guides: Head-start
 
 Follow our handy guides to get started on the basics as quickly as possible:

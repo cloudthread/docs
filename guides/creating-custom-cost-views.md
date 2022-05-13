@@ -34,5 +34,5 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
 6. Put a descriptive name and click save
 7. See your saved Cost View in the Library
 
-![Creating a custom Cost View](<../.gitbook/assets/Screen Cast 2022-05-01 at 10.45.05 PM.gif>)
+![Creating a custom Cost View](<../.gitbook/assets/creating-custom-cost-views__demo.gif>)
 

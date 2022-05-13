@@ -25,5 +25,5 @@ Creating custom [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "me
 5. Put a descriptive name and click save
 6. See your saved Unit Metric in the Library
 
-![](<../.gitbook/assets/Screen Cast 2022-05-01 at 11.05.47 PM.gif>)
+![Creating a custom Unit Metric](<../.gitbook/assets/creating-custom-unit-metrics__demo.gif>)
 
