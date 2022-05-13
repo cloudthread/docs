@@ -29,4 +29,4 @@ Adding new users to the platform will enable the following:
 Cloudthread's [pricing](https://www.cloudthread.io/pricing) is **not based on number of users** – we do not want to create wrong incentives and discourage people in your organization to use the app and see valuable cloud efficiency insights.
 {% endhint %}
 
-![](<../.gitbook/assets/Screen Cast 2022-05-03 at 7.15.15 PM.gif>)
+![Adding a new User](<../.gitbook/assets/managing-account-and-team__demo.gif>)

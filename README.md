@@ -11,7 +11,7 @@ coverY: 707.2806255430061
 Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up) to set one up!
 {% endhint %}
 
-![Cloudthread platform](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/ed9fqLkBoXv4cBkZW9kGZ\_cost-overview.png)
+![Cloudthread platform](<../../.gitbook/assets/what-is-cloudthread__cloudthread_platform_overview.png>)
 
 Whether you're just getting started with Cloud Financial Management or you're a veteran that's looking to contribute to a mature FinOps process, we're excited to help. Our success is measured by your engineering team's confidence in their cloud cost efficiency.
 

@@ -79,7 +79,7 @@ Once you initiate CF stack creation, it will take up to an hour to setup the req
 
 Once the initial setup is complete, you will be able to see first cost insights in the app.
 
-![Cloudthread App](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/D20Bh-wmsnI\_x-x4ASjtQ\_image.png)
+![Cloudthread App](connecting-aws-account__default_cost_view.png)
 
 {% hint style="info" %}
 #### **"Initial" cost insights**

@@ -26,4 +26,4 @@ Using [drill-down.md](../fundamentals/drill-down.md "mention") feature for RCA c
    * You can change levels from the control line as you go
    * Going level back is also done through control line by deleting the latest level
 
-![](<../.gitbook/assets/Screen Cast 2022-05-03 at 2.25.34 PM (1).gif>)
+![](<../.gitbook/assets/performing-root-cause-analysis_demo.gif>)

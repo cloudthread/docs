@@ -40,7 +40,7 @@ Currently alerts are available for [unit-metric.md](../fundamentals/unit-metrics
 6. Save the alert one form is filled
 7. You should now be receiving a notification whenever the threshold for your unit metric is broken
 
-![](<../.gitbook/assets/Screen Cast 2022-05-03 at 5.48.01 PM.gif>)
+![Setting up an Alert](<../.gitbook/assets/setting-up-alerts-and-reports__alerts_demo.gif>)
 
 ### Reports
 
@@ -72,4 +72,4 @@ Currently only one report type is available: **General Cost Report** is delivere
 By default a report for **Total Cost** view is created as part of **onboarding** process. After you set up an account, you will be receiving a weekly report to your inbox, no action needed.
 {% endhint %}
 
-![](<../.gitbook/assets/Screen Cast 2022-05-03 at 6.29.38 PM.gif>)
+![Setting up a Report](<../.gitbook/assets/setting-up-alerts-and-reports__reports_demo.gif>)
