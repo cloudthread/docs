@@ -1,0 +1,220 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+    CloudthreadStackToken:
+        Type: String
+        Default: foo
+        Description: DO NOT CHANGE! Token to validate this stack in Cloudthread's environment.
+    ExternalId:
+        Type: String
+        Default: bar
+        Description: DO NOT CHANGE! Token to validate Cloudthread in this environment.
+    ReportName:
+        Type: String
+        Default: cloudthread-costandusagereport
+        Description: Cost and Usage Report name.
+    ReportPrefix:
+        Type: String
+        Default: report
+        Description: Cost and Usage Report prefix.
+Resources:
+    CloudthreadRole:
+        Type: "AWS::IAM::Role"
+        Properties:
+            AssumeRolePolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Principal:
+                        AWS: "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
+                      Action:
+                        - "sts:AssumeRole"
+                      Condition:
+                        StringEquals:
+                            sts:ExternalId:
+                                Ref: ExternalId
+            Path: "/"
+
+    RolePoliciesCloudwatch:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-cloudwatch-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "cloudwatch:ListMetrics"
+                        - "cloudwatch:GetMetricData"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    RolePoliciesTrustedAdvisor:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-trustedadvisor-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "support:DescribeTrustedAdvisorCheckRefreshStatuses"
+                        - "support:DescribeTrustedAdvisorCheckResult"
+                        - "support:RefreshTrustedAdvisorCheck"
+                        - "support:DescribeTrustedAdvisorCheckSummaries"
+                        - "support:DescribeTrustedAdvisorChecks"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    RolePoliciesOrganizataion:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-organization-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "organizations:DescribeOrganization"
+                        - "organizations:ListRoots"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+    
+    RolePoliciesCostExplorer:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-costexplorer-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "ce:*"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    RolePoliciesCostandUsageReport:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-costandusagereport-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "cur:*"
+                      Resource:
+                        - "*"
+                    - Effect: "Allow"
+                      Action:
+                        - "s3:*"
+                      Resource:
+                        - !GetAtt CostUsageReportBucket.Arn
+                    - Effect: "Allow"
+                      Action:
+                        - "s3:*"
+                      Resource:
+                        Fn::Join:
+                            - ""
+                            - - "arn:aws:s3:::"
+                              - Ref: CostUsageReportBucket
+                              - "/*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    CostUsageReportBucket:
+        Type: AWS::S3::Bucket
+        Properties:
+          AccessControl: Private
+          PublicAccessBlockConfiguration:
+            BlockPublicAcls: True
+            BlockPublicPolicy: True
+            IgnorePublicAcls: True
+            RestrictPublicBuckets: True
+
+
+    CostUserReportBucketPolicy:
+        Type: AWS::S3::BucketPolicy
+        Properties: 
+          Bucket:
+              Ref: CostUsageReportBucket
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Action:
+                  - 's3:GetBucketAcl'
+                  - 's3:GetBucketPolicy'
+                Effect: Allow
+                Resource: !Join
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - !Ref CostUsageReportBucket
+                Principal:
+                    Service: "billingreports.amazonaws.com"
+              - Action:
+                  - 's3:PutObject'
+                Effect: Allow
+                Resource: !Join
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - !Ref CostUsageReportBucket
+                    - /*
+                Principal:
+                    Service: "billingreports.amazonaws.com"
+
+    CloudthreadCostUsageReport:
+        DependsOn:
+        - CostUsageReportBucket
+        Type: AWS::CUR::ReportDefinition
+        Properties: 
+            AdditionalSchemaElements: 
+                - RESOURCES
+            Compression: Parquet
+            Format: Parquet
+            RefreshClosedReports: True
+            ReportName:
+                Ref: ReportName
+            ReportVersioning: OVERWRITE_REPORT
+            S3Bucket:
+                Ref: CostUsageReportBucket
+            S3Prefix:
+                Ref: ReportPrefix
+            S3Region:
+                Ref: AWS::Region
+            TimeUnit: HOURLY
+
+    RegisterRole:
+        DependsOn:
+        - CloudthreadRole
+        - RolePoliciesCloudwatch
+        - RolePoliciesOrganizataion
+        - RolePoliciesCostExplorer
+        - RolePoliciesCostandUsageReport
+        - CostUsageReportBucket
+        - CostUserReportBucketPolicy
+        - CloudthreadCostUsageReport
+        Type: Custom::RegisterRole
+        Properties:
+            ServiceToken: foobar
+            AwsAccountId:
+                Ref: AWS::AccountId
+            RoleArn: !GetAtt CloudthreadRole.Arn
+            CloudthreadStackToken:
+                Ref: CloudthreadStackToken
+            ExternalId:
+                Ref: ExternalId
+            CURReportName:
+                Ref: ReportName
+            CURReportPrefix:
+                Ref: ReportPrefix
+            CURS3Bucket:
+                Ref: CostUsageReportBucket
+            CloudthreadCostUsageReport:
+                Ref: CloudthreadCostUsageReport
