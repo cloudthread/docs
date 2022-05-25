@@ -46,7 +46,7 @@ Cloudthread is using [**AWS CloudFormation**](https://aws.amazon.com/cloudformat
 
 ### 1. Create and confirm Cloudthread account
 
-After your account is [created](app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
+After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
 
 ![Connect Cloudthread via CF Stack](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/51jIaOM0EwsLP\_\_rD08MG\_image.png)
 
