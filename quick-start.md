@@ -4,7 +4,7 @@
 
 In order to start with Cloudthread, follow these 2 steps:
 
-1. Create an account at [app.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)
+1. Create an account at [app.core.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)
 2. Connect your AWS account: [connecting-aws-account.md](guides/connecting-aws-account.md "mention")
 
 ## Getting Started
