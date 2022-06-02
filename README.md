@@ -6,12 +6,12 @@ coverY: 707.2806255430061
 # ☁ What Is Cloudthread
 
 {% hint style="success" %}
-**Cloudthread** is an **analytics platform** aimed at helping engineering teams **build in the cloud** with **cost**  and **environmental efficiency**.
+**Cloudthread** is an **analytics platform** aimed at helping engineering teams **build in the cloud** with **cost** and **environmental efficiency**.
 
 Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up) to set one up!
 {% endhint %}
 
-![Cloudthread platform](<../../.gitbook/assets/what-is-cloudthread__cloudthread_platform_overview.png>)
+![Cloudthread platform](.gitbook/assets/what-is-cloudthread\_\_cloudthread\_platform\_overview.png)
 
 Whether you're just getting started with Cloud Financial Management or you're a veteran that's looking to contribute to a mature FinOps process, we're excited to help. Our success is measured by your engineering team's confidence in their cloud cost efficiency.
 
@@ -27,7 +27,7 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 ## With Cloudthread you can...
 
-**Analyze your cloud spend** in a minimalistic, easy-to-use interface. No more frustrating over-complicated tools.&#x20;
+**Analyze your cloud spend** in a minimalistic, easy-to-use interface. No more frustrating over-complicated tools.
 
 **Track your cloud cost efficiency** with custom-defined **unit metrics**. We support various data sourced and let you create cloud cost unit metrics that are meaningful for your team.
 
@@ -37,7 +37,7 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 ## Starting takes just 10 min
 
-You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [Broken link](broken-reference "mention") section for a fast onboarding experience.
+You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [connecting-aws-account.md](guides/connecting-aws-account.md "mention") section for a fast onboarding experience.
 
 {% hint style="warning" %}
 Cloudthread is supporting only **AWS** at the moment. If you are using other cloud providers, please let us know [here](https://www.cloudthread.io/contact-us).
