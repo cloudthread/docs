@@ -1,0 +1,127 @@
+Parameters:
+    CloudthreadStackToken:
+        Type: String
+        Default: foo
+        Description: DO NOT CHANGE! Token to validate this stack in Cloudthread's environment.
+    ExternalId:
+        Type: String
+        Default: bar
+        Description: DO NOT CHANGE! Token to validate Cloudthread in this environment.
+Resources:
+    StackSet:
+        Type: AWS::CloudFormation::StackSet
+        Properties:
+          AutoDeployment:
+            Enabled: True
+            RetainStacksOnAccountRemoval: True
+          Capabilities:
+            - CAPABILITY_IAM
+          PermissionModel: SERVICE_MANAGED
+          StackInstancesGroup:
+            - DeploymentTargets:
+                OrganizationalUnitIds:
+                  - foobar
+              Regions:
+                - us-east-1
+          StackSetName: CloudthreadCloudwatchCollection
+          TemplateBody: !Sub
+            - |
+              AWSTemplateFormatVersion: "2010-09-09"         
+              Resources:
+                  CloudthreadRole:
+                      Type: "AWS::IAM::Role"
+                      Properties:
+                          AssumeRolePolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Principal:
+                                      AWS: "arn:aws:iam::XXXXXXXX:root"
+                                    Action:
+                                      - "sts:AssumeRole"
+                                    Condition:
+                                      StringEquals:
+                                          sts:ExternalId: ${ExternalId}
+                          Path: "/"
+
+                  RolePoliciesCloudwatch:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-cloudwatch-access"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "cloudwatch:ListMetrics"
+                                      - "cloudwatch:GetMetricData"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadRole"
+
+                  RolePoliciesTrustedAdvisor:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-trustedadvisor-access"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "support:DescribeTrustedAdvisorCheckRefreshStatuses"
+                                      - "support:DescribeTrustedAdvisorCheckResult"
+                                      - "support:RefreshTrustedAdvisorCheck"
+                                      - "support:DescribeTrustedAdvisorCheckSummaries"
+                                      - "support:DescribeTrustedAdvisorChecks"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadRole"
+
+                  RolePoliciesOrganizataion:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-organization-access"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "organizations:DescribeOrganization"
+                                      - "organizations:ListRoots"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadRole"
+
+                  RolePoliciesCostExplorer:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-costexplorer-access"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "ce:*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadRole"
+
+                  RegisterRole:
+                      DependsOn:
+                      - CloudthreadRole
+                      - RolePoliciesCloudwatch
+                      - RolePoliciesOrganizataion
+                      Type: Custom::RegisterRole
+                      Properties:
+                          ServiceToken: foobar
+                          AwsAccountId:
+                              Ref: AWS::AccountId
+                          RoleArn: !GetAtt CloudthreadRole.Arn
+                          CloudthreadStackToken: ${CloudthreadStackToken}
+                          ExternalId: ${ExternalId}
+            - CloudthreadStackToken: !Ref CloudthreadStackToken
+              ExternalId: !Ref ExternalId
