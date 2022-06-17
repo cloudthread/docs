@@ -7,7 +7,7 @@ Connecting AWS account is an **essential** part of Cloudthread onboarding proces
 {% hint style="success" %}
 We are very careful with the access to your AWS environment, you can always see and adjust the policy templates we use in your accounts. Our policies are **read-only**, except for the billing S3 bucket we setup for you with your permission.
 
-[Cloudthread Policy](https://github.com/cloudthread/docs/blob/main/policy_cfn_cldthrd.yaml)
+[Cloudthread Policy](../policy\_cfn\_cldthrd.yaml)
 {% endhint %}
 
 Cloudthread is using a delegated access role to read data from your account into the application This role has read access only to the resources necessary for generating the insights – AWS cost and usage data. This includes but not limited to:
@@ -19,13 +19,13 @@ Cloudthread is using a delegated access role to read data from your account into
   * To read saved CUR files
 
 {% hint style="info" %}
-In more detail, Cloudthread needs roughly 5 sets of permissions / actions:
+In more detail, Cloudthread needs roughly **5 sets** of permissions / actions:
 
-1. CUR bucket creation, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
-2. Listing organization root ids to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics
-3. Cloudwatch read access to list metrics and collect Cloudwatch data
-4. Cost Explorer complete access to power the first 24 hours of the tool and trusted advisor maintenance
-5. CUR report complete access to create a cur report and help maintain existing ones
+1. **CUR bucket creation**, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
+2. **Listing organization root ids** to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics
+3. **CloudWatch read access** to list metrics and collect CloudWatch data
+4. **Cost Explorer complete access** to power the first 24 hours of the tool and trusted advisor maintenance
+5. **CUR report complete access** to create a cur report and help maintain existing ones
 {% endhint %}
 
 {% hint style="warning" %}
@@ -48,7 +48,7 @@ Cloudthread is using [**AWS CloudFormation**](https://aws.amazon.com/cloudformat
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
 
-![Connect Cloudthread via CF Stack](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/51jIaOM0EwsLP\_\_rD08MG\_image.png)
+![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account\_\_1\_cf\_stack\_page.png)
 
 ### 2. Redirect to AWS
 
@@ -64,14 +64,14 @@ Pressing "_Connect Cloudthread via CF Stack_" will automatically **redirect** yo
 ![CF stack setup AWS screen](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/cpr-c6EyGtNIdzG6Pzk9E\_image.png)
 
 {% hint style="warning" %}
-Make sure to check mark _"Acknowlegde that CloudFormation might create IAM resources"_
+Make sure to check mark **"I acknowledge that AWS CloudFormation might create IAM resources."**
 {% endhint %}
 
 {% hint style="danger" %}
-**Note:** In order for Cloudthread to work, [Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) (CUR) file needs to be set up in **us-east-1**. Our CloudFormation stack has it preset, but if you change the region the stack won't work.
+**Note:** In order for Cloudthread to work, [Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) (CUR) file needs to be set up in **us-east-1** region. CloudFormation stack has it preset, but if you change the region the stack won't work.
 {% endhint %}
 
-Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthred to generate initial insights. Your AWS console will show something like this:
+Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
 
 ![AWS console after CF stack launch](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/9ZyRUNWNOupFwOa5b55Ey\_image.png)
 
@@ -79,10 +79,10 @@ Once you initiate CF stack creation, it will take up to an hour to setup the req
 
 Once the initial setup is complete, you will be able to see first cost insights in the app.
 
-![Cloudthread App](<../.gitbook/assets/connecting-aws-account__default_cost_view.png>)
+![Cloudthread App](../.gitbook/assets/connecting-aws-account\_\_default\_cost\_view.png)
 
 {% hint style="info" %}
-#### **"Initial" cost insights**
+**"Initial" cost insights**
 
 Cloudthread is using [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) API service to supply cost insights while more detailed AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours).
 
