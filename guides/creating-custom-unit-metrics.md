@@ -15,15 +15,12 @@ Creating custom [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "me
 
 ## Detailed instructions
 
-1. Choose Unit Metrics section in the menu to the right, then choose Unit Metrics Overview item
-   * You will see a page with charts for a default metric prebuilt for you by Cloudthread
-2. Adjust Date filter at the top-right of the window as needed
-   * By default the dates are shown for the last 7 days
-3. Click "Create New Metric" button at the top-right of the window and add necessary filters for Numerator (cost) and Denominator (CloudWatch units) in the constructor section
-   * This is where you introduce all necessary conditions for custom unit metric dimensions
+1. Choose [unit-metrics-library.md](../fundamentals/unit-metrics/unit-metrics-library.md "mention") menu item under [unit-metrics](../fundamentals/unit-metrics/ "mention") section in the menu to the left
+   * You will see a table with a list of predefined unit metrics ("base",created by Cloudthread out of the box) as well as custom ones (created by your team)
+2. Click "Create New Metric" button at the top-right corner of the screen
+3. Fill in the form to create a basis for your future custom unit metric
 4. Input constructor conditions for Numerator and Denominator
 5. Put a descriptive name and click save
 6. See your saved Unit Metric in the Library
 
-![Creating a custom Unit Metric](<../.gitbook/assets/creating-custom-unit-metrics__demo.gif>)
-
+![Creating a custom Unit Metric](../.gitbook/assets/creating-custom-unit-metrics-1-demo.gif)

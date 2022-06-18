@@ -25,7 +25,7 @@ Absolute cost chart with **current** and **previous** period spend vs. time line
 * If current period is May 1, 2022 - May 7, 2022, previous period is April 24, 2022 - April 30, 2022
 {% endhint %}
 
-![Absolute cost chart](<../../.gitbook/assets/image (1).png>)
+![Absolute cost chart](<../../.gitbook/assets/image (1) (1).png>)
 
 #### Absolute Cost Breakdown Chart
 

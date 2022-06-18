@@ -1,6 +1,6 @@
 # Setting up Alerts and Reports
 
-Once you get familiar with [creating-custom-cost-views.md](creating-custom-cost-views.md "mention") and [creating-custom-unit-metrics.md](creating-custom-unit-metrics.md "mention"), you might want to setup [notifications](../fundamentals/notifications/ "mention") for the metrics so that important insights are not missed by you and your team.
+Once you get familiar with [creating-custom-cost-views.md](creating-custom-cost-views.md "mention") and [creating-custom-unit-metrics.md](creating-custom-unit-metrics.md "mention"), you might want to setup [notifications](../fundamentals/notifications/ "mention") for the views so that important insights are not missed by you and your team.
 
 Cloudthread has two types of notifications:
 
@@ -8,7 +8,7 @@ Cloudthread has two types of notifications:
 * [reports.md](../fundamentals/notifications/reports.md "mention") – detailed notifications sent on schedule
 
 {% hint style="success" %}
-All  notifications can be delivered through **e-mail** and **Slack** (see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for Slack App setup instructions).
+All notifications can be delivered through **e-mail** and **Slack** (see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for Slack App setup instructions).
 {% endhint %}
 
 ## What do I need it for? <a href="#what-do-i-need-it-for" id="what-do-i-need-it-for"></a>
@@ -25,51 +25,79 @@ Using [alerts.md](../fundamentals/notifications/alerts.md "mention") and [report
 
 ### Alerts
 
-{% hint style="warning" %}
-Currently alerts are available for [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") only.
+{% hint style="info" %}
+See [alerts.md](../fundamentals/notifications/alerts.md "mention") for alert examples and details on alert types and cadence.
 {% endhint %}
 
-1. To set up [alerts.md](../fundamentals/notifications/alerts.md "mention") you should navigate to Unit Metrics Overview in the right menu pane
-2. Once you are in Unit Metrics, choose the saved metric that you want to set alert on
-3. Push "Set Alert" button at the bottom part of the first chart (Unit Metric) in Threshold Alerts section
-   * ![](<../.gitbook/assets/Screen Cast 2022-05-03 at 5.37.54 PM.gif>)
-4. Push "Add Alert" and fill in the form with the alert name, threshold type (absolute $ or relative %) and the value
-5. Fill in the delivery channel details
-   1. For e-mails you can add as many addresses as you want separated by a comma
-   2. For Slack you need to supply webhooks data for channels you want the alerts be delivered to – see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for more details on how to obtain webhook IDs
-6. Save the alert one form is filled
-7. You should now be receiving a notification whenever the threshold for your unit metric is broken
+1. Choose **Notification Center** menu item at the bottom part of the menu to the left
+2.  Navigate to **Alerts** section at the top of the screen, you will see the table listing all the alerts set up in your Cloudthread account
 
-![Setting up an Alert](<../.gitbook/assets/setting-up-alerts-and-reports__alerts_demo.gif>)
+    ![](<../.gitbook/assets/setting-up-alerts-and-reports-1-alerts-table (1).png>)
+3.  Click "Create New Alert" button at the top of the table, you will see the the form with alert settings
+
+    ![](<../.gitbook/assets/image (11).png>)
+4. Choose [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") that you want the alert to be applied to from the list
+5. Specify the alert type based on the threshold type you want to apply – Absolute or Relative
+   * **Absolute** thresholds are associated with a specific, absolute number (e.g. alert when costs go above $10)
+   * **Relative** thresholds are associated with a percentage increase Week over Week (e.g. alert when costs increase by more than 5% compared to last week)
+6. Add e-mail addresses for alert recipients
+   * Multiple e-mail addresses are allowed
+   * List of addresses should be comma separated
+   * Note: any emails will work, they don't need to have an associated Cloudthread user
+7. Choose Slack channels the alert notifications should be sent to
+   * You should have Slack connected to Cloudthread, see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for instructions
+   * Multiple Slack channels are allowed&#x20;
+8. Input the alert name
+9. Click "Save Alert"
+10. Your alert will appear in the saved alerts table with Active switch on, i.e. the alert is active and will be fired to specified channels once the threshold is broken
+
+![Setting up an Alert](../.gitbook/assets/setting-up-alerts-and-reports-3-alerts-demo.gif)
 
 ### Reports
 
-{% hint style="warning" %}
-Currently only one report type is available: **General Cost Report** is delivered **weekly**. You can learn more about it in [reports.md](../fundamentals/notifications/reports.md "mention") section.
+{% hint style="info" %}
+See [reports.md](../fundamentals/notifications/reports.md "mention") for report examples and details on report types and cadence.
 {% endhint %}
 
-1. To set up [reports.md](../fundamentals/notifications/reports.md "mention") you should navigate to Reports section at the bottom part of the right menu
-2. There you will be able to see the list of the reports that already exist (created by any user of the platform) as well as the form to create a new report
-3. Fill the form in with report name and report type (for now only one value is available - General Report)
-4. Choose saved Cost View that the report will be based on
-   * See [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") for more details
-   * You can choose only one Cost View for your report
-   * If nothing is selected, default Cost View (Total Cost) will be used
-5. Choose saved Unit Metrics to be added to report
-   1. See [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") for more details
-   2. You can choose multiple unit metrics to be added to your report
-   3. If nothing is selected, no unit metric section will be present in report
-6. Add threshold data for the report section flagging biggest spend changes
-   * Absolute Spend Threshold: report will not highlight items that have absolute spend less than the threshold
-   * Absolute Change Threshold: report will not highlight items that have absolute spend change less than the threshold
-   * Relative Change Threshold: report will not highlight items that have % spend change less than the threshold
-7. Fill in the delivery channel details
-   * For e-mails you can add as many addresses as you want separated by a comma
-   * For Slack you need to supply webhooks data for channels you want the alerts be delivered to – see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for more details on how to obtain webhook IDs
-8. Save the report – it should appear in the list above the form, and you will be getting the report on schedule specified in report description (see [reports.md](../fundamentals/notifications/reports.md "mention") for more details)
+1. Choose **Notification Center** menu item at the bottom part of the menu to the left
+2.  Navigate to **Reports** section at the top of the screen, you will see the table listing all the reports set up in your Cloudthread account
+
+    ![](<../.gitbook/assets/image (1).png>)
+3.  Click "Create New Report" button at the top of the table, you will see the the form with report settings
+
+    ![](<../.gitbook/assets/image (3).png>)
+4. In the **Filtering** section of the form choose one of your custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") that you want the report to be based on
+   * All data in the report will be filtered in accordance with the chosen Cost View
+   * If you chose no view, non-filtered (total) cost will be reported
+5. In the **Detailed Insights** section of the form specify [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") and/or **Tags** that you want to be added to the report – insights on these Unit Metrics and tags will be included into the special sections of the report
+   * Max 5 Unit Metrics can be added
+   * Max 3 Tags can be added
+6. In the **Movers and Shakers** section of the form specify settings for the corresponding report section – a summary of the biggest spend changes within your environment
+   * **Minimum spend threshold** – you don't want cost movements below this absolute spend number to be included in reports or be flagged as a daily mover and shaker
+     * e.g. if Absolute Spend Threshold is $10 and your Lambda pricing goes up by 500% but still only costs $9, Lambda won't show up in the reports
+   * **Minimum spend change** – only changes in spend exceeding these relative or absolute thresholds will be added to the reports&#x20;
+     * **Absolute** thresholds are associated with a specific, absolute number
+       * You don't want cost movements below this absolute change to be included in reports or be flagged as a daily mover and shaker
+       * e.g. if Absolute Change Threshold is $50 and your Lambda pricing goes up from $10,020 last week to $10,050 this week, Lambda has increased by only $30 and won't show up as a Top Spender and won't show up in daily movers and shakers
+     * **Relative** thresholds are associated with a percentage increase Week over Week
+       * You don't want cost movements below this relative change to be included in reports or be flagged as a daily mover and shaker
+       * e.g. if Relative Change Threshold is 10% and your Lambda pricing goes up from $100 last week to $109 this week, Lambda has increased by only 9% and won't show up as a Top Spender and won't show up in daily movers and shakers
+   * **Daily Movers and Shakers** – this checkbox introduces a special daily report that is sent only if one of the thresholds above is broken
+     * This is similar to Alert behavior, but includes more detailed information on spend changes
+     * If checked, the report will be send on the threshold break event, outside of any previously set schedule
+7. Add e-mail addresses for report recipients
+   * Multiple e-mail addresses are allowed
+   * List of addresses should be comma separated
+   * Note: any emails will work, they don't need to have an associated Cloudthread user
+8. Choose Slack channels the alert notifications should be sent to
+   * You should have Slack connected to Cloudthread, see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for instructions
+   * Multiple Slack channels are allowed&#x20;
+9. Input the report name
+10. Click "Save Report"
+11. Your report will appear in the saved reports table with Active switch on, i.e. the report is active and will be delivered to specified channels on schedule or daily in case **Daily Movers and Shakers checkbox was checked** and the threshold is broken
 
 {% hint style="success" %}
 By default a report for **Total Cost** view is created as part of **onboarding** process. After you set up an account, you will be receiving a weekly report to your inbox, no action needed.
 {% endhint %}
 
-![Setting up a Report](<../.gitbook/assets/setting-up-alerts-and-reports__reports_demo.gif>)
+![Setting up a Report](../.gitbook/assets/setting-up-alerts-and-reports-6-reports-demo.gif)

@@ -48,7 +48,7 @@ Cloudthread is using [**AWS CloudFormation**](https://aws.amazon.com/cloudformat
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
 
-![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account\_\_1\_cf\_stack\_page.png)
+![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account-1-cf-stack-page.png)
 
 ### 2. Redirect to AWS
 
@@ -61,7 +61,7 @@ Pressing "_Connect Cloudthread via CF Stack_" will automatically **redirect** yo
 
 ### 3. Review CF stack and confirm creation
 
-![CF stack setup AWS screen](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/cpr-c6EyGtNIdzG6Pzk9E\_image.png)
+![CF stack setup AWS screen](../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-1.png)
 
 {% hint style="warning" %}
 Make sure to check mark **"I acknowledge that AWS CloudFormation might create IAM resources."**
@@ -73,13 +73,13 @@ Make sure to check mark **"I acknowledge that AWS CloudFormation might create IA
 
 Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
 
-![AWS console after CF stack launch](https://archbee-image-uploads.s3.amazonaws.com/c7\_e5ZVbCODT0rr09z9Gx/9ZyRUNWNOupFwOa5b55Ey\_image.png)
+![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-3-aws-cf-screen-2.png)
 
 ### 4. Come back to Cloudthread App
 
 Once the initial setup is complete, you will be able to see first cost insights in the app.
 
-![Cloudthread App](../.gitbook/assets/connecting-aws-account\_\_default\_cost\_view.png)
+![Cloudthread App](../.gitbook/assets/connecting-aws-account-4-summary-dash.png)
 
 {% hint style="info" %}
 **"Initial" cost insights**
@@ -90,7 +90,7 @@ _This means that you'll have high level cost analytics available through the Cos
 {% endhint %}
 
 {% hint style="warning" %}
-Once the CUR file is ready Cloudthread will notify you, and you will be able to see deeper insights on the platform.
+Once the CUR file is ready Cloudthread will **notify** you, and you will be able to see deeper insights on the platform.
 
 _Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to backfill it._
 {% endhint %}
