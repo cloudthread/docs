@@ -1,9 +1,11 @@
 # Unit Metrics
 
-**Unit Metric** is the base logical entity of Unit Economics feature. It represents unit metrics that can be **constructed** by defining Numerator and Denominator, **saved,** and that alerts and reports can be **applied** to.
+**Unit Metric** is the base logical entity of Unit Economics feature. It represents the efficiency-focused cloud cost metrics that are **defined** by dividing cost value (Numerator) by certain usage value (Denominator). Unit metrics can be constructed, **saved,** and can have [notifications](../notifications/ "mention") applied to.
 
 {% hint style="info" %}
-Unit metric is **Cost** divided by certain **Usage** unit. Example: $ per Lambda Invocation.
+Unit metric is **Cost** divided by a certain **Usage** unit (Requests, Bytes, Invocations, etc).&#x20;
+
+E.g. **$ per ELB Request**: AWS ELB cost divided by AWS ELB request count.
 {% endhint %}
 
-![Unit Metric View](<../../.gitbook/assets/image (11) (1).png>)
+![Unit Metric Overview](<../../.gitbook/assets/unit-metrics-1 (3).png>)

@@ -19,6 +19,7 @@
   * [Cost View Library](fundamentals/cost-transparency/cost-view-library.md)
   * [Costs Overview](fundamentals/cost-transparency/costs-overview.md)
   * [Drill-Down](fundamentals/drill-down.md)
+  * [Tag Analyzer](fundamentals/cost-transparency/tag-analyzer.md)
 * [Unit Economics](fundamentals/unit-metrics/README.md)
   * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)
   * [Unit Metrics Library](fundamentals/unit-metrics/unit-metrics-library.md)

@@ -8,7 +8,7 @@ Cloudthread supports **e-mail** and **Slack** alerts. See [setting-up-alerts-and
 
 ### Email Alerts
 
-![E-mail alert](<../../.gitbook/assets/image (4).png>)
+![E-mail alert](<../../.gitbook/assets/image (4) (1).png>)
 
 ### Slack Alerts
 
@@ -16,4 +16,4 @@ Cloudthread supports **e-mail** and **Slack** alerts. See [setting-up-alerts-and
 See [slack-integration.md](slack-integration.md "mention") for the instructions on Slack setup.
 {% endhint %}
 
-![Slack Alerts](<../../.gitbook/assets/image (5).png>)
+![Slack Alerts](<../../.gitbook/assets/image (5) (1).png>)

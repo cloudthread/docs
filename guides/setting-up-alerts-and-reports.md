@@ -62,7 +62,7 @@ See [reports.md](../fundamentals/notifications/reports.md "mention") for report 
 1. Choose **Notification Center** menu item at the bottom part of the menu to the left
 2.  Navigate to **Reports** section at the top of the screen, you will see the table listing all the reports set up in your Cloudthread account
 
-    ![](<../.gitbook/assets/image (1).png>)
+    ![](<../.gitbook/assets/image (1) (1).png>)
 3.  Click "Create New Report" button at the top of the table, you will see the the form with report settings
 
     ![](<../.gitbook/assets/image (3).png>)

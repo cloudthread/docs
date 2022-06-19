@@ -25,5 +25,10 @@ Using [drill-down.md](../fundamentals/drill-down.md "mention") feature for RCA c
 4. Once you are in drill-down mode, you can see the level you are at on the control line above the table
    * You can change levels from the control line as you go
    * Going level back is also done through control line by deleting the latest level
+5. Drill-down while you see the root cause of the cost spike
 
 ![Performing Root Cause Analysis](../.gitbook/assets/performing-root-cause-analysis\_demo.gif)
+
+{% hint style="success" %}
+For tag-based analysis use [tag-analyzer.md](../fundamentals/cost-transparency/tag-analyzer.md "mention")
+{% endhint %}

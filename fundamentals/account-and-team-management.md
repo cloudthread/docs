@@ -20,3 +20,7 @@ The user that creates your account will automatically be an **Admin**.
 
 * Create new **Users** or **Admins** (Account -> Team Management)
 * Create [alerts.md](notifications/alerts.md "mention") and [reports.md](notifications/reports.md "mention") that can be delivered to **any** email, **any** Slack user, and **any** Slack channel
+
+{% hint style="success" %}
+See [managing-account-and-team.md](../guides/managing-account-and-team.md "mention") for detailed instructions on how to invite new users.
+{% endhint %}
