@@ -6,14 +6,33 @@
 
 #### Cost View Control Pane
 
-This is top pane of the page that includes:
+This is the top pane of the page that includes:
 
 * Cost View name
 * Filter indicator
-* Cost View **delete**, **save as new** and **save changes** buttons
+* **Delete**, **save as new** and **save changes** buttons
 * [#date-picker](costs-overview.md#date-picker "mention") and [#filter-pane](costs-overview.md#filter-pane "mention")
+* [#absolute-cost-chart](costs-overview.md#absolute-cost-chart "mention")
+* [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
+* [#undefined](costs-overview.md#undefined "mention")
 
 ![Cost View Control Pane](../../.gitbook/assets/image.png)
+
+#### Date Picker
+
+![](../../.gitbook/assets/date-picker.png)
+
+
+
+#### Filter Pane
+
+Filter pane is designed for a convenient filtering of AWS cost data and [creating-custom-cost-views.md](../../guides/creating-custom-cost-views.md "mention").
+
+{% hint style="success" %}
+Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
+{% endhint %}
+
+![Filter Pane](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.13.50 PM.gif>)
 
 #### Absolute Cost Chart
 
@@ -25,7 +44,7 @@ Absolute cost chart with **current** and **previous** period spend vs. time line
 * If current period is May 1, 2022 - May 7, 2022, previous period is April 24, 2022 - April 30, 2022
 {% endhint %}
 
-![Absolute cost chart](<../../.gitbook/assets/image (1).png>)
+![Absolute Cost Chart](<../../.gitbook/assets/image (9).png>)
 
 #### Absolute Cost Breakdown Chart
 
@@ -35,18 +54,6 @@ This chart also has a data table attached to see the breakdown in more convenien
 
 ![Absolute cost breakdown chart](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.03.32 PM.gif>)
 
-#### Date Picker
+#### Tag Analyzer
 
-This is functionality for setting the dates for the cost insights.
-
-![Date Picker](<../../.gitbook/assets/image (12).png>)
-
-#### Filter Pane
-
-Filter pane is designed for a convenient filtering of AWS cost data and [creating-custom-cost-views.md](../../guides/creating-custom-cost-views.md "mention").
-
-{% hint style="success" %}
-Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
-{% endhint %}
-
-![Filter Pane](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.13.50 PM.gif>)
+Table with spend distributed by tag. See [tag-analyzer.md](tag-analyzer.md "mention") for more details.

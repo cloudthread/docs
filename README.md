@@ -6,7 +6,7 @@ coverY: 707.2806255430061
 # ☁ What Is Cloudthread
 
 {% hint style="success" %}
-**Cloudthread** is an **analytics platform** aimed at helping engineering teams **build in the cloud** with **cost** and **environmental efficiency**.
+**Cloudthread** is an **analytics platform** aimed at helping **engineering** teams **build in the cloud** with **cost** and **environmental efficiency**.
 
 Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up) to set one up!
 {% endhint %}
@@ -33,7 +33,7 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 **Understand what is important to track.** Based on your environment our system recommends unit metrics that make sense for you. So, if you not sure how to start with cloud cost efficiency and unit economics, we get you going.
 
-**Be notified and always on top of your cloud spend.** Our reporting and alerting capabilities will deliver the most important information at the right time to the channels that matter.
+**Be notified and always on top of your cloud spend.** Our reporting and alerting capabilities will deliver the most important information to the right people at the right time through the channels that matter.
 
 ## Starting takes just 10 min
 

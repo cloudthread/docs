@@ -1,5 +1,5 @@
 # Cost Views
 
-**Cost View** is the base logical entity of Cost Transparency feature. It represents filtered absolute spend that can be **saved** and that alerts and reports can be **applied** to.
+**Cost View** is the base logical entity of Cost Transparency feature. It represents filtered absolute spend that can be **saved** and that [notifications](../notifications/ "mention") can be applied to.
 
-![Cost View](<../../.gitbook/assets/image (9).png>)
+![Cost View Overview](../../.gitbook/assets/cost-views-1.png)

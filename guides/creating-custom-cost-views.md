@@ -18,8 +18,8 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
 
 ## Detailed instructions
 
-1. Choose Costs Transparency section in the menu to the right, then choose Cost Overview item
-   * You will see a page with Total Cost View – a default Cost View representing all the spend from added accounts, will no filters applied
+1. Choose [costs-overview.md](../fundamentals/cost-transparency/costs-overview.md "mention") menu item under [cost-transparency](../fundamentals/cost-transparency/ "mention") section in the menu to the left
+   * You will see a page with Default View – a default Cost View representing **total spend** from added accounts, with **no** filters applied
 2. Adjust Date filter at the top-right of the window as needed
    * By default the dates are shown for the last 7 days
 3. Open Filter pane at the top-right of the window and add necessary filters
@@ -32,7 +32,6 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
    * Bottom chart is a "breakdown", it shows same spend by one of the four dimensions: Account, Region, Service and Operation
 5. Click "Save as New" at top pane right near the default Cost View name
 6. Put a descriptive name and click save
-7. See your saved Cost View in the Library
+7. See your saved Cost View in the [cost-view-library.md](../fundamentals/cost-transparency/cost-view-library.md "mention")
 
-![Creating a custom Cost View](<../.gitbook/assets/creating-custom-cost-views__demo.gif>)
-
+![Creating a custom Cost View](../.gitbook/assets/creating-custom-cost-views-1-demo.gif)
