@@ -50,6 +50,21 @@ Resources:
             Roles:
                 - Ref: "CloudthreadRole"
 
+    RolePoliciesAlias:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-account-alias-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "iam:ListAccountAliases"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
     RolePoliciesTrustedAdvisor:
         Type: "AWS::IAM::Policy"
         Properties:
@@ -95,6 +110,23 @@ Resources:
                     - Effect: "Allow"
                       Action:
                         - "ce:*"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    RolePoliciesPricing:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-pricing-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "pricing:DescribeServices"
+                        - "pricing:GetAttributeValues"
+                        - "pricing:GetProducts"
                       Resource:
                         - "*"
             Roles:
@@ -210,8 +242,11 @@ Resources:
         DependsOn:
         - CloudthreadRole
         - RolePoliciesCloudwatch
+        - RolePoliciesAlias
+        - RolePoliciesTrustedAdvisor
         - RolePoliciesOrganizataion
         - RolePoliciesCostExplorer
+        - RolePoliciesPricing
         - RolePoliciesCostandUsageReport
         - CostUsageReportBucket
         - CostUserReportBucketPolicy
