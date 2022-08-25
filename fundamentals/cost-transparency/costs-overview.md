@@ -14,7 +14,7 @@ This is the top pane of the page that includes:
 * [#date-picker](costs-overview.md#date-picker "mention") and [#filter-pane](costs-overview.md#filter-pane "mention")
 * [#absolute-cost-chart](costs-overview.md#absolute-cost-chart "mention")
 * [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
-* [#undefined](costs-overview.md#undefined "mention")
+* [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
 ![Cost View Control Pane](../../.gitbook/assets/image.png)
 
@@ -39,9 +39,7 @@ Cloudthread allows for complex filtering of AWS cost data across **Account**, **
 Absolute cost chart with **current** and **previous** period spend vs. time lines.
 
 {% hint style="info" %}
-**Previous period** is defined as period of equal length directly proceeding the current period:
-
-* If current period is May 1, 2022 - May 7, 2022, previous period is April 24, 2022 - April 30, 2022
+**Previous period** is defined as period of equal length directly proceeding the current period. E.g. if current period is June 17, 2022 - June 24, 2022, previous period is June 9, 2022 - June 16, 2022.
 {% endhint %}
 
 ![Absolute Cost Chart](<../../.gitbook/assets/image (9).png>)
