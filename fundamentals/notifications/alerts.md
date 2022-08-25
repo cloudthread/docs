@@ -3,12 +3,12 @@
 **Alerts** are short notifications sent on certain event (like threshold break).
 
 {% hint style="info" %}
-Cloudthread supports **e-mail** and **Slack** alerts. See [setting-up-alerts-and-reports.md](../../guides/setting-up-alerts-and-reports.md "mention") for setup instructions.
+Cloudthread supports **email** and **Slack** alerts. See [setting-up-alerts-and-reports.md](../../guides/setting-up-alerts-and-reports.md "mention") for setup instructions.
 {% endhint %}
 
 ### Email Alerts
 
-![E-mail alert](<../../.gitbook/assets/image (4) (1).png>)
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Cloudthread email alert</p></figcaption></figure>
 
 ### Slack Alerts
 
@@ -16,4 +16,4 @@ Cloudthread supports **e-mail** and **Slack** alerts. See [setting-up-alerts-and
 See [slack-integration.md](slack-integration.md "mention") for the instructions on Slack setup.
 {% endhint %}
 
-![Slack Alerts](<../../.gitbook/assets/image (5) (1).png>)
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Cloudthread Slack Alert</p></figcaption></figure>

@@ -16,13 +16,20 @@ This is the top pane of the page that includes:
 * [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
 * [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
-![Cost View Control Pane](../../.gitbook/assets/image.png)
+![Cost View Control Pane](<../../.gitbook/assets/image (1).png>)
 
 #### Date Picker
 
-![](../../.gitbook/assets/date-picker.png)
+Date Picker is providing a convenient interface for setting the time dimension for the analysis. It includes the following functionality:
 
+* **Quick period** setting
+  * Quick start and end date definition
+  * Yesterday, Last Week, Last Month, Last Quarter, Last Year
+* **Granularity** setting
+  * Aggregation of data by time dimension
+  * Day (default), Week, Month, Quarter, Year
 
+![Date Picker](<../../.gitbook/assets/image (4).png>)
 
 #### Filter Pane
 
@@ -32,7 +39,7 @@ Filter pane is designed for a convenient filtering of AWS cost data and [creatin
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
 {% endhint %}
 
-![Filter Pane](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.13.50 PM.gif>)
+<figure><img src="../../.gitbook/assets/Screen Cast 2022-08-24 at 8.53.48 PM (1).gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
 
 #### Absolute Cost Chart
 

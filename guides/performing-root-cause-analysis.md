@@ -8,7 +8,7 @@ Root Cause Analysis (RCA)​ is an important part of dealing with cloud costs: i
 Using [drill-down.md](../fundamentals/drill-down.md "mention") feature for RCA can help you to:
 
 * Find out answers to the questions like "Which AWS **resource** is behind the increase in cost of my **team's** cloud infrastructure?"
-* See the **breakdown** of specific parts of you spend by Account, Region, Service,, Usage Type, Operation and Resource.
+* See the **breakdown** of specific parts of you spend by Account, Region, Service, Usage Type, Operation and Resource.
 {% endhint %}
 
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>
