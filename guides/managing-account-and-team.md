@@ -18,7 +18,7 @@ Adding new users to the platform will enable the following:
 
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>
 
-1. Go to **Account** section from the right menu pane
+1. Go to **Settings** section from the right menu pane
 2. Choose **Team Management** tab
 3. Fill in the user invite form under the list of users
    * All you need is User Name and e-mail
@@ -29,4 +29,4 @@ Adding new users to the platform will enable the following:
 Cloudthread's [pricing](https://www.cloudthread.io/pricing) is **not based on number of users** – we do not want to create wrong incentives and discourage people in your organization to use the app and see valuable cloud efficiency insights.
 {% endhint %}
 
-![Adding a new User](<../.gitbook/assets/managing-account-and-team__demo.gif>)
+![Adding a new User](../.gitbook/assets/managing-account-and-team\_\_demo.gif)
