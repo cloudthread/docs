@@ -30,11 +30,11 @@ All ingestion requests use the following endpoint
 
 `https://api.cloudthread.io/streams/ingest`
 
-## Custom Data Ingestion (Data Stream Type: Custom)
+## Custom Data Ingestion
 
 Cloudthread can process custom data to help customers understand their non-cost data as it relates to their cost data.
 
-In order to send custom data, you must provision a **Custom Data Data Stream Token** on the Cloudthread platform within the **Settings** tab.
+In order to send custom data, you must provision a **Custom Data - Data Stream Token** on the Cloudthread platform within the **Settings** tab.
 
 To send custom data to Cloudthread, use the **Data Ingeation** endpoint above with the provisioned Data Stream Token and the following payload
 
