@@ -59,7 +59,7 @@ To send custom data to Cloudthread, use the **Data Ingeation** endpoint above wi
 
 * `metric_agg_func`: aggregation function across the dataset. *Do not* include data with different aggregation methods into the same request.
 * `timestamp`: datetime with **hourly** granularity. Any timestamp with minutes, seconds, etc. will be rejected. E.g. `'2022-10-01 00:00:00'`. To send daily data, send data with the timepart = `00:00:00`.
-* `metric_name`: name of the metric -- all metrics that share a name and aggregation function will be grouped together by date given the prescribed aggregation function. This means you can up to four versions of the same metric name based on different aggregation functions.
+* `metric_name`: name of the metric -- all metrics that share a name and aggregation function will be grouped together by date given the prescribed aggregation function. This means you can up have up to four versions of the same metric name based on different aggregation functions.
 * `mertic_value`: float convertiable value of the metric.
 * `custom_dimensions` is an map of **up to 10** key value pairs that you will be able to segment the data by on the Cloudthread platform.
 
