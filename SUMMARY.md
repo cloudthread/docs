@@ -31,3 +31,4 @@
   * [Reports](fundamentals/notifications/reports.md)
   * [Slack Integration](fundamentals/notifications/slack-integration.md)
 * [Account & Team Management](fundamentals/account-and-team-management.md)
+* [Developer API](fundamentals/developer-api.md)
