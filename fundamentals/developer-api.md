@@ -2,7 +2,7 @@
 
 Cloudthread provides a powerful and flexible REST Developer API to help you get the most out of your data.
 
-This page how to use the API, and what features are currently available.
+This page shows how to use the API, and what features are currently available.
 
 ## Basic setup
 
@@ -20,9 +20,9 @@ Any request without a valid token will be rejected.
 
 ## Data Ingestion
 
-Cloudthread provides the abiilty to send data to our platform that can then be uased on the app.
+Cloudthread provides the abiilty to send data to our systems that can then be used in the platform.
 
-Cloudthread requires a **Data Stream Token** to process incoming Data Ingestion API requests - this requirement applies to **all** ingestion endpoints. This token helps organize and control the flow of data. Admin's have the ability to generate a Data Stream Token on the Cloudthread platform within the **Settings** tab.
+Cloudthread requires a **Data Stream Token** to process incoming Data Ingestion API requests. This requirement applies to **all** ingestion endpoints. This token helps organize and control the flow of data. Admin's have the ability to generate a Data Stream Token on the Cloudthread platform within the **Settings** tab. Data Stream Tokens are generated with a **Data Stream Type** that determines how the incoming data is validated.
 
 This Data Stream Token should be included in the body of incoming ingestion requests as demonstrated in the payload examples below.
 
@@ -30,7 +30,7 @@ All ingestion requests go through the same endpoint
 
 `https://api.cloudthread.io/streams/ingest`
 
-## Custom Data Ingestion
+## Custom Data Ingestion (Data Stream Type: Custom)
 
 Cloudthread can process custom data to help customers understand their non-cost data as it relates to their cost data.
 
