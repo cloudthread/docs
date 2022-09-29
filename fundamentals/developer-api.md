@@ -50,9 +50,9 @@ To send custom data to Cloudthread, use the **Data Ingeation** endpoint above wi
       custom_dimensions: {
         string: string,
         ...
-      },
-      ...
-    }
+      }
+    },
+    ...
   ]
 }
 ```
