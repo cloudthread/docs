@@ -132,6 +132,40 @@ Resources:
             Roles:
                 - Ref: "CloudthreadRole"
 
+    RolePoliciesECS:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-ecs-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "ecs:ListClusters"
+                        - "ecs:ListServices"
+                        - "ecs:ListTasks"
+                        - "ecs:DescribeTasks"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
+    RolePoliciesEC2:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-ec2-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "ec2:DescribeInstances"
+                        - "ec2:DescribeVolumes"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRole"
+
     RolePoliciesCostandUsageReport:
         Type: "AWS::IAM::Policy"
         Properties:
@@ -247,6 +281,8 @@ Resources:
         - RolePoliciesOrganizataion
         - RolePoliciesCostExplorer
         - RolePoliciesPricing
+        - RolePoliciesECS
+        - RolePoliciesEC2
         - RolePoliciesCostandUsageReport
         - CostUsageReportBucket
         - CostUserReportBucketPolicy
