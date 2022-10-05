@@ -63,6 +63,8 @@ To send custom data to Cloudthread, use the **Data Ingeation** endpoint above wi
 * `mertic_value`: float convertiable value of the metric.
 * `custom_dimensions` is an map of **up to 10** key value pairs that you will be able to segment the data by on the Cloudthread platform.
 
+If the data pass validation and successfully save you'll receive a `201` status code.
+
 Cloudthread creates a record ID for each data point by hashing the metric name, metric aggreation function, and the custom dimensions into a single key. To update a data point that's already been sent, the incoming data point must match along these fields -- otherwise a new data point will be generated. You can then update a given timestamp and metric value pair by sending in the matching timestamp with a new metric value.
 
 Data sent via this API will appear in the **Unit Metrics Lab** on Cloudthread's platform.
