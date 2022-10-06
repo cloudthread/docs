@@ -36,7 +36,7 @@ Cloudthread can process custom data to help customers understand their non-cost 
 
 In order to send custom data, you must provision a **Custom Data - Data Stream Token** on the Cloudthread platform within the **Settings** tab.
 
-To send custom data to Cloudthread, use the **Data Ingeation** endpoint above with the provisioned Data Stream Token and the following payload
+To send custom data to Cloudthread, use the **Data Ingestion** endpoint above with the provisioned Data Stream Token and the following payload
 
 ```json
 {
