@@ -14,9 +14,9 @@ There are four types of integration stacks Cloudthread provides:
 
 You can generate these templates in the Settings > Data Collection part of the platform. Please note that you must have already integrated a **Master Account** template in an organization root account to be able to use a **StackSet** template. **StackSet** templates require your organization root ID - which will be pre-filled based on the organization root account you decide to integrate.
 
-Cloudthreat existing Cost and Usage report requirements:
-1. Hourly Time Granularity
-2. Parquet File Format
+**Cloudthreat existing Cost and Usage report requirements**:
+1. Hourly time granularity
+2. Parquet file format
 3. Overwrite existing file updates
 4. Resource ID level report content
 
@@ -24,7 +24,7 @@ Cloudthreat existing Cost and Usage report requirements:
 
 This stack template is for companies who do not already have a Cost and Usage report that matches Cloudthread's requirements. This template should be run in your main account if you're not using AWS Organizations, or in your organization root account if you are using AWS Organizations.
 
-### Master Account templates with a Existing Cost and Usage Report (Onboarding flow only)
+### Master Account templates with an Existing Cost and Usage Report (Onboarding flow only)
 
 This stack template is for companies who have an existing Cost and Usage report that matches Cloudthread's requirements. You will be required to submit your report name, report prefix, and report bucket in the creation form. This template should be run in your main account if you're not using AWS Organizations, or in your organization root account if you are using AWS Organizations.
 
