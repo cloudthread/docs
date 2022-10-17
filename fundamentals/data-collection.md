@@ -16,8 +16,8 @@ You can generate these templates in the Settings > Data Collection part of the p
 
 **Cloudthreat existing Cost and Usage report requirements**:
 1. Hourly time granularity
-2. Parquet file format
-3. Overwrite existing file updates
+2. Parquet file type
+3. Overwrite Report file versioning
 4. Resource ID level report content
 
 ### Master Account templates with a New Cost and Usage Report
