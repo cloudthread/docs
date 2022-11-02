@@ -61,7 +61,7 @@ To send custom data to Cloudthread, use the **Data Ingestion** endpoint above wi
 * `timestamp`: datetime with **hourly** granularity. Any timestamp with minutes, seconds, etc. will be rejected. E.g. `'2022-10-01 00:00:00'`. To send daily data, send data with the timepart = `00:00:00`.
 * `metric_name`: name of the metric -- all metrics that share a name and aggregation function will be grouped together by date given the prescribed aggregation function. This means you can up have up to four versions of the same metric name based on different aggregation functions.
 * `mertic_value`: float convertiable value of the metric.
-* `custom_dimensions` is an map of **up to 10** key value pairs that you will be able to segment the data by on the Cloudthread platform.
+* `custom_dimensions`: map of **up to 10** key value pairs that you will be able to segment the data by on the Cloudthread platform.
 
 If the data pass validation and successfully save you'll receive a `201` status code.
 
@@ -71,4 +71,42 @@ Data sent via this API will appear in the **Unit Metrics Lab** on Cloudthread's 
 
 ## Event Overlay Ingestion
 
-COMING SOON! Contact support@cloudthread.io if you wish to see this feature faster.
+Cloudthread can process webhook events that can be overlayed ontop of your cost data and unit metrics.
+
+In order to send events data, follow the .
+
+To send events data to Cloudthread, use the following endpoint and the following payload
+
+`https://api.cloudthread.io/events`
+
+```json
+{
+  data: [
+    {
+      timestamp: datetime,
+      team_id?: int,
+      payload: {
+        decscription: string (max length 1000),
+        type: string,
+        event_url?: string,
+      }
+    },
+    ...
+  ]
+}
+```
+
+* `timestamp`: datetime with **hourly** granularity. Any timestamp with minutes, seconds, etc. will be rejected. E.g. `'2022-10-01 00:00:00'`. To send daily data, send data with the timepart = `00:00:00`.
+* `team_id`: OPITIONAL - integer ID of the team for which the event is tied. This means only users (and admins) will be able to see this event in Cloudthread unless an admin enables **Global Events**.
+* `decscription`: text describing event.
+* `type`: event type to help organize and filter events on the platform - please ensure types are consistent across events to help easy filtering.
+* `event_url`: OPTIONAL - link to get more information about the sent event on the platform.
+
+If the data pass validation and successfully save you'll receive a `201` status code.
+
+Data sent via this API will appear in **Costs Overview** and **Unit Metrics Lab** on Cloudthread's platform.
+
+
+##COMING SOON - Data querying API
+
+Please contact support@cloudthread.io for more information about this feature
