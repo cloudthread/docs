@@ -20,7 +20,7 @@ Any request without a valid token will be rejected.
 
 ## Data Ingestion
 
-Cloudthread provides the abiilty to send data to our systems that can then be used in the platform.
+Cloudthread provides the abiilty to send data to our systems that can then be used on the platform.
 
 Cloudthread requires a **Data Stream Token** to process incoming Data Ingestion API requests. This token helps organize and control the flow of data. Data Stream Tokens are generated with a **Data Stream Type** that determines how the incoming data is validated. Admin's have the ability to generate a Data Stream Token on the Cloudthread platform within the **Settings** tab.
 
@@ -97,7 +97,7 @@ To send events data to Cloudthread, use the following endpoint and the following
 ```
 
 * `timestamp`: datetime with **hourly** granularity. Any timestamp with minutes, seconds, etc. will be rejected. E.g. `'2022-10-01 00:00:00'`. To send daily data, send data with the timepart = `00:00:00`.
-* `team_id`: OPITIONAL - integer ID of the team for which the event is tied. This means only users (and admins) will be able to see this event in Cloudthread unless an admin enables **Global Events**.
+* `team_id`: OPITIONAL - integer ID of the team for which the event is tied. This means only users on this team (and admins) will be able to see this event on the platform.
 * `decscription`: text describing event.
 * `type`: event type to help organize and filter events on the platform - please ensure types are consistent across events to help easy filtering.
 * `event_url`: OPTIONAL - link to get more information about the sent event on the platform.
