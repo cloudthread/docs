@@ -16,7 +16,7 @@ This is the top pane of the page that includes:
 * [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
 * [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
-![Cost View Control Pane](<../../.gitbook/assets/image (23).png>)
+![Cost View Control Pane](<../../.gitbook/assets/image (22).png>)
 
 #### Date Picker
 
@@ -29,7 +29,7 @@ Date Picker is providing a convenient interface for setting the time dimension f
   * Aggregation of data by time dimension
   * Day (default), Week, Month, Quarter, Year
 
-![Date Picker](<../../.gitbook/assets/image (8).png>)
+![Date Picker](<../../.gitbook/assets/image (12).png>)
 
 #### Filter Pane
 
@@ -49,7 +49,7 @@ Absolute cost chart with **current** and **previous** period spend vs. time line
 **Previous period** is defined as period of equal length directly proceeding the current period. E.g. if current period is June 17, 2022 - June 24, 2022, previous period is June 9, 2022 - June 16, 2022.
 {% endhint %}
 
-![Absolute Cost Chart](<../../.gitbook/assets/image (19).png>)
+![Absolute Cost Chart](<../../.gitbook/assets/image (15).png>)
 
 #### Absolute Cost Breakdown Chart
 

@@ -19,15 +19,15 @@ Creating custom [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "me
    * You will see a table with a list of predefined unit metrics ("base",created by Cloudthread out of the box) as well as custom ones (created by your team)
 2.  Click "Create New Metric" button at the top-right corner of the screen, you will see the form to create a basis for your future custom unit metric
 
-    ![](<../.gitbook/assets/creating-custom-unit-metrics-1-new-metric-form (1).png>)****
+    ![](../.gitbook/assets/creating-custom-unit-metrics-1-new-metric-form.png)\*\*\*\*
 3. Choose **base metric** from the list – this is the the source of denominator for the Unit Metric
-4. Set up **custom dimensions** – filters for the metric numerator (cost): account, region and tag&#x20;
+4. Set up **custom dimensions** – filters for the metric numerator (cost): account, region and tag
 5. Choose **numerator cost** type
-   * **Service** – **** numerator will include only the cost of the service numerator as part of the unit metric. This is valuable when you want to isolate that specific service's cost efficiency (e.g. lambda $ / lambda invocation)numerator to the service relevant to the denominator specified in the base metric (e.g. lambda $ / lambda invocation)
+   * **Service** – \*\*\*\* numerator will include only the cost of the service numerator as part of the unit metric. This is valuable when you want to isolate that specific service's cost efficiency (e.g. lambda $ / lambda invocation)numerator to the service relevant to the denominator specified in the base metric (e.g. lambda $ / lambda invocation)
    * **Total** – numerator include all costs associated with filters you've selected, not just the cost of the service. This is valuable when you want to use the unit metric as a proxy for the team's overall efficiency (e.g. tag-teamX $ / ELB request)
 6. Input the unit metric name
 7. Click "Save Metric"
 8. See your saved Unit Metric in the Library
-   * You will be able to edit the metric further with the filter functionality in [unit-metrics-lab.md](../fundamentals/unit-metrics/unit-metrics-lab.md "mention")&#x20;
+   * You will be able to edit the metric further with the filter functionality in [unit-metrics-lab.md](../fundamentals/unit-metrics/unit-metrics-lab.md "mention")
 
 ![Creating a custom Unit Metric](../.gitbook/assets/creating-custom-unit-metrics-1-demo.gif)

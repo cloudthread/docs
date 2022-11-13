@@ -2,9 +2,7 @@
 
 **Cost View Library** is the section of the app where you can see all the saved [cost-view.md](cost-view.md "mention") listed: both custom and predefined ones. It is a convenient entry point into absolute cost analysis.
 
-![Cost View Library](<../../.gitbook/assets/cost-view-library-1 (1).png>)
-
-
+![Cost View Library](../../.gitbook/assets/cost-view-library-1.png)
 
 There are two types of metics in the Library:
 

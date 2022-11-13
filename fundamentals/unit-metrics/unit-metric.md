@@ -8,4 +8,4 @@ Unit metric is **Cost** divided by a certain **Usage** unit (Requests, Bytes, In
 E.g. **$ per ELB Request**: AWS ELB cost divided by AWS ELB request count.
 {% endhint %}
 
-![Unit Metric Overview](../../.gitbook/assets/unit-metrics-1.png)
+![Unit Metric Overview](<../../.gitbook/assets/unit-metrics-1 (2).png>)
