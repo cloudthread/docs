@@ -16,7 +16,7 @@ This is the top pane of the page that includes:
 * [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
 * [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
-![Cost View Control Pane](<../../.gitbook/assets/image (1).png>)
+![Cost View Control Pane](<../../.gitbook/assets/image (23).png>)
 
 #### Date Picker
 
@@ -29,7 +29,7 @@ Date Picker is providing a convenient interface for setting the time dimension f
   * Aggregation of data by time dimension
   * Day (default), Week, Month, Quarter, Year
 
-![Date Picker](<../../.gitbook/assets/image (4).png>)
+![Date Picker](<../../.gitbook/assets/image (8).png>)
 
 #### Filter Pane
 
@@ -39,7 +39,7 @@ Filter pane is designed for a convenient filtering of AWS cost data and [creatin
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Screen Cast 2022-08-24 at 8.53.48 PM (1).gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Cast 2022-08-24 at 8.53.48 PM.gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
 
 #### Absolute Cost Chart
 
@@ -49,15 +49,15 @@ Absolute cost chart with **current** and **previous** period spend vs. time line
 **Previous period** is defined as period of equal length directly proceeding the current period. E.g. if current period is June 17, 2022 - June 24, 2022, previous period is June 9, 2022 - June 16, 2022.
 {% endhint %}
 
-![Absolute Cost Chart](<../../.gitbook/assets/image (9).png>)
+![Absolute Cost Chart](<../../.gitbook/assets/image (19).png>)
 
 #### Absolute Cost Breakdown Chart
 
 Absolute cost chart with the **additional** data dimension, but no previous period displayed.
 
-This chart also has a data table attached to see the breakdown in more convenient way and control [drill-down.md](../drill-down.md "mention").
+This chart also has a data table attached to see the breakdown in more convenient way and control [drill-down.md](drill-down.md "mention").
 
-![Absolute cost breakdown chart](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.03.32 PM.gif>)
+![Absolute cost breakdown chart](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.23.21 PM.gif>)
 
 #### Tag Analyzer
 

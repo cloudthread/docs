@@ -48,7 +48,7 @@ Cloudthread is using [**AWS CloudFormation**](https://aws.amazon.com/cloudformat
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
 
-![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account-1-cf-stack-page.png)
+![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account\_\_1\_cf\_stack\_page.png)
 
 ### 2. Redirect to AWS
 
@@ -73,7 +73,7 @@ Make sure to check mark **"I acknowledge that AWS CloudFormation might create IA
 
 Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
 
-![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-3-aws-cf-screen-2.png)
+![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-2.png)
 
 ### 4. Come back to Cloudthread App
 

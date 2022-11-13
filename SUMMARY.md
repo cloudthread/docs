@@ -20,7 +20,7 @@
   * [Cost View Library](fundamentals/cost-transparency/cost-view-library.md)
   * [Costs Overview](fundamentals/cost-transparency/costs-overview.md)
   * [Kubernetes Dimensions](fundamentals/cost-transparency/kubernetes-dimensions.md)
-  * [Drill-Down](fundamentals/drill-down.md)
+  * [Drill-Down](fundamentals/cost-transparency/drill-down.md)
   * [Tag Analyzer](fundamentals/cost-transparency/tag-analyzer.md)
 * [Unit Economics](fundamentals/unit-metrics/README.md)
   * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)

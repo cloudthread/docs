@@ -2,7 +2,7 @@
 
 **Unit Metrics Library** is the section of the app where you can see all the saved [unit-metric.md](unit-metric.md "mention") listed: both custom and predefined ones. It is a convenient entry point into cost efficiency analysis.
 
-![Unit Metrics Library](../../.gitbook/assets/cost-view-library-1.png)
+![Unit Metrics Library](<../../.gitbook/assets/cost-view-library-1 (2).png>)
 
 There are two types of metics in the Library:
 
