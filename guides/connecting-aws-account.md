@@ -1,6 +1,15 @@
-# Connecting AWS Account
+# Connecting AWS Management Account
 
-Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS billing and usage data is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
+Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS **billing and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
+
+{% hint style="warning" %}
+This is the guide for the **initial and essential** data access setup, which is aimed at **AWS** **Management** **Account** (see [AWS Consolidate Billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) for more information). This setup fully covers:
+
+* **Billing data (CUR)**
+* **Resource monitoring data (CloudWatch)** for resources running within the Management Account
+
+If you have functional **sub-accounts** and want to collect resource monitoring data for them (recommended), see [connecting-aws-sub-accounts.md](connecting-aws-sub-accounts.md "mention") guide.
+{% endhint %}
 
 ## Cloudthread AWS access
 
@@ -22,10 +31,12 @@ Cloudthread is using a delegated access role to read data from your account into
 In more detail, Cloudthread needs roughly **5 sets** of permissions / actions:
 
 1. **CUR bucket creation**, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
-2. **Listing organization root ids** to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics
-3. **CloudWatch read access** to list metrics and collect CloudWatch data
-4. **Cost Explorer complete access** to power the first 24 hours of the tool and trusted advisor maintenance
-5. **CUR report complete access** to create a cur report and help maintain existing ones
+2. **Listing organization root ids** to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics.
+3. **CloudWatch read access** to list metrics and collect CloudWatch data:
+   * This can be edited in [data-collection.md](../fundamentals/settings/data-collection.md "mention") settings
+   * CloudWatch data gets collected from the
+4. **Cost Explorer complete access** to power the first 24 hours of the tool and trusted advisor maintenance.
+5. **CUR report complete access** to create a cur report and help maintain existing ones.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -33,38 +44,89 @@ Before connecting your account to Cloudthread we recommend you make sure [AWS Or
 {% endhint %}
 
 {% hint style="success" %}
-Cloudthread is using the most granular version of [AWS Cost and Usage Report](https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/) **(CUR)** to deliver cost insights. Unlike with most other cloud cost management solutions, with Cloudthread you do not need to set it up yourself, our onboarding process takes care of it.
-
-_If you have a version of CUR already enabled in your account, Cloudthread can work with it as well._
+Cloudthread is using the most granular version of [AWS Cost and Usage Report](https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/) **(CUR)** to deliver cost insights – the report can be set up form scratch by our automated onboarding process, or can be reused in case you already have it in place.
 {% endhint %}
 
-## Connecting Cloudthread via CF Stack
+## Connecting Cloudthread via CloudFormation Stack
 
-{% hint style="info" %}
-Cloudthread is using [**AWS CloudFormation**](https://aws.amazon.com/cloudformation/) **(CF)** **service** to enable fast and reliable integration. You control every part of this setup process and have full visibility into actions CF is performing with your AWS environment. At any point in time you can disconnect your account from Settings page in Cloudthread app.
-{% endhint %}
+Cloudthread is using [**AWS CloudFormation** **(CF)** **service**](https://aws.amazon.com/cloudformation/) to enable fast and reliable integration. You **control** every part of this setup process and have full visibility into actions CF is performing with your AWS environment. At any point in time you can disconnect your account or adjust setup in [data-collection.md](../fundamentals/settings/data-collection.md "mention") section in Cloudthread settings.
+
+In order for Cloudthread start functioning and delivering value, AWS Management Account has to be connected. This is the first and **essential** step after the account creation ([app.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)):
 
 ### 1. Create and confirm Cloudthread account
 
-After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to "_Connect Cloudthread via CF Stack_".
+After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to get connected to your AWS environment through either creating a new Cost and Usage Report (CUR) or using the existing one.
 
-![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account\_\_1\_cf\_stack\_page.png)
+![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account-1-cf-stack-page.png)
 
-### 2. Redirect to AWS
+### 2. Choose an integration option
 
-Pressing "_Connect Cloudthread via CF Stack_" will automatically **redirect** you to your AWS console, and **pre-populate** a CF Stack with Cloudthread's required access permissions.
+#### a. Create a new Cost and Usage Report
 
-{% hint style="warning" %}
-* Make sure you are in the right AWS account.
-* We recommend to start with AWS management account.
+This is a **default** option, choose it if:
+
+* You **do not have** Cost and Usage Report set up for your AWS billing account
+* You **have** Cost and Usage Report set up for your AWS billing account, but it is not corresponding to the following settings:
+  * **Hourly** time granularity
+  * **Parquet** file type
+  * **Overwrite Report** file versioning
+  * **Resource ID** level
+* You **have** Cost and Usage Report set up for your AWS billing account, but want a clean state for Cloudthread integration
+* You **do not know** if the Cost and Usage Report set up for your AWS billing account, or unsure about the settings – don't worry, **Cloudthread setup will not mess anything up**
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-2-cf-stack-page-cur-not-exist.png" alt=""><figcaption><p>Integration through new Cost and Usage Report</p></figcaption></figure>
+
+#### b. Use an existing Cost and Usage Report
+
+Choose this option **only** if:
+
+* You **have** Cost and Usage Report set up for your AWS billing account, and it corresponds to the following settings:
+  * **Hourly** time granularity
+  * **Parquet** file type
+  * **Overwrite Report** file versioning
+  * **Resource ID** level
+
+{% hint style="info" %}
+Choosing an existing Cost and Usage Report for Cloudthread integration has an advantage of the **full historical data**, which will be missing in case of the new report creation. However, even with the new CUR the **historical backfill is possible**, and we will help you to arrange it with your AWS TAM.
 {% endhint %}
 
-### 3. Review CF stack and confirm creation
+<div>
 
-![CF stack setup AWS screen](../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-1.png)
+<figure><img src="../.gitbook/assets/connecting-aws-account-3-cf-stack-page-cur-exist.png" alt=""><figcaption><p>Existing Cost and Usage Report information</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-4-cf-stack-page-cur-exist.png" alt=""><figcaption><p>Integration through new Cost and Usage Report</p></figcaption></figure>
+
+</div>
+
+{% hint style="info" %}
+More on the properties of CUR and where to find them:
+
+[AWS documentation](https://docs.aws.amazon.com/cur/latest/userguide/understanding-report-versions.html)
+
+[AWS Well-Architected Labs](https://www.wellarchitectedlabs.com/cost/100\_labs/100\_1\_aws\_account\_setup/3\_cur/)
+{% endhint %}
+
+### 3. Redirect to AWS
+
+Pressing "_Go to New Report Template_" (for new CUR integration) or "_Go to Existing Report Template_" (for existing CUR integration) to will automatically **redirect** you to your AWS console, and **pre-populate** a CF Stack with Cloudthread's required access permissions.
+
+{% hint style="warning" %}
+* Make sure you are in the right AWS account
+* We recommend to start with AWS management account, i.e. the main account
+{% endhint %}
+
+### 4. Review CF stack and confirm creation
+
+![CF stack setup AWS screen](../.gitbook/assets/connecting-aws-account-5-aws-cf-screen-1.png)
 
 {% hint style="warning" %}
 Make sure to check mark **"I acknowledge that AWS CloudFormation might create IAM resources."**
+{% endhint %}
+
+{% hint style="warning" %}
+If you chose [Use an existing Cost and Usage Report](connecting-aws-account.md#b.-use-an-existing-cost-and-usage-report) integration option, the fields in the **Quick create stack** form will be pre-populated with the CUR parameters you supplied (Report name, Report prefix, Report bucket) – make sure they are correct.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -75,22 +137,22 @@ Once you initiate CF stack creation, it will take up to an hour to setup the req
 
 ![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-2.png)
 
-### 4. Come back to Cloudthread App
+### 5. Come back to Cloudthread App
 
 Once the initial setup is complete, you will be able to see first cost insights in the app.
 
-![Cloudthread App](<../.gitbook/assets/connecting-aws-account-4-summary-dash (1).png>)
+![Cloudthread App](../.gitbook/assets/connecting-aws-account-6-summary-dash.png)
 
 {% hint style="info" %}
 **"Initial" cost insights**
 
 Cloudthread is using [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) API service to supply cost insights while more detailed AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours).
-
-_This means that you'll have high level cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready._
 {% endhint %}
+
+This means that you'll have high level cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready.
 
 {% hint style="warning" %}
 Once the CUR file is ready Cloudthread will **notify** you, and you will be able to see deeper insights on the platform.
-
-_Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to backfill it._
 {% endhint %}
+
+Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to **backfill** it.

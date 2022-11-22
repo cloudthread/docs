@@ -1,4 +1,4 @@
-# Unit Metrics Overview
+# Unit Metrics Lab
 
 **Unit Metrics Overview** is the section of the app where you can see and adjust [unit-metric.md](unit-metric.md "mention") with charts and filters.
 
@@ -28,7 +28,7 @@ This is the top pane of the page that includes:
 
 ![](<../../.gitbook/assets/date-picker (2).png>)
 
-#### Filter Pane
+#### Settings Pane
 
 Filter pane in Unit Metrics Overview designed for customizing unit metrics (editing both numerator and denominator), for more instructions see [creating-custom-unit-metrics.md](../../guides/creating-custom-unit-metrics.md "mention")
 

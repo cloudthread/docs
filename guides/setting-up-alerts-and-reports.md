@@ -16,9 +16,9 @@ All notifications can be delivered through **e-mail** and **Slack** (see [slack-
 {% hint style="info" %}
 Using [alerts.md](../fundamentals/notifications/alerts.md "mention") and [reports.md](../fundamentals/notifications/reports.md "mention") will help you to:
 
-* Get **notified** when your [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") break absolute or relative threshold you defined.
-* Receive **detailed** insights on cloud spend relevant to you every week/month/quarter.
-* **Subscribe** team members to important notifications so that they receive important information on their cloud costs in time.
+* Get **notified** when your [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") break absolute or relative threshold you defined
+* Receive **detailed** insights on cloud spend relevant to you every week/month/quarter
+* **Subscribe** team members to important notifications so that they receive important information on their cloud costs in time
 {% endhint %}
 
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>

@@ -25,5 +25,3 @@ Using [kubernetes-dimensions.md](../fundamentals/cost-transparency/kubernetes-di
 3. Check the **charts** if they represent the data you were looking for
    * Top chart shows total filtered spend for chosen period and the period of same size right before
    * Bottom chart is a "breakdown", it shows same spend by one of the six dimensions: Account, Region, Service, Usage Type, Operation and Resource
-
-<figure><img src="../.gitbook/assets/Screen Cast 2022-08-24 at 8.53.48 PM (1).gif" alt=""><figcaption><p>Performing K8s Cost Analysis</p></figcaption></figure>

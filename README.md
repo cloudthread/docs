@@ -6,12 +6,12 @@ coverY: 707.2806255430061
 # ☁ What Is Cloudthread
 
 {% hint style="success" %}
-**Cloudthread** is an **analytics platform** aimed at helping **engineering** teams **build in the cloud** with **cost** and **environmental efficiency**.
+**Cloudthread** is an **analytics platform** aimed at empowering **engineering** owners to take **action** on cloud **cost savings** and **environmental efficiency** insights.
 
 Don't have an account yet? Click [here](https://app.core.cloudthread.io/sign-up) to set one up!
 {% endhint %}
 
-![Cloudthread platform](.gitbook/assets/what-is-cloudthread\_\_cloudthread\_platform\_overview.png)
+![Cloudthread platform](<.gitbook/assets/what-is-cloudthread\_\_cloudthread\_platform\_overview (2).png>)
 
 Whether you're just getting started with Cloud Financial Management or you're a veteran that's looking to contribute to a mature FinOps process, we're excited to help. Our success is measured by your engineering team's confidence in their cloud cost efficiency.
 
@@ -33,14 +33,16 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 **Understand what is important to track.** Based on your environment our system recommends unit metrics that make sense for you. So, if you not sure how to start with cloud cost efficiency and unit economics, we get you going.
 
+**Have a clear action plan.** Cloudthread platform provides a powerful **cost savings recommendation engine** that helps to guide optimization agenda.
+
 **Be notified and always on top of your cloud spend.** Our reporting and alerting capabilities will deliver the most important information to the right people at the right time through the channels that matter.
 
 ## Starting takes just 10 min
 
-You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [connecting-aws-account.md](guides/connecting-aws-account.md "mention") section for a fast onboarding experience.
+You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [Broken link](broken-reference "mention") section for a fast onboarding experience.
 
 {% hint style="warning" %}
-Cloudthread is supporting only **AWS** at the moment. If you are using other cloud providers, please let us know [here](https://www.cloudthread.io/contact-us).
+Cloudthread is supporting only **AWS** at the moment. **Google Cloud** integration is on the way. If you are using other cloud providers, please let us know [here](https://www.cloudthread.io/contact-us).
 {% endhint %}
 
 ## Support

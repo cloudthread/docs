@@ -18,10 +18,10 @@ Using [drill-down.md](../fundamentals/cost-transparency/drill-down.md "mention")
    * If you want to work with a a custom filtered view that was saved earlier or with the base view (predefined cost category), choose [cost-view-library.md](../fundamentals/cost-transparency/cost-view-library.md "mention") or see[creating-custom-cost-views.md](creating-custom-cost-views.md "mention") for guidance
 2. Move to the second chart on page (**Breakdown Chart**) and navigate to the table below the chart
    * The table shows the items visualized on breakdown chart
-3. Hover over the table row you want to drill-down into and click the drill-down button to the right
+3. Hover over the table row you want to drill-down into and click the drill-down button to the right, or, alternatively, click on the data point on the cart you want to drill-down into
    * You will see table and chart change to show the items on the next level of drill-down contributing to the item you chose
+   * You will see the drill-down pane open to the right with convenient data on the state of drill-down and the controls to change any level or dimension
    * The drill-down level sequence we currently support: Account -> Region -> Service -> Usage Type -> Operation -> Resource
-   * Usage Type -> Operation -> Resource levels are available starting from Service, i.e. you cannot drill down to resource right from Account level)
 4. Once you are in drill-down mode, you can see the level you are at on the control line above the table
    * You can change levels from the control line as you go
    * Going level back is also done through control line by deleting the latest level
