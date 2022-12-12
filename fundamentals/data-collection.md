@@ -1,6 +1,6 @@
 # Data Collection
 
-Cloudthread provides easy integrations for data sets across your environment. The information below explains different inegrations options to have Cloudthread pull data from your environment.
+Cloudthread provides easy integrations for data sets across your environment. The information below explains different inegrations options to have Cloudthread pull or push data from your environment.
 
 ## AWS
 
@@ -35,3 +35,28 @@ This stack template is for companies with many sub-accounts that would like to i
 ### Sub Account
 
 This stack template is for companies that would like to integrate only a few sub-accounts from their environment.
+
+## Kubernetes
+
+Cloudthread's K8s integration is Helm Chart based.
+
+Cloudthread requires a **Data Stream Token** to process incoming Data Ingestion API requests. This token helps organize and control the flow of data. Data Stream Tokens are generated with a **Data Stream Type** that determines how the incoming data is validated. Admin's have the ability to generate a Data Stream Token on the Cloudthread platform within the **Settings** tab.
+
+Our K8s require a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generated an AWS Key and Secret to be used for this integration in particular that are required for **Step 1** below.
+
+
+1. Get a stream token and AWS credentials
+2. Add cloudhtread helm charts with: `helm repo add cloudthread  https://cloudthread.github.io/helm-charts/`
+3. Create a kubernetes namespace to run the exporter `kubectl create namespace cloudthread`
+4. Install kubernetes exporter with a command like this one:
+```
+helm install kubex cloudthread/cloudtread-kubex  \
+    --namespace cloudthread \
+    --set cloudthread.role_arn= YOUR ROLE ARN HERE \
+    --set cloudthread.role_external_id=  YOUR ROLE_EXTERNAL_ID HERE \
+    --set cloudthread.stream_token= YOUR STREAM_TOKEN  \
+    --set cloudthread.org_id= YOUR ORG_ID  \
+    --set cloudthread.dst_bucket=cloudthread-push \
+    --set cloudthread.cluster_id= OPTIONAL HUMAN READABLE CLUSTER ID \
+    --set cloudthread.region= CLOSEST AWS REGION
+```
