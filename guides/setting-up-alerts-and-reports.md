@@ -16,9 +16,9 @@ All notifications can be delivered through **e-mail** and **Slack** (see [slack-
 {% hint style="info" %}
 Using [alerts.md](../fundamentals/notifications/alerts.md "mention") and [reports.md](../fundamentals/notifications/reports.md "mention") will help you to:
 
-* Get **notified** when your [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") break absolute or relative threshold you defined.
-* Receive **detailed** insights on cloud spend relevant to you every week/month/quarter.
-* **Subscribe** team members to important notifications so that they receive important information on their cloud costs in time.
+* Get **notified** when your [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") break absolute or relative threshold you defined
+* Receive **detailed** insights on cloud spend relevant to you every week/month/quarter
+* **Subscribe** team members to important notifications so that they receive important information on their cloud costs in time
 {% endhint %}
 
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>
@@ -35,7 +35,7 @@ See [alerts.md](../fundamentals/notifications/alerts.md "mention") for alert exa
     ![](<../.gitbook/assets/setting-up-alerts-and-reports-1-alerts-table (1).png>)
 3.  Click "Create New Alert" button at the top of the table, you will see the the form with alert settings
 
-    ![](<../.gitbook/assets/image (11).png>)
+    ![](<../.gitbook/assets/image (6).png>)
 4. Choose [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") that you want the alert to be applied to from the list
 5. Specify the alert type based on the threshold type you want to apply – Absolute or Relative
    * **Absolute** thresholds are associated with a specific, absolute number (e.g. alert when costs go above $10)
@@ -46,7 +46,7 @@ See [alerts.md](../fundamentals/notifications/alerts.md "mention") for alert exa
    * Note: any emails will work, they don't need to have an associated Cloudthread user
 7. Choose Slack channels the alert notifications should be sent to
    * You should have Slack connected to Cloudthread, see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for instructions
-   * Multiple Slack channels are allowed&#x20;
+   * Multiple Slack channels are allowed
 8. Input the alert name
 9. Click "Save Alert"
 10. Your alert will appear in the saved alerts table with Active switch on, i.e. the alert is active and will be fired to specified channels once the threshold is broken
@@ -62,10 +62,10 @@ See [reports.md](../fundamentals/notifications/reports.md "mention") for report 
 1. Choose **Notification Center** menu item at the bottom part of the menu to the left
 2.  Navigate to **Reports** section at the top of the screen, you will see the table listing all the reports set up in your Cloudthread account
 
-    ![](<../.gitbook/assets/image (1) (1).png>)
+    ![](<../.gitbook/assets/image (10).png>)
 3.  Click "Create New Report" button at the top of the table, you will see the the form with report settings
 
-    ![](<../.gitbook/assets/image (3).png>)
+    ![](<../.gitbook/assets/image (14).png>)
 4. In the **Filtering** section of the form choose one of your custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") that you want the report to be based on
    * All data in the report will be filtered in accordance with the chosen Cost View
    * If you chose no view, non-filtered (total) cost will be reported
@@ -75,7 +75,7 @@ See [reports.md](../fundamentals/notifications/reports.md "mention") for report 
 6. In the **Movers and Shakers** section of the form specify settings for the corresponding report section – a summary of the biggest spend changes within your environment
    * **Minimum spend threshold** – you don't want cost movements below this absolute spend number to be included in reports or be flagged as a daily mover and shaker
      * e.g. if Absolute Spend Threshold is $10 and your Lambda pricing goes up by 500% but still only costs $9, Lambda won't show up in the reports
-   * **Minimum spend change** – only changes in spend exceeding these relative or absolute thresholds will be added to the reports&#x20;
+   * **Minimum spend change** – only changes in spend exceeding these relative or absolute thresholds will be added to the reports
      * **Absolute** thresholds are associated with a specific, absolute number
        * You don't want cost movements below this absolute change to be included in reports or be flagged as a daily mover and shaker
        * e.g. if Absolute Change Threshold is $50 and your Lambda pricing goes up from $10,020 last week to $10,050 this week, Lambda has increased by only $30 and won't show up as a Top Spender and won't show up in daily movers and shakers
@@ -91,7 +91,7 @@ See [reports.md](../fundamentals/notifications/reports.md "mention") for report 
    * Note: any emails will work, they don't need to have an associated Cloudthread user
 8. Choose Slack channels the alert notifications should be sent to
    * You should have Slack connected to Cloudthread, see [slack-integration.md](../fundamentals/notifications/slack-integration.md "mention") for instructions
-   * Multiple Slack channels are allowed&#x20;
+   * Multiple Slack channels are allowed
 9. Input the report name
 10. Click "Save Report"
 11. Your report will appear in the saved reports table with Active switch on, i.e. the report is active and will be delivered to specified channels on schedule or daily in case **Daily Movers and Shakers checkbox was checked** and the threshold is broken
