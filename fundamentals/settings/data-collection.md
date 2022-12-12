@@ -44,7 +44,7 @@ Cloudthread requires a **Data Stream Token** to process incoming K8s ingestion r
 
 ### Kubernetes EKS
 
-Our K8s EKS integration requires a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generate the AWS Role Arn and External ID required for a K8s integration.
+Our K8s EKS integration requires a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generate the AWS Role Arn and External ID required for a K8s EKS integration.
 
 
 1. Generate a **Data Stream Token** with **Data Stream Type** `kubernetes` from the **Settings** tab
