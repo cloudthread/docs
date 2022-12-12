@@ -42,11 +42,11 @@ Cloudthread's K8s integration is Helm Chart based.
 
 Cloudthread requires a **Data Stream Token** to process incoming K8s ingestion requests. This token helps organize and control the flow of data. Data Stream Tokens are generated with a **Data Stream Type** that determines how the incoming data is validated. Admin's have the ability to generate a Data Stream Token on the Cloudthread platform within the **Settings** tab.
 
-Our K8s integration requires a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generated an AWS Role Arn and External ID required for a K8s integration.
+Our K8s integration requires a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generate the AWS Role Arn and External ID required for a K8s integration.
 
 
 1. Generate a **Data Stream Token** with **Data Stream Type** `kubernetes` from the **Settings** tab
-2. Copy the data stream token, AWS credentials (Role Arn and External ID) tied to the data stream, and Organiztion ID
+2. Copy the generated data stream token, AWS credentials (Role Arn and External ID), and your Organiztion ID
 3. Add cloudhtread helm charts with: `helm repo add cloudthread  https://cloudthread.github.io/helm-charts/`
 4. Create a kubernetes namespace to run the exporter `kubectl create namespace cloudthread`
 5. Install kubernetes exporter with a command like this one:
