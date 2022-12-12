@@ -53,10 +53,10 @@ Our K8s integration requires a data stream token to be generated with **Data Str
 ```
 helm install kubex cloudthread/cloudtread-kubex  \
     --namespace cloudthread \
-    --set cloudthread.role_arn= YOUR ROLE ARN HERE \
-    --set cloudthread.role_external_id=  YOUR ROLE_EXTERNAL_ID HERE \
+    --set cloudthread.role_arn= YOUR ROLE_ARN \
+    --set cloudthread.role_external_id=  YOUR ROLE_EXTERNAL_ID \
     --set cloudthread.stream_token= YOUR STREAM_TOKEN  \
-    --set cloudthread.org_id= YOUR ORG_ID  \
+    --set cloudthread.org_id= YOUR ORGANIZATION_ID  \
     --set cloudthread.dst_bucket=cloudthread-push \
     --set cloudthread.cluster_id= OPTIONAL HUMAN READABLE CLUSTER ID \
     --set cloudthread.region= CLOSEST AWS REGION
