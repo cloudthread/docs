@@ -24,7 +24,7 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
 1. Navigate to [costs-overview.md](../fundamentals/cost-transparency/costs-overview.md "mention") section in [cost-transparency](../fundamentals/cost-transparency/ "mention") space in the menu to the left:
    * You can get there via several different paths:
      * From the menu pane at the left
-     * From the [summary-dashboard.md](../fundamentals/summary-dashboard.md "mention") by clicking "Create New Cost View"
+     * From the [summary-dashboard.md](../fundamentals/dashboards/summary-dashboard.md "mention") by clicking "Create New Cost View"
      * From the [cost-view-library.md](../fundamentals/cost-transparency/cost-view-library.md "mention") by clicking "Create New View"
        * A good practice is to explore the Library if the view you want to create already exists
    * You will see a page with Default View – a default Cost View representing **total spend** from integrated billing accounts, with **no** filters applied

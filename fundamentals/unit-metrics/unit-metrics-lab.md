@@ -1,11 +1,9 @@
 # Unit Metrics Lab
 
-**Unit Metrics Overview** is the section of the app where you can see and adjust [unit-metric.md](unit-metric.md "mention") with charts and filters.
+**Unit Metrics Lab** is the section of the app where you can see and adjust [unit-metric.md](unit-metric.md "mention") with charts and filters.
 
 {% hint style="info" %}
-Unit Metrics Overview is accessible through [unit-metrics-library.md](unit-metrics-library.md "mention") by choosing one of the saved or predefined metrics.
-
-Refer to [creating-custom-unit-metrics.md](../../guides/creating-custom-unit-metrics.md "mention") to see how to create an initial custom unit metric through simplified form and edit it further in Unit Metrics Overview.
+Refer to [creating-custom-unit-metrics.md](../../guides/creating-custom-unit-metrics.md "mention") guide to see how to create custom unit metrics.
 {% endhint %}
 
 ### Key Features
@@ -18,9 +16,7 @@ This is the top pane of the page that includes:
 * Unit Metric source
   * This is where the denominator of the metric is coming from (CloudWatch, CUR, etc.)
 * **Delete**, **Save as New** and **Save Changes** buttons
-* [#date-picker](unit-metrics-lab.md#date-picker "mention") and [#filter-pane](unit-metrics-lab.md#filter-pane "mention")
-* [#unit-metric-chart](unit-metrics-lab.md#unit-metric-chart "mention")
-* [#unit-metric-numerator-denominator-chart](unit-metrics-lab.md#unit-metric-numerator-denominator-chart "mention")
+* [#date-picker](unit-metrics-lab.md#date-picker "mention") and [#settings-pane](unit-metrics-lab.md#settings-pane "mention")
 
 ![Unit Metrics Control Pane](../../.gitbook/assets/unit-metrics-overview-1-top-pane.png)
 
@@ -36,7 +32,7 @@ Filter pane in Unit Metrics Overview designed for customizing unit metrics (edit
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
 {% endhint %}
 
-#### ![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4).png>)
 
 #### Unit Metric Chart
 

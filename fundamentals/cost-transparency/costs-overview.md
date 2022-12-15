@@ -16,7 +16,7 @@ This is the top pane of the page that includes:
 * [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
 * [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
-![Cost View Control Pane](<../../.gitbook/assets/image (22).png>)
+![Cost View Control Pane](../../.gitbook/assets/costs-overview-1.png)
 
 #### Date Picker
 
@@ -39,7 +39,7 @@ Filter pane is designed for a convenient filtering of AWS cost data and [creatin
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Screen Cast 2022-08-24 at 8.53.48 PM.gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/costs-overview-2.gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
 
 #### Absolute Cost Chart
 
@@ -49,7 +49,11 @@ Absolute cost chart with **current** and **previous** period spend vs. time line
 **Previous period** is defined as period of equal length directly proceeding the current period. E.g. if current period is June 17, 2022 - June 24, 2022, previous period is June 9, 2022 - June 16, 2022.
 {% endhint %}
 
-![Absolute Cost Chart](<../../.gitbook/assets/image (15).png>)
+The chart has setting for **Line** or **Bar** styles, and **Cumulative mode** (showing the cumulative data for current and previous month spend).
+
+Also the chart has [budgets.md](budgets.md "mention") functionality and [events-overlay.md](events-overlay.md "mention") (if enabled through [custom-data-api.md](../custom-data-api.md "mention")).
+
+![Absolute Cost Chart](../../.gitbook/assets/costs-overview-3.png)
 
 #### Absolute Cost Breakdown Chart
 

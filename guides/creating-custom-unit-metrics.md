@@ -22,7 +22,7 @@ Creating custom [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "me
 1. Navigate to [unit-metrics-lab.md](../fundamentals/unit-metrics/unit-metrics-lab.md "mention") section in [unit-metrics](../fundamentals/unit-metrics/ "mention") space in the menu to the left:
    * You can get there via several different paths:
      * From the menu pane at the left
-     * From the [summary-dashboard.md](../fundamentals/summary-dashboard.md "mention") by clicking "Create New Unit Metric"
+     * From the [summary-dashboard.md](../fundamentals/dashboards/summary-dashboard.md "mention") by clicking "Create New Unit Metric"
      * From the [unit-metrics-library.md](../fundamentals/unit-metrics/unit-metrics-library.md "mention") by clicking "Create New Metric"
        * A good practice is to explore the Library if the metric you want to create already exists
    * You will see a page with empty chart placeholders (Cost per Unit, Numerator, Denominator) as well as the settings pane to the right

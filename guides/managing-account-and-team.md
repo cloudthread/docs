@@ -19,7 +19,7 @@ Adding a budget to a Cost View allows to:
 1. Go to [cost-view-library.md](../fundamentals/cost-transparency/cost-view-library.md "mention") section in [cost-transparency](../fundamentals/cost-transparency/ "mention") space in the menu to the left:
    * You can get there via several different paths:
      * From the menu pane at the left
-     * From the [summary-dashboard.md](../fundamentals/summary-dashboard.md "mention") by clicking "View All" in the Cost Views section
+     * From the [summary-dashboard.md](../fundamentals/dashboards/summary-dashboard.md "mention") by clicking "View All" in the Cost Views section
      * From the [costs-overview.md](../fundamentals/cost-transparency/costs-overview.md "mention") section by clicking "Cost Views" at the top of the screen
 2. Choose the saved Cost View you want to assign budget to, and click into it, you will get to [costs-overview.md](../fundamentals/cost-transparency/costs-overview.md "mention") with you saved filters set
 3. Navigate to the [#absolute-cost-chart](../fundamentals/cost-transparency/costs-overview.md#absolute-cost-chart "mention") (the first one on the page) and click "Budget" button (with "+") at the right top corner of the chart
