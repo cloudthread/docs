@@ -14,6 +14,7 @@
 * [Setting Budgets](guides/managing-account-and-team.md)
 * [Creating Custom Dashboards](guides/creating-custom-dashboards.md)
 * [Ingesting Custom Data](guides/ingesting-custom-data.md)
+* [Setting Up Events Overlay](guides/ingesting-custom-data-1.md)
 * [Setting up Alerts and Reports](guides/setting-up-alerts-and-reports.md)
 * [Adding new Users](guides/managing-account-and-team-1.md)
 * [Setting up Teams](guides/setting-up-teams.md)
