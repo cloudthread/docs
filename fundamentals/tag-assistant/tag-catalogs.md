@@ -5,12 +5,15 @@
 It represents the setup interface for **Tag Catalog** creation and maintenance.
 
 {% hint style="warning" %}
-Tag Automation currently is supporting on **GitHub** and **Terraform** based Infrastructure as a Code (IaaC) environments.
+Tag Automation currently is supported on **GitHub** and **Terraform** based Infrastructure as a Code (IaaC) environments.
+{% endhint %}
+{% hint style="warning" %}
+You can also use our `GET /api/tag-catalog` endpoint directly via the developer API to create your own automation.
 {% endhint %}
 
-Connected to GitHub repository through [GitHub Actions](https://docs.github.com/en/actions), Tag Catalog allows to make sure all the Terraform builds in the repository get the tags outlined in the catalog. This allows to maintain consistent tagging and control it from a single place.
+Connected to a GitHub repository through [GitHub Actions](https://docs.github.com/en/actions), Tag Catalog allows to make sure all the Terraform builds in the repository get the tags outlined in the catalog. This allows to maintain consistent tagging and control it from a single place.
 
-GitHub Actions should be set up for the repo with a Cloudthread  **API Key** and **Actions Variable** matching the **Tag Catalog Key.** Based on the connection between GitHub and Cloudthread established this way, the tags from the catalog are getting propagated to the `.tf` build files in the repository: every time the action is run a PR adding new tags is created.
+GitHub Actions should be set up for the repo with a Cloudthread  **API Key** and **Tag Catalog Key** in Action Secrets. Based on the connection between GitHub and Cloudthread established this way, the tags from the catalog are getting propagated to the `.tf` build files in the repository: every time the action is run a PR adding new tags is created.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -29,10 +32,10 @@ The pane at the top of the page that includes major Tag Catalog actions:
 * Adding new API key
   * This is needed for connecting Cloudthread to GitHub repository
 * Synchronizing tags
-  * This grabs your current active cost allocation tags from Cost Explorer and retrieves values from the last 7 days. 
-  * These keys and values are available for tag catalog entries.
-  * **If you want to add a new key to a tag catalog, you must first add it as a cost allocation tag in AWS.**
-  * **Only AWS payer accounts have access to cost allocation tags - you must integrate at least one pay account to use Tag Catalogs**
+  * This syncs your current active cost allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated payer AWS accounts 
+  * These keys and values are then available for tag catalog entrie
+  * **If you want to add a new key to a tag catalog, you must first add it as a Cost Allocation tag in AWS.**
+  * **Only AWS payer accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs**
 
 #### Tag Catalogs Table
 

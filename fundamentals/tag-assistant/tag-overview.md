@@ -1,6 +1,6 @@
 # Tag Overview
 
-**Tag Overview** is an section of an app containing analytics around tagging compliance.
+**Tag Overview** is a section of an app containing analytics around tagging compliance.
 
 {% hint style="info" %}
 **Tagging** is one of the foundations of cloud cost management supporting all the major phases of [FinOps cycle](https://www.finops.org/framework/phases/) (inform -> optimize -> operate).
