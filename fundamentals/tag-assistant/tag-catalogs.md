@@ -32,6 +32,7 @@ The pane at the top of the page that includes major Tag Catalog actions:
   * This grabs your current active cost allocation tags from Cost Explorer and retrieves values from the last 7 days. 
   * These keys and values are available for tag catalog entries.
   * **If you want to add a new key to a tag catalog, you must first add it as a cost allocation tag in AWS.**
+  * **Only AWS payer accounts have access to cost allocation tags - you must integrate at least one pay account to use Tag Catalogs**
 
 #### Tag Catalogs Table
 
