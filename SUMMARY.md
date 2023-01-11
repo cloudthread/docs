@@ -16,6 +16,7 @@
 * [Ingesting Custom Data](guides/ingesting-custom-data.md)
 * [Setting Up Events Overlay](guides/ingesting-custom-data-1.md)
 * [Setting up Alerts and Reports](guides/setting-up-alerts-and-reports.md)
+* [Setting up Tag Catalog](guides/setting-up-tag-catalog.md)
 * [Adding new Users](guides/managing-account-and-team-1.md)
 * [Setting up Teams](guides/setting-up-teams.md)
 
@@ -40,6 +41,9 @@
   * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)
   * [Unit Metrics Lab](fundamentals/unit-metrics/unit-metrics-lab.md)
   * [Unit Metrics Library](fundamentals/unit-metrics/unit-metrics-library.md)
+* [Tag Assistant](fundamentals/tag-assistant/README.md)
+  * [Tag Overview](fundamentals/tag-assistant/tag-overview.md)
+  * [Tag Catalogs](fundamentals/tag-assistant/tag-catalogs.md)
 * [Notifications](fundamentals/notifications/README.md)
   * [Alerts](fundamentals/notifications/alerts.md)
   * [Reports](fundamentals/notifications/reports.md)

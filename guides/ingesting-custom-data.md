@@ -14,4 +14,4 @@ Adding a custom data integration allows to:
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>
 
 1. Please, refer to the [API](https://app.gitbook.com/o/TmVItW5TwUC23RxcuDg9/s/KuhDuXL0YPX22VMOHZWV/ "mention") documentation for detailed instructions on how to setup a data stream
-2. Once you have set up the data stream, you will be able to see the **custom data stream token** in the [#settings-pane](../fundamentals/unit-metrics/unit-metrics-lab.md#settings-pane "mention") of [unit-metrics-lab.md](../fundamentals/unit-metrics/unit-metrics-lab.md "mention") (undr Custom data source)
+2. Once you have set up the data stream, you will be able to see the **custom data stream token** in the [#settings-pane](../fundamentals/unit-metrics/unit-metrics-lab.md#settings-pane "mention") of [unit-metrics-lab.md](../fundamentals/unit-metrics/unit-metrics-lab.md "mention") (under Custom data source)

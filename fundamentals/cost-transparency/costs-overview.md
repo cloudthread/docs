@@ -4,6 +4,14 @@
 
 ### Key Features
 
+[#cost-view-control-pane](costs-overview.md#cost-view-control-pane "mention")
+
+[#absolute-cost-chart](costs-overview.md#absolute-cost-chart "mention")
+
+[#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
+
+[#tag-analyzer](costs-overview.md#tag-analyzer "mention")
+
 #### Cost View Control Pane
 
 This is the top pane of the page that includes:
@@ -12,9 +20,6 @@ This is the top pane of the page that includes:
 * Filter indicator
 * **Delete**, **save as new** and **save changes** buttons
 * [#date-picker](costs-overview.md#date-picker "mention") and [#filter-pane](costs-overview.md#filter-pane "mention")
-* [#absolute-cost-chart](costs-overview.md#absolute-cost-chart "mention")
-* [#absolute-cost-breakdown-chart](costs-overview.md#absolute-cost-breakdown-chart "mention")
-* [#tag-analyzer](costs-overview.md#tag-analyzer "mention")
 
 ![Cost View Control Pane](../../.gitbook/assets/costs-overview-1.png)
 
@@ -40,6 +45,10 @@ Cloudthread allows for complex filtering of AWS cost data across **Account**, **
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/costs-overview-2.gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
+
+{% hint style="info" %}
+Filtering includes **regular expressions**.
+{% endhint %}
 
 #### Absolute Cost Chart
 
