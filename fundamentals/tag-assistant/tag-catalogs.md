@@ -34,7 +34,7 @@ The pane at the top of the page that includes major Tag Catalog actions:
 * Synchronizing tags
   * This syncs your current active AWS Cost Allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated **AWS Master Accounts** 
   * These keys and values are then available for tag catalog tag key value pairs
-  * **If you want to add a new key to a tag catalog, you must first add it as a Cost Allocation tag in AWS.**
+  * **If you want to add a new key to a tag catalog, you must first add it as a Cost Allocation tag in AWS**
   * **Only AWS Master Accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs**
 
 #### Tag Catalogs Table
