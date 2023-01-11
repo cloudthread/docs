@@ -8,7 +8,7 @@ Cloudthread allows to automate tagging of Terraform-created resources through th
 Adding a Tag Catalog entry allows to:
 
 * **Make** **sure** no AWS resources without proper tags from a centrally maintained tag repository are brought up by Terraform builds
-* **Change** existing tags for a new ones globally
+* **Change** existing tags for a new AWS resources globally
 * **Track** the changes to the tag catalog
 {% endhint %}
 
@@ -20,8 +20,8 @@ Adding a Tag Catalog entry allows to:
 2.  Click 'Create New Catalog' and fill in the form
 
     ![](<../.gitbook/assets/image (27).png>)
-3. Generate an API token <a href="https://app.cloudthread.io/settings/api-keys">here</a>
-4. Add the following template GitHub action file a new `.github/workflows/tag-assistant.yml`
+3. Create API Key by clicking designated button or by going <a href="https://app.cloudthread.io/settings/api-keys">here</a>. **Admins only**
+4. Add the following GitHub action yaml file `.github/workflows/tag-assistant.yml`
 
 ```
 name: Tag Assistant
@@ -42,6 +42,6 @@ jobs:
           cloudthread-token: ${{ secrets.CLOUDTHREAD_TOKEN }}
 ```
 
-`terraform-path` should be the file path for where your Terraform project lives within the repo.
+`terraform-path` should be the file path for where your Terraform project lives within the repository.
 
-5. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repo Actions Secrets in the repo Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from Step 2, and `CLOUDTHREAD_TOKEN` set to the Api Key generated in Step 3.
+5. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repository Actions Secrets in the repository Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from Step 2, and `CLOUDTHREAD_TOKEN` set to the Api Key generated in Step 3.
