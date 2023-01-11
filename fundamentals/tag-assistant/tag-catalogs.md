@@ -28,14 +28,14 @@ The pane at the top of the page that includes major Tag Catalog actions:
 
 * Adding new Tag Catalog
   * This creates a new tag catalog
-  * The idea is that one tag catalog covers one repository, so that different repositories can be getting different tags
+  * The idea is that one tag catalog covers one repository, so that different repositories can be tagged differently
 * Adding new API key
-  * This is needed for connecting Cloudthread to GitHub repository
+  * This is needed for fetching tag catalog from the GitHub repository
 * Synchronizing tags
-  * This syncs your current active cost allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated payer AWS accounts 
-  * These keys and values are then available for tag catalog entrie
+  * This syncs your current active AWS Cost Allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated **AWS Master Accounts** 
+  * These keys and values are then available for tag catalog tag key value pairs
   * **If you want to add a new key to a tag catalog, you must first add it as a Cost Allocation tag in AWS.**
-  * **Only AWS payer accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs**
+  * **Only AWS Master Accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs**
 
 #### Tag Catalogs Table
 
