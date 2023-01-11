@@ -44,5 +44,4 @@ jobs:
 
 `terraform-path` should be the file path for where your Terraform project lives within the repo.
 
-4. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repo Actions Secrets in the repo Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from Step 2, and `CLOUDTHREAD_TOKEN` set to the Api Key generated in Step 3.
-
+5. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repo Actions Secrets in the repo Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from Step 2, and `CLOUDTHREAD_TOKEN` set to the Api Key generated in Step 3.

@@ -29,6 +29,9 @@ The pane at the top of the page that includes major Tag Catalog actions:
 * Adding new API key
   * This is needed for connecting Cloudthread to GitHub repository
 * Synchronizing tags
+  * This grabs your current active cost allocation tags from Cost Explorer and retrieves values from the last 7 days. 
+  * These keys and values are available for tag catalog entries.
+  * **If you want to add a new key to a tag catalog, you must first add it as a cost allocation tag in AWS.**
 
 #### Tag Catalogs Table
 
