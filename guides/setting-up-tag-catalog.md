@@ -20,7 +20,7 @@ Adding a Tag Catalog entry allows to:
 2.  Click 'Create New Catalog' and fill in the form
 
     ![](<../.gitbook/assets/image (27).png>)
-3. Create API Key by clicking designated button or by going <a href="https://app.cloudthread.io/settings/api-keys">here</a>. **Only admins can generate API keys**
+3. Create API Key by clicking designated button - **only admins can generate API keys**
 4. Add the following GitHub action yaml file `.github/workflows/tag-assistant.yml` to your repository
 
     ```
