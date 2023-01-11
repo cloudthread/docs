@@ -20,28 +20,28 @@ Adding a Tag Catalog entry allows to:
 2.  Click 'Create New Catalog' and fill in the form
 
     ![](<../.gitbook/assets/image (27).png>)
-3. Create API Key by clicking designated button or by going <a href="https://app.cloudthread.io/settings/api-keys">here</a>. **Admins only**
-4. Add the following GitHub action yaml file `.github/workflows/tag-assistant.yml`
+3. Create API Key by clicking designated button or by going <a href="https://app.cloudthread.io/settings/api-keys">here</a>. **Only admins can generate API keys**
+4. Add the following GitHub action yaml file `.github/workflows/tag-assistant.yml` to your repository
 
-```
-name: Tag Assistant
+    ```
+    name: Tag Assistant
 
-on:
-  pull_request
+    on:
+    pull_request
 
-jobs:
-  tag-assistant-job:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run CloudThread Tag Assistant
-        uses: cloudthread/tag-assistant-action@v2
-        with:
-          terraform-path: TBD (optional)
-          catalog-key: ${{ secrets.CLOUDTHREAD_CATALOG_KEY }}
-          cloudthread-token: ${{ secrets.CLOUDTHREAD_TOKEN }}
-```
+    jobs:
+    tag-assistant-job:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+        - name: Run CloudThread Tag Assistant
+            uses: cloudthread/tag-assistant-action@v2
+            with:
+            terraform-path: TBD (optional)
+            catalog-key: ${{ secrets.CLOUDTHREAD_CATALOG_KEY }}
+            cloudthread-token: ${{ secrets.CLOUDTHREAD_TOKEN }}
+    ```
 
-`terraform-path` should be the file path for where your Terraform project lives within the repository.
+    `terraform-path` should be the file path for where your Terraform project lives within the repository.
 
 5. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repository Actions Secrets in the repository Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from Step 2, and `CLOUDTHREAD_TOKEN` set to the Api Key generated in Step 3.
