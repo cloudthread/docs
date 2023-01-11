@@ -8,7 +8,7 @@ It represents the setup interface for **Tag Catalog** creation and maintenance.
 Tag Automation currently is supported on **GitHub** and **Terraform** based Infrastructure as a Code (IaaC) environments.
 {% endhint %}
 {% hint style="warning" %}
-You can also use our `GET /api/tag-catalog` endpoint directly via the developer API to create your own automation.
+You can also use our `/api/tag-catalog` endpoint directly <a href="https://docs.cloudthread.io/v/api-docs/reference/api-reference/tag_catalog">here</a> via the developer API to create your own automation.
 {% endhint %}
 
 Connected to a GitHub repository through [GitHub Actions](https://docs.github.com/en/actions), Tag Catalog allows to make sure all the Terraform builds in the repository get the tags outlined in the catalog. This allows to maintain consistent tagging and control it from a single place.
