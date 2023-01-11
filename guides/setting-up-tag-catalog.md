@@ -20,7 +20,7 @@ Adding a Tag Catalog entry allows to:
 2.  Click 'Create New Catalog' and fill in the form
 
     ![](<../.gitbook/assets/image (27).png>)
-3. Create API Key by clicking designated button - **only admins can generate API keys**
+3. Click 'Create API Key for Tag Assistant' and create an API key.  **Only admins can generate API keys**
 4. Add the following GitHub action yaml file `.github/workflows/tag-assistant.yml` to your repository
 
     ```
