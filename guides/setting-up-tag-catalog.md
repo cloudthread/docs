@@ -45,3 +45,5 @@ Adding a Tag Catalog entry allows to:
     - `terraform-path` should be the file path for where your Terraform project lives within the repository.
 
 5. Add the required `CLOUDTHREAD_CATALOG_KEY` and `CLOUDTHREAD_TOKEN` variables to your repository **Action Secrets** in the repository Settings page. `CLOUDTHREAD_CATALOG_KEY` should be set to the catalog key from **Step 2**, and `CLOUDTHREAD_TOKEN` set to the API Key generated in **Step 3.**
+
+6. Ensure **Action Workflow permissions** is set to `Read and write permission` in the repository Settings page.
