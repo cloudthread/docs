@@ -41,13 +41,13 @@ Date Picker is providing a convenient interface for setting the time dimension f
 Filter pane is designed for a convenient filtering of AWS cost data and [creating-custom-cost-views.md](../../guides/creating-custom-cost-views.md "mention").
 
 {% hint style="success" %}
-Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
+Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses and **IN** and **LIKE** conditions.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/costs-overview-2.gif" alt=""><figcaption><p>Filter Pane</p></figcaption></figure>
 
 {% hint style="info" %}
-Filtering includes **regular expressions**.
+Filtering includes [regular-expressions.md](regular-expressions.md "mention").
 {% endhint %}
 
 #### Absolute Cost Chart
