@@ -115,18 +115,16 @@ Resources:
             Roles:
                 - Ref: "CloudthreadRole"
 
-    RolePoliciesPricing:
+    RolePoliciesResourceTagging:
         Type: "AWS::IAM::Policy"
         Properties:
-            PolicyName: "cloudthread-pricing-access"
+            PolicyName: "cloudthread-resource-tagging-access"
             PolicyDocument:
                 Version: "2012-10-17"
                 Statement:
                     - Effect: "Allow"
                       Action:
-                        - "pricing:DescribeServices"
-                        - "pricing:GetAttributeValues"
-                        - "pricing:GetProducts"
+                        - "tag:*"
                       Resource:
                         - "*"
             Roles:
@@ -175,7 +173,7 @@ Resources:
                 Statement:
                     - Effect: "Allow"
                       Action:
-                        - "cur:*"
+                        - "cur:DescribeReportDefinitions"
                       Resource:
                         - "*"
                     - Effect: "Allow"
@@ -280,7 +278,7 @@ Resources:
         - RolePoliciesTrustedAdvisor
         - RolePoliciesOrganizataion
         - RolePoliciesCostExplorer
-        - RolePoliciesPricing
+        - RolePoliciesResourceTagging
         - RolePoliciesECS
         - RolePoliciesEC2
         - RolePoliciesCostandUsageReport
