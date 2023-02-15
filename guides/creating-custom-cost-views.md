@@ -37,6 +37,7 @@ Creating custom [cost-view.md](../fundamentals/cost-transparency/cost-view.md "m
      * 6 for **AWS**: Account, Region, Service and Tag, Usage Type, Operation
      * 4 for **Kubernetes**: Cluster, Namespace, Pod, Label (available only for Amazon EC2 service)
    * You can add filter conditions in buckets, where each bucket represents AND condition for lines of different dimensions inside, and separate buckets are connected by OR condition
+     * [regular-expressions.md](../fundamentals/cost-transparency/regular-expressions.md "mention") are allowed in filters
    * More on filtering functionality in [#filter-pane](../fundamentals/cost-transparency/costs-overview.md#filter-pane "mention") section
    * Click "Apply" button to apply the filters
 4. Check the **charts** if they represent the data you were looking for

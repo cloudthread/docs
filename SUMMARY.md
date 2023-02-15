@@ -37,6 +37,7 @@
   * [Movers and Shakers Snapshot](fundamentals/cost-transparency/movers-and-shakers-snapshot.md)
   * [Low Utilization Detection](fundamentals/cost-transparency/low-utilization-detection.md)
   * [Events Overlay](fundamentals/cost-transparency/events-overlay.md)
+  * [Regular Expressions](fundamentals/cost-transparency/regular-expressions.md)
 * [Unit Economics](fundamentals/unit-metrics/README.md)
   * [Unit Metrics](fundamentals/unit-metrics/unit-metric.md)
   * [Unit Metrics Lab](fundamentals/unit-metrics/unit-metrics-lab.md)
