@@ -9,6 +9,8 @@ Parameters:
         Description: DO NOT CHANGE! Token to validate Cloudthread in this environment.
 Resources:
     StackSet:
+        DependsOn:
+        - CloudthreadRootRole
         Type: AWS::CloudFormation::StackSet
         Properties:
           AutoDeployment:
@@ -20,15 +22,15 @@ Resources:
           StackInstancesGroup:
             - DeploymentTargets:
                 OrganizationalUnitIds:
-                  - foobar
+                  - foo
               Regions:
                 - us-east-1
-          StackSetName: CloudthreadCloudwatchCollection
+          StackSetName: CloudthreadCostOptimization
           TemplateBody: !Sub
             - |
               AWSTemplateFormatVersion: "2010-09-09"         
               Resources:
-                  CloudthreadRole:
+                  CloudthreadCostOptimizationRole:
                       Type: "AWS::IAM::Role"
                       Properties:
                           AssumeRolePolicyDocument:
@@ -36,18 +38,31 @@ Resources:
                               Statement:
                                   - Effect: "Allow"
                                     Principal:
-                                      AWS: "arn:aws:iam::XXXXXXXX:root"
+                                      AWS: bar
                                     Action:
                                       - "sts:AssumeRole"
                                     Condition:
                                       StringEquals:
-                                          sts:ExternalId: ${ExternalId}
+                                          sts:ExternalId: $${{ExternalId}}
                           Path: "/"
-
-                  RolePoliciesCloudwatch:
+                  RolePoliciesListPermissions:
                       Type: "AWS::IAM::Policy"
                       Properties:
-                          PolicyName: "cloudthread-cloudwatch-access"
+                          PolicyName: "cloudthread-list-permissions-access"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "iam:ListRolePolicies"
+                                    Resource:
+                                      - !GetAtt CloudthreadCostOptimizationRole.Arn
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesReadCloudwatch:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-read-cloudwatch-access"
                           PolicyDocument:
                               Version: "2012-10-17"
                               Statement:
@@ -58,140 +73,249 @@ Resources:
                                     Resource:
                                       - "*"
                           Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesAlias:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectEC2Opportunities:
                       Type: "AWS::IAM::Policy"
                       Properties:
-                          PolicyName: "cloudthread-account-alias-access"
+                          PolicyName: "cloudthread-detect-ec2-opportunities"
                           PolicyDocument:
                               Version: "2012-10-17"
                               Statement:
                                   - Effect: "Allow"
                                     Action:
-                                      - "iam:ListAccountAliases"
+                                      - "ec2:Describe*"
+                                      - "ec2:Get*"
+                                      - "ec2:List*"
+                                      - "ec2:Search*"
+                                      - "autoscaling:Describe*"
+                                      - "autoscaling:Get*"
                                     Resource:
                                       - "*"
                           Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesTrustedAdvisor:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectRDSOpportunities:
                       Type: "AWS::IAM::Policy"
                       Properties:
-                          PolicyName: "cloudthread-trustedadvisor-access"
+                          PolicyName: "cloudthread-detect-rds-opportunities"
                           PolicyDocument:
                               Version: "2012-10-17"
                               Statement:
                                   - Effect: "Allow"
                                     Action:
-                                      - "support:DescribeTrustedAdvisorCheckRefreshStatuses"
+                                      - "rds:Describe*"
+                                      - "rds:Download*"
+                                      - "rds:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectS3Opportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-s3-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "s3:Describe*"
+                                      - "s3:Get*"
+                                      - "s3:List*"
+                                      - "s3-outposts:Get*"
+                                      - "s3-outposts:List*"
+                                      - "s3-object-lambda:Get*"
+                                      - "s3-object-lambda:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectDynamoDBOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-dynamodb-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "dynamodb:Describe*"
+                                      - "dynamodb:Get*"
+                                      - "dynamodb:List*"
+                                      - "dax:Describe*"
+                                      - "dax:Get*"
+                                      - "dax:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectLambdaOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-lambda-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "lambda:Get*"
+                                      - "lambda:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectStepFunctionOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-stepfunction-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "states:Describe*"
+                                      - "states:Get*"
+                                      - "states:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectECSOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-ecs-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "ecs:Describe*"
+                                      - "ecs:Get*"
+                                      - "ecs:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectELBOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-elb-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "elasticloadbalancing:Describe*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectElasticCacheOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-ec-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "elasticache:Describe*"
+                                      - "elasticache:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectOpenSearchOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-opensearch-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "aoss:Describe*"
+                                      - "aoss:Get*"
+                                      - "aoss:List*"
+                                      - "es:Describe*"
+                                      - "es:Get*"
+                                      - "es:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectTrustedAdvisorOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-trustedadvisor-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
                                       - "support:DescribeTrustedAdvisorCheckResult"
-                                      - "support:RefreshTrustedAdvisorCheck"
-                                      - "support:DescribeTrustedAdvisorCheckSummaries"
                                       - "support:DescribeTrustedAdvisorChecks"
                                     Resource:
                                       - "*"
                           Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesOrganizataion:
-                      Type: "AWS::IAM::Policy"
-                      Properties:
-                          PolicyName: "cloudthread-organization-access"
-                          PolicyDocument:
-                              Version: "2012-10-17"
-                              Statement:
-                                  - Effect: "Allow"
-                                    Action:
-                                      - "organizations:DescribeOrganization"
-                                      - "organizations:ListRoots"
-                                    Resource:
-                                      - "*"
-                          Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesCostExplorer:
-                      Type: "AWS::IAM::Policy"
-                      Properties:
-                          PolicyName: "cloudthread-costexplorer-access"
-                          PolicyDocument:
-                              Version: "2012-10-17"
-                              Statement:
-                                  - Effect: "Allow"
-                                    Action:
-                                      - "ce:*"
-                                    Resource:
-                                      - "*"
-                          Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesResourceTagging:
-                      Type: "AWS::IAM::Policy"
-                      Properties:
-                          PolicyName: "cloudthread-resource-tagging-access"
-                          PolicyDocument:
-                              Version: "2012-10-17"
-                              Statement:
-                                  - Effect: "Allow"
-                                    Action:
-                                      - "tag:*"
-                                    Resource:
-                                      - "*"
-                          Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesECS:
-                      Type: "AWS::IAM::Policy"
-                      Properties:
-                          PolicyName: "cloudthread-ecs-access"
-                          PolicyDocument:
-                              Version: "2012-10-17"
-                              Statement:
-                                  - Effect: "Allow"
-                                    Action:
-                                      - "ecs:ListClusters"
-                                      - "ecs:ListServices"
-                                      - "ecs:ListTasks"
-                                      - "ecs:DescribeTasks"
-                                    Resource:
-                                      - "*"
-                          Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RolePoliciesEC2:
-                      Type: "AWS::IAM::Policy"
-                      Properties:
-                          PolicyName: "cloudthread-ec2-access"
-                          PolicyDocument:
-                              Version: "2012-10-17"
-                              Statement:
-                                  - Effect: "Allow"
-                                    Action:
-                                      - "ec2:DescribeInstances"
-                                      - "ec2:DescribeVolumes"
-                                    Resource:
-                                      - "*"
-                          Roles:
-                              - Ref: "CloudthreadRole"
-
-                  RegisterRole:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RegisterCostOptimizationRole:
                       DependsOn:
-                      - CloudthreadRole
-                      - RolePoliciesCloudwatch
-                      - RolePoliciesAlias
-                      - RolePoliciesTrustedAdvisor
-                      - RolePoliciesOrganizataion
-                      - RolePoliciesCostExplorer
-                      - RolePoliciesResourceTagging
-                      - RolePoliciesECS
-                      - RolePoliciesEC2
+                      - CloudthreadCostOptimizationRole
+                      - RolePoliciesListPermissions
+                      - RolePoliciesReadCloudwatch
+                      - RolePoliciesDetectEC2Opportunities
+                      - RolePoliciesDetectRDSOpportunities
+                      - RolePoliciesDetectS3Opportunities
+                      - RolePoliciesDetectDynamoDBOpportunities
+                      - RolePoliciesDetectLambdaOpportunities
+                      - RolePoliciesDetectStepFunctionOpportunities
+                      - RolePoliciesDetectECSOpportunities
+                      - RolePoliciesDetectELBOpportunities
+                      - RolePoliciesDetectElasticCacheOpportunities
+                      - RolePoliciesDetectOpenSearchOpportunities
+                      - RolePoliciesDetectTrustedAdvisorOpportunities
                       Type: Custom::RegisterRole
                       Properties:
-                          ServiceToken: foobar
+                          ServiceToken: bar
                           AwsAccountId:
                               Ref: AWS::AccountId
-                          RoleArn: !GetAtt CloudthreadRole.Arn
-                          CloudthreadStackToken: ${CloudthreadStackToken}
-                          ExternalId: ${ExternalId}
+                          RoleName:
+                              Ref: CloudthreadCostOptimizationRole
+                          RoleArn: !GetAtt CloudthreadCostOptimizationRole.Arn
+                          RoleArnRoot: $${{RoleArnRoot}}
+                          CloudthreadStackToken: $${{CloudthreadStackToken}}
+                          CloudthreadStackType: cost-optimization
+                          ExternalId: $${{ExternalId}}
             - CloudthreadStackToken: !Ref CloudthreadStackToken
               ExternalId: !Ref ExternalId
+              RoleArnRoot: !GetAtt CloudthreadRootRole.Arn
+    CloudthreadRootRole:
+        Type: "AWS::IAM::Role"
+        Properties:
+            AssumeRolePolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Principal:
+                        AWS: foo
+                      Action:
+                        - "sts:AssumeRole"
+                      Condition:
+                        StringEquals:
+                            sts:ExternalId:
+                                Ref: ExternalId
+            Path: "/"
+    RolePoliciesDescribeAccount:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-describe-account-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "organizations:DescribeAccount"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadRootRole"
