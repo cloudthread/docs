@@ -96,6 +96,10 @@ Choose this option if:
 
 <figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Once you are redirected to AWS Cloud Formation ([next step](connecting-aws-account.md#3.-redirect-to-aws)), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
+{% endhint %}
+
 #### b.  You have an existing Cost and Usage Report set up and want to use it
 
 <figure><img src="../.gitbook/assets/connecting-aws-account-7-existing-report.png" alt=""><figcaption></figcaption></figure>
@@ -126,6 +130,10 @@ b.2. You have many accounts managed by [AWS Organizations](https://docs.aws.amaz
 <figure><img src="../.gitbook/assets/connecting-aws-account-6-org-report-details.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+Once you are redirected to AWS Cloud Formation ([next step](connecting-aws-account.md#3.-redirect-to-aws)), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
+{% endhint %}
 
 {% hint style="info" %}
 Choosing an existing Cost and Usage Report for Cloudthread integration has an advantage of the **full historical data**, which will be missing in case of the new report creation. However, even with the new CUR the **historical backfill is possible**, and we will help you to arrange it with your AWS TAM.
@@ -162,6 +170,10 @@ If you chose [Use an existing Cost and Usage Report](connecting-aws-account.md#b
 
 {% hint style="danger" %}
 **Note:** In order for Cloudthread to work, [Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) (CUR) file needs to be set up in **us-east-1** region. CloudFormation stack has it preset, but if you change the region the stack won't work.
+{% endhint %}
+
+{% hint style="warning" %}
+If you used AWS Organizations setup options (a.2 and b.2 above), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
 {% endhint %}
 
 Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
