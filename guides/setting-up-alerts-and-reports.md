@@ -32,10 +32,10 @@ See [alerts.md](../fundamentals/notifications/alerts.md "mention") for alert exa
 1. Choose **Notification Center** menu item at the bottom part of the menu to the left
 2.  Navigate to **Alerts** section at the top of the screen, you will see the table listing all the alerts set up in your Cloudthread account
 
-    ![](<../.gitbook/assets/setting-up-alerts-and-reports-1-alerts-table (1).png>)
+    ![](../.gitbook/assets/setting-up-alerts-and-reports-1-alerts-table.png)
 3.  Click "Create New Alert" button at the top of the table, you will see the the form with alert settings
 
-    ![](<../.gitbook/assets/image (6) (1).png>)
+    ![](<../.gitbook/assets/image (20).png>)
 4. Choose [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") or [unit-metric.md](../fundamentals/unit-metrics/unit-metric.md "mention") that you want the alert to be applied to from the list
 5. Specify the alert type based on the threshold type you want to apply – Absolute or Relative
    * **Absolute** thresholds are associated with a specific, absolute number (e.g. alert when costs go above $10)

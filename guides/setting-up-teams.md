@@ -1,6 +1,6 @@
 # Setting up Teams
 
-Cloudthread platform allows to assign users to [teams.md](../fundamentals/settings/teams.md "mention") **** that have **global filters** enabled, i.e. every user belonging to the Team can see all the data filtered without an ability to remove the filtering.
+Cloudthread platform allows to assign users to [teams.md](../fundamentals/settings/teams.md "mention") that have **global filters** enabled, i.e. every user belonging to the Team can see all the data filtered without an ability to remove the filtering.
 
 This feature allows to restrict the access to the sensitive data across the complex organizational structure.
 

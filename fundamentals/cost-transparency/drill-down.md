@@ -6,4 +6,4 @@
 Drill-down currently allows for **Account -> Region -> Service -> Usage Type -> Operation -> Resource** level sequence.
 {% endhint %}
 
-![Drill-Down feature](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.03.32 PM.gif>)
+![Drill-Down feature](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.23.21 PM.gif>)

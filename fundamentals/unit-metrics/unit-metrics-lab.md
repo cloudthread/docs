@@ -22,7 +22,7 @@ This is the top pane of the page that includes:
 
 #### Date Picker
 
-![](<../../.gitbook/assets/date-picker (2).png>)
+![](<../../.gitbook/assets/date-picker (1) (2).png>)
 
 #### Settings Pane
 
@@ -32,7 +32,7 @@ Filter pane in Unit Metrics Overview designed for customizing unit metrics (edit
 Cloudthread allows for complex filtering of AWS cost data across **Account**, **Region**, **Service** and **Tag** dimensions. Both **AND** and **OR** filter conditions are supported as well as **IS** and **IS NOT** clauses.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (2).png>)
 
 #### Unit Metric Chart
 
@@ -44,7 +44,7 @@ Unit Metric cost chart with **current** and **previous** period spend vs. time l
 * If current period is May 1, 2022 - May 7, 2022, previous period is April 24, 2022 - April 30, 2022
 {% endhint %}
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (1) (2).png>)
 
 #### Unit Metric Numerator/Denominator Chart
 

@@ -1,6 +1,6 @@
 # Setting Budgets
 
-As you are getting [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") created for various stakeholders (see [creating-custom-cost-views.md](creating-custom-cost-views.md "mention") guide for how-to) it is beneficial to have [budgets.md](../fundamentals/cost-transparency/budgets.md "mention") **** visible **** in case you are having such a process in your FinOps practice.
+As you are getting [cost-view.md](../fundamentals/cost-transparency/cost-view.md "mention") created for various stakeholders (see [creating-custom-cost-views.md](creating-custom-cost-views.md "mention") guide for how-to) it is beneficial to have [budgets.md](../fundamentals/cost-transparency/budgets.md "mention") visible in case you are having such a process in your FinOps practice.
 
 Cloudthread platform allows setting one budget per cost view and displaying it on the [#absolute-cost-chart](../fundamentals/cost-transparency/costs-overview.md#absolute-cost-chart "mention").
 

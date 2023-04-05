@@ -26,6 +26,12 @@ Cloudthread is using a delegated access role to read data from your account into
 * [CloudWatch](https://aws.amazon.com/cloudwatch/) metrics
 * [AWS Simple Storage](https://aws.amazon.com/s3) (S3)
   * To read saved CUR files
+* AWS Services (EC2, RDS, ElastiCache, OpenSearch, etc.)
+  * To generate usage optimization recommendations
+* [AWS Trusted Advisor](http://localhost:5000/s/Q8QqeF6WFPo2rNkc3ND6/the-basics/collections) (if enabled)
+  * To gather cost optimization recommendations suggested by AWS
+* [AWS Compute Optimizer](https://docs.aws.amazon.com/compute-optimizer/latest/ug/what-is-compute-optimizer.html)
+  * To gather compute optimization recommendations suggested by AWS
 
 {% hint style="info" %}
 In more detail, Cloudthread needs roughly **5 sets** of permissions / actions:
@@ -57,13 +63,15 @@ In order for Cloudthread start functioning and delivering value, AWS Management 
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to get connected to your AWS environment through either creating a new Cost and Usage Report (CUR) or using the existing one.
 
-![Connect Cloudthread via CF Stack](../.gitbook/assets/connecting-aws-account-1-cf-stack-page.png)
+<figure><img src="../.gitbook/assets/connecting-aws-account-1-cf-stack-page.png" alt=""><figcaption><p>Connect Cloudthread via CF Stack</p></figcaption></figure>
 
 ### 2. Choose an integration option
 
-#### a. Create a new Cost and Usage Report
+#### a. You do not have any existing Cost and Usage Report (or want to use a new one)
 
-This is a **default** option, choose it if:
+<figure><img src="../.gitbook/assets/connecting-aws-account-2-new-report.png" alt=""><figcaption></figcaption></figure>
+
+Choose this option if:
 
 * You **do not have** Cost and Usage Report set up for your AWS billing account
 * You **have** Cost and Usage Report set up for your AWS billing account, but it is not corresponding to the following settings:
@@ -71,14 +79,28 @@ This is a **default** option, choose it if:
   * **Parquet** file type
   * **Overwrite Report** file versioning
   * **Resource ID** level
-* You **have** Cost and Usage Report set up for your AWS billing account, but want a clean state for Cloudthread integration
-* You **do not know** if the Cost and Usage Report set up for your AWS billing account, or unsure about the settings – don't worry, **Cloudthread setup will not mess anything up**
+* You **have** Cost and Usage Report set up with settings above for your AWS billing account, but do not want to use it for some reason
 
-<figure><img src="../.gitbook/assets/connecting-aws-account-2-cf-stack-page-cur-not-exist.png" alt=""><figcaption><p>Integration through new Cost and Usage Report</p></figcaption></figure>
+**a.1. You have only one account to integrate**
 
-#### b. Use an existing Cost and Usage Report
+<figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
 
-Choose this option **only** if:
+
+
+**a.2. You have many accounts managed by** [**AWS Organizations**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+1. Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html)
+2. Proceed to CloudFormation stack setup
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-4-root-id.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+
+#### b.  You have an existing Cost and Usage Report set up and want to use it
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-7-existing-report.png" alt=""><figcaption></figcaption></figure>
+
+Choose this option if:
 
 * You **have** Cost and Usage Report set up for your AWS billing account, and it corresponds to the following settings:
   * **Hourly** time granularity
@@ -86,19 +108,28 @@ Choose this option **only** if:
   * **Overwrite Report** file versioning
   * **Resource ID** level
 
+b.1. You have only one account to integrate
+
+* Input the details of your Cost and Usage report
+* Proceed to CloudFormation stack setup
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-5-report-details.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+
+b.2. You have many accounts managed by [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+* Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html)
+* Input the details of your Cost and Usage report
+* Proceed to CloudFormation stack setup
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-6-org-report-details.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 Choosing an existing Cost and Usage Report for Cloudthread integration has an advantage of the **full historical data**, which will be missing in case of the new report creation. However, even with the new CUR the **historical backfill is possible**, and we will help you to arrange it with your AWS TAM.
 {% endhint %}
-
-<div>
-
-<figure><img src="../.gitbook/assets/connecting-aws-account-3-cf-stack-page-cur-exist.png" alt=""><figcaption><p>Existing Cost and Usage Report information</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/connecting-aws-account-4-cf-stack-page-cur-exist.png" alt=""><figcaption><p>Integration through new Cost and Usage Report</p></figcaption></figure>
-
-</div>
 
 {% hint style="info" %}
 More on the properties of CUR and where to find them:
@@ -135,24 +166,32 @@ If you chose [Use an existing Cost and Usage Report](connecting-aws-account.md#b
 
 Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
 
-![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-2.png)
+![AWS console after CF stack launch](../.gitbook/assets/connecting-aws-account-3-aws-cf-screen-2.png)
+
+<figure><img src="../.gitbook/assets/connecting-aws-account-8-success.png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Come back to Cloudthread App
 
 Once the initial setup is complete, you will be able to see first cost insights in the app.
 
-![Cloudthread App](../.gitbook/assets/connecting-aws-account-6-summary-dash.png)
+<figure><img src="../.gitbook/assets/connecting-aws-account-9-welcome.png" alt=""><figcaption><p>Cloudthread App Welcome</p></figcaption></figure>
 
 {% hint style="info" %}
-**"Initial" cost insights**
+AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours).
+{% endhint %}
 
-Cloudthread is using [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) API service to supply cost insights while more detailed AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours).
+<figure><img src="../.gitbook/assets/connecting-aws-account-10-welcome-dash.png" alt=""><figcaption><p>Cloudthread Inltial Dashboard</p></figcaption></figure>
+
+{% hint style="warning" %}
+Some sections of the app are grayed out right after the integration due to CUR integration timeline.&#x20;
 {% endhint %}
 
 This means that you'll have high level cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Once the CUR file is ready Cloudthread will **notify** you, and you will be able to see deeper insights on the platform.
 {% endhint %}
+
+![Cloudthread App](../.gitbook/assets/connecting-aws-account-11-dash.png)
 
 Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to **backfill** it.

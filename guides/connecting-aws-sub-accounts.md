@@ -33,7 +33,7 @@ Connecting sub-accounts to Cloudthread is important in order to:
 5. Login the AWS account you want to integrate
 6. Follow the steps for the CloudFormation stack creation similar to the ones described in [connecting-aws-account.md](connecting-aws-account.md "mention") guide
 
-<figure><img src="../.gitbook/assets/connecting-sub-account-1-single.gif" alt=""><figcaption><p>Connecting single AWS sub-account</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/connecting-sub-account-1-single (1).gif" alt=""><figcaption><p>Connecting single AWS sub-account</p></figcaption></figure>
 
 ### b. Connecting multiple Sub-Accounts
 

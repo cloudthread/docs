@@ -70,7 +70,7 @@ Absolute cost chart with the **additional** data dimension, but no previous peri
 
 This chart also has a data table attached to see the breakdown in more convenient way and control [drill-down.md](drill-down.md "mention").
 
-![Absolute cost breakdown chart](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.23.21 PM.gif>)
+![Absolute cost breakdown chart](<../../.gitbook/assets/Screen Cast 2022-05-03 at 8.03.32 PM.gif>)
 
 #### Tag Analyzer
 
