@@ -93,6 +93,40 @@ Resources:
                                       - "*"
                           Roles:
                               - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectComputeOptimizerOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-computeoptimizer-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "compute-optimizer:Describe*"
+                                      - "compute-optimizer:Get*"
+                                      - "compute-optimizer:List*"
+                                      - "compute-optimizer:Export*"
+                                      - "compute-optimizer:Update*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
+                  RolePoliciesDetectCostExplorerOpportunities:
+                      Type: "AWS::IAM::Policy"
+                      Properties:
+                          PolicyName: "cloudthread-detect-costexplorer-opportunities"
+                          PolicyDocument:
+                              Version: "2012-10-17"
+                              Statement:
+                                  - Effect: "Allow"
+                                    Action:
+                                      - "ce:Describe*"
+                                      - "ce:Get*"
+                                      - "ce:List*"
+                                    Resource:
+                                      - "*"
+                          Roles:
+                              - Ref: "CloudthreadCostOptimizationRole"
                   RolePoliciesDetectRDSOpportunities:
                       Type: "AWS::IAM::Policy"
                       Properties:
@@ -264,6 +298,8 @@ Resources:
                       - RolePoliciesListPermissions
                       - RolePoliciesReadCloudwatch
                       - RolePoliciesDetectEC2Opportunities
+                      - RolePoliciesDetectComputeOptimizerOpportunities
+                      - RolePoliciesDetectCostExplorerOpportunities
                       - RolePoliciesDetectRDSOpportunities
                       - RolePoliciesDetectS3Opportunities
                       - RolePoliciesDetectDynamoDBOpportunities
@@ -314,7 +350,8 @@ Resources:
                 Statement:
                     - Effect: "Allow"
                       Action:
-                        - "organizations:DescribeAccount"
+                        - "organizations:Describe*"
+                        - "organizations:List*"
                       Resource:
                         - "*"
             Roles:
