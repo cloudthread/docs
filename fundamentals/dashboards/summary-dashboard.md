@@ -1,3 +1,7 @@
+---
+description: App Section
+---
+
 # Summary Dashboard
 
 **Summary Dashboard** is a high-level overview of the cloud costs for integrated accounts. It serves as an entry point to Cloudthread platform.
@@ -6,7 +10,7 @@
 Summary Dashboard is a fixed pre-build **Dashboard** object that serves as a summary view with standard structure for all the users (the data can differ based on user data visibility restrictions).
 {% endhint %}
 
-Summary Dashboard has the following components:
+Summary Dashboard has the following **components**:
 
 * Total absolute spend trends
   * Total spend cards

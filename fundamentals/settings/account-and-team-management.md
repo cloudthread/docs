@@ -11,7 +11,7 @@ The user that creates your account will automatically be an **Admin**.
 **Users** have the ability to:
 
 * Use [cost-transparency](../cost-transparency/ "mention") and [unit-metrics](../unit-metrics/ "mention") features in full
-* Create [cost-view.md](../cost-transparency/cost-view.md "mention") and [unit-metric.md](../unit-metrics/unit-metric.md "mention") that are available to **all** other users
+* Create [cost-view.md](../cost-transparency/key-concepts/cost-view.md "mention") and [unit-metric.md](../unit-metrics/key-concepts/unit-metric.md "mention") that are available to **all** other users
 * Create [alerts.md](../notifications/alerts.md "mention") and [reports.md](../notifications/reports.md "mention") that will be delivered **only to them** via email and/or Slack
 
 ### **Admin**
@@ -22,5 +22,5 @@ The user that creates your account will automatically be an **Admin**.
 * Create [alerts.md](../notifications/alerts.md "mention") and [reports.md](../notifications/reports.md "mention") that can be delivered to **any** email, **any** Slack user, and **any** Slack channel
 
 {% hint style="success" %}
-See [managing-account-and-team-1.md](../../guides/managing-account-and-team-1.md "mention") for detailed instructions on how to invite new users.
+See [managing-account-and-team-1.md](../../guides/onboarding/managing-account-and-team-1.md "mention") for detailed instructions on how to invite new users.
 {% endhint %}

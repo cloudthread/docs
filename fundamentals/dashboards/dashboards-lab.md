@@ -1,9 +1,13 @@
+---
+description: App Section
+---
+
 # Dashboards Lab
 
 **Dashboards Lab** is an interface for creating [.](./ "mention").
 
 {% hint style="info" %}
-Refer to [creating-custom-dashboards.md](../../guides/creating-custom-dashboards.md "mention") guide to see how to create custom dashboards.
+Refer to [creating-custom-dashboards.md](../../guides/monitoring-cloud-costs/creating-custom-dashboards.md "mention") guide to see how to create custom dashboards.
 {% endhint %}
 
 ### Key Features
@@ -22,8 +26,8 @@ This is where you add and adjust widgets on the dashboard.
 {% hint style="info" %}
 As or now, there are two types of widgets:
 
-* [cost-view.md](../cost-transparency/cost-view.md "mention") line chart
-* [unit-metric.md](../unit-metrics/unit-metric.md "mention") line chart
+* [cost-view.md](../cost-transparency/key-concepts/cost-view.md "mention") line chart
+* [unit-metric.md](../unit-metrics/key-concepts/unit-metric.md "mention") line chart
 {% endhint %}
 
 In order to create widget, the following sequence of actions is required:

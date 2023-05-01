@@ -1,20 +1,24 @@
-# Data Collection
+# Pull Data Collection
 
 Cloudthread provides easy integrations for data sets across your environment. The information below explains different inegrations options to have Cloudthread pull or push data from your environment.
+
+<figure><img src="../../.gitbook/assets/settings-pull-data-collection-1.png" alt=""><figcaption></figcaption></figure>
 
 ## AWS
 
 Cloudthread's AWS integrations are all Cloudformation Stack based.
 
 There are four types of integration stacks Cloudthread provides:
+
 1. Master Account template with a New Cost and Usage Report
 2. Master Account template for an Existing Cost and Usage Report
-2. StackSet template
-3. Sub Account template
+3. StackSet template
+4. Sub Account template
 
 You can generate these templates in the Settings > Data Collection part of the platform. Please note that you must have already integrated a **Master Account** template in an organization root account to be able to use a **StackSet** template. **StackSet** templates require your organization root ID - which will be pre-filled based on the organization root account you decide to integrate.
 
-**Cloudthreat existing Cost and Usage report requirements**:
+**Cloudthread existing Cost and Usage report requirements**:
+
 1. Hourly time granularity
 2. Parquet file type
 3. Overwrite Report file versioning
@@ -46,12 +50,12 @@ Cloudthread requires a **Data Stream Token** to process incoming K8s ingestion r
 
 Our K8s EKS integration requires a data stream token to be generated with **Data Stream Type** `kubernetes` - generating this token will also generate the AWS Role Arn and External ID required for a K8s EKS integration.
 
-
 1. Generate a **Data Stream Token** with **Data Stream Type** `kubernetes` from the **Settings** tab
 2. Copy the generated data stream token, AWS credentials (Role Arn and External ID), and your Organiztion ID
-3. Add cloudhtread helm charts with: `helm repo add cloudthread  https://cloudthread.github.io/helm-charts/`
+3. Add cloudhtread helm charts with: `helm repo add cloudthread https://cloudthread.github.io/helm-charts/`
 4. Create a kubernetes namespace to run the exporter `kubectl create namespace cloudthread`
 5. Install kubernetes exporter with a command like this one:
+
 ```
 helm install kubex cloudthread/cloudtread-kubex  \
     --namespace cloudthread \

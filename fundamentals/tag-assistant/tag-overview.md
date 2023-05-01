@@ -1,4 +1,8 @@
-# Tag Overview
+---
+description: App Section
+---
+
+# Tags Overview
 
 **Tag Overview** is a section of an app containing analytics around tagging compliance.
 
@@ -10,10 +14,10 @@ You can learn about tagging in AWS in our [blog](https://www.cloudthread.io/blog
 
 ### Key Features
 
-* #### [#tag-overview-control-pane](tag-overview.md#tag-overview-control-pane "mention")
-* #### [#tag-key-selection-field](tag-overview.md#tag-key-selection-field "mention")
-* #### [#tag-coverage-overview-chart](tag-overview.md#tag-coverage-overview-chart "mention")
-* #### [#tag-coverage-breakdown-chart](tag-overview.md#tag-coverage-breakdown-chart "mention")
+* [#tag-overview-control-pane](tag-overview.md#tag-overview-control-pane "mention")
+* [#tag-key-selection-field](tag-overview.md#tag-key-selection-field "mention")
+* [#tag-coverage-overview-chart](tag-overview.md#tag-coverage-overview-chart "mention")
+* [#tag-coverage-breakdown-chart](tag-overview.md#tag-coverage-breakdown-chart "mention")
 
 #### Tag Overview Control Pane
 

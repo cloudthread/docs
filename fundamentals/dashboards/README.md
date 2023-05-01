@@ -2,9 +2,9 @@
 description: Feature focused on summary cost data presentation
 ---
 
-# Dashboards
+# Custom Dashboards
 
-**Dashboards** are collections of visualized data entities created on the platform: [cost-view.md](../cost-transparency/cost-view.md "mention") abd [unit-metric.md](../unit-metrics/unit-metric.md "mention").
+**Dashboards** are collections of visualized data entities created on the platform: [cost-view.md](../cost-transparency/key-concepts/cost-view.md "mention") abd [unit-metric.md](../unit-metrics/key-concepts/unit-metric.md "mention").
 
 Dashboards represent a shareable object within the platform – they can be created, saved, changed, deleted, shared and restricted.
 

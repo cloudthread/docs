@@ -3,7 +3,7 @@
 **Reports** are detailed notifications sent on schedule.
 
 {% hint style="info" %}
-Cloudthread supports **e-mail** and **Slack** reports. See [setting-up-alerts-and-reports.md](../../guides/setting-up-alerts-and-reports.md "mention") for setup instructions.
+Cloudthread supports **e-mail** and **Slack** reports. See [setting-up-alerts-and-reports.md](../../guides/monitoring-cloud-costs/setting-up-alerts-and-reports.md "mention") for setup instructions.
 {% endhint %}
 
 {% hint style="success" %}
