@@ -18,6 +18,8 @@ Connecting cloud environments is essential for Cloudthread to deliver insights a
 
 <figure><img src="../../.gitbook/assets/onboarding-2-setup.png" alt=""><figcaption></figcaption></figure>
 
+### AWS
+
 {% content-ref url="connecting-aws-account.md" %}
 [connecting-aws-account.md](connecting-aws-account.md)
 {% endcontent-ref %}
@@ -25,3 +27,7 @@ Connecting cloud environments is essential for Cloudthread to deliver insights a
 {% content-ref url="connecting-aws-sub-accounts.md" %}
 [connecting-aws-sub-accounts.md](connecting-aws-sub-accounts.md)
 {% endcontent-ref %}
+
+### GCP
+
+Coming soon.

@@ -44,7 +44,7 @@ The rows of the table are **selectable.** For the selected rows 3 actions are av
 * Assign To Thread
 * Archive Selected
 
-#### Create New Thread
+#### Create New Thread Button
 
 Redirects to a form for creating a new Thread (see [savings-threads.md](key-concepts/savings-threads.md "mention")) with selected opportunities.
 
@@ -70,5 +70,66 @@ Archived opportunities can be **restored** by clicking restore button in Actions
 
 ### Opportunity Details Page
 
+<figure><img src="../../.gitbook/assets/opportunity-explorer-2-details.png" alt=""><figcaption><p>Cloudthread Optimization Opportunity Details</p></figcaption></figure>
+
 By clicking on the **Opportunity ID** in the tables above, you will be redirected to **Opportunity Details Page** containing detailed context on the optimization opportunity. See [optimization-opportunities.md](key-concepts/optimization-opportunities.md "mention") for description of the context types.
 
+#### Assign To Thread Button
+
+Redirects to a form for adding current opportunity to an existing Thread (see [savings-threads.md](key-concepts/savings-threads.md "mention")).
+
+#### Create New Thread Button
+
+Redirects to a form for creating a new Thread (see [savings-threads.md](key-concepts/savings-threads.md "mention")) with current opportunity.
+
+#### Resolve Button
+
+Marks current opportunity as **Done** (see [status](key-concepts/optimization-opportunities.md#workflow-context)).
+
+#### Archive Button
+
+Marks current opportunity as **Archived** (see [status](key-concepts/optimization-opportunities.md#workflow-context)).
+
+#### Savings Potential Card
+
+[Estimated monthly savings](key-concepts/optimization-opportunities.md#estimated-savings) expected from opportunity implementation.
+
+#### Difficulty Card
+
+Opportunity [difficulty](key-concepts/optimization-opportunities.md#difficulty).
+
+#### Resource Details Cards
+
+Major [details](key-concepts/optimization-opportunities.md#resource-context) of cloud resource.
+
+#### Recommendation Details Card
+
+Recommendation [context](key-concepts/optimization-opportunities.md#recommendation-context).
+
+#### Resource Cost Chart
+
+The chart with the cost of resource over time.
+
+#### Resource Context Section
+
+Detailed context for the resource.
+
+#### Usage Context Section
+
+Enriched context for resource usage.
+
+#### Resource Details Section
+
+Raw JSON for resource details.
+
+{% hint style="success" %}
+JSON is great for copying over and extracting the relevant information by **engineers**.&#x20;
+{% endhint %}
+
+#### Opportunity Full Metadata Section
+
+Raw JSON for recommendation details.
+
+{% hint style="success" %}
+JSON is great for copying over and extracting the relevant information by **engineers**.&#x20;
+{% endhint %}

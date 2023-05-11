@@ -10,3 +10,16 @@ Adding a Tag Catalog entry allows to:
 * **Slicing** the cost data
 * **Allocating** the spend to [teams.md](../../fundamentals/settings/teams.md "mention")
 {% endhint %}
+
+## Detailed instructions
+
+1. Navigate to [rule-editor.md](../../fundamentals/cost-transparency/rule-editor.md "mention") section in the menu to the left
+2. Choose costs source from [#costs-source-dropdown](../../fundamentals/cost-transparency/rule-editor.md#costs-source-dropdown "mention")
+3. Select the first Split Dimension from [#split-dimension-dropdown](../../fundamentals/cost-transparency/rule-editor.md#split-dimension-dropdown "mention")
+4. Set the first value for the split dimension
+   * By default the two-way split is created: the dimension with the value you choose (e.g. Region = us-east-1) and Other
+5. Add another value for the split dimension by clicking "Add child" and choosing the value
+   * Other split value stays
+6. Add Rule Tags by clicking "Add rule tags" and defining new tag key and tag value
+   * This is used for Custom Rule Tags definition – these tags can be used in filters across [cost-transparency](../../fundamentals/cost-transparency/ "mention") features
+7. Add another split to any of the values of the split dimension, repeat 4-6

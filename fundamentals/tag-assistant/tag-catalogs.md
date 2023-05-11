@@ -22,26 +22,32 @@ GitHub Actions should be set up for the repo with a Cloudthread **API Key** and 
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-### Key Features
+## Key Features
 
-* [#tag-catalogs-control-pane](tag-catalogs.md#tag-catalogs-control-pane "mention")
-* [#tag-catalogs-table](tag-catalogs.md#tag-catalogs-table "mention")
+### Synchronize Tags Button
 
-#### Tag Catalogs Control Pane
+* This syncs your current active AWS Cost Allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated **AWS Master Accounts**
+* These keys and values are then available for tag catalog tag key value pairs
 
-The pane at the top of the page that includes major Tag Catalog actions:
+{% hint style="warning" %}
+If you want to add a new key to a tag catalog, you must first add it as a **Cost Allocation Tag** in AWS.
 
-* Adding new Tag Catalog
-  * This creates a new tag catalog
-  * The idea is that one tag catalog covers one repository, so that different repositories can be tagged differently
-* Adding new API key
-  * This is needed for fetching tag catalog from the GitHub repository
-* Synchronizing tags
-  * This syncs your current active AWS Cost Allocation tags from Cost Explorer and retrieves values from the last 7 days over all integrated **AWS Master Accounts**
-  * These keys and values are then available for tag catalog tag key value pairs
-  * **If you want to add a new key to a tag catalog, you must first add it as a Cost Allocation tag in AWS**
-  * **Only AWS Master Accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs**
+Only AWS Master Accounts have access to cost allocation tags - you must integrate at least one payer AWS account to use Tag Catalogs.
+{% endhint %}
 
-#### Tag Catalogs Table
+### Create API Key for Tag Assistant Button
+
+This is needed for fetching tag catalog from the GitHub repository. Clicking the button redirects to [api-keys.md](../settings/api-keys.md "mention") settings page.
+
+### Create New Catalog Button
+
+This creates a new Tags Catalog. The idea is that **one tag catalog covers one repository**, so that different repositories can be tagged differently.
+
+<figure><img src="../../.gitbook/assets/tag-catalog-1-create-new.png" alt="" width="375"><figcaption></figcaption></figure>
+
+### Tags Catalog Table
 
 This is the table containing tag Catalogs. It allows to set the tag key-value pairs within the Tag Catalog, saving the catalog state and resetting the Catalog.
+
+<figure><img src="../../.gitbook/assets/tag-catalog-2-tag-table.png" alt=""><figcaption></figcaption></figure>
+

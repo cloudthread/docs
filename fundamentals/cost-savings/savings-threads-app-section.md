@@ -51,7 +51,7 @@ The button for creating a **JIRA ticket** based on the Thread. It starts the imp
 <figure><img src="../../.gitbook/assets/savings-threads-section-3-thread-details-workflow.png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-**JIRA integration** is required. See [Broken link](broken-reference "mention") guide for details.
+**JIRA integration** is required. See [#jira-integration](../settings/slack-integration.md#jira-integration "mention") for details.
 {% endhint %}
 
 #### Reject Thread Button
@@ -80,7 +80,7 @@ List of [optimization-opportunities.md](key-concepts/optimization-opportunities.
 
 #### GitHub PRs Table
 
-\<WIP> List of GitHub PRs associated with the Thread.
+List of GitHub PRs associated with the Thread.
 
 
 

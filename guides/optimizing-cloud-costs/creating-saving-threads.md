@@ -9,7 +9,8 @@ Creating [savings-threads.md](../../fundamentals/cost-savings/key-concepts/savin
 
 * **Group** [optimization-opportunities.md](../../fundamentals/cost-savings/key-concepts/optimization-opportunities.md "mention") into a **mini-project** for easier implementation down the line
 * **Analyze** the enriched context and implementation
-* **Share** the enriched context on the group of opportunities with stakeholders through JIRA
+* **Share** the enriched context on the group of opportunities with stakeholders through Jira
+  * See [#jira-integration](../../fundamentals/settings/slack-integration.md#jira-integration "mention") for instructions on setting up the integration
 * **Review the** enriched context enriched context and implementation instructions
 * **Track** the progress of recommendation implementation via statuses
 {% endhint %}
@@ -33,5 +34,5 @@ Creating [savings-threads.md](../../fundamentals/cost-savings/key-concepts/savin
      * It is possible to create the thread from [opportunities-explorer.md](../../fundamentals/cost-savings/opportunities-explorer.md "mention") by choosing the opportunities in the table over there and clicking [#assign-to-thread-button](../../fundamentals/cost-savings/opportunities-explorer.md#assign-to-thread-button "mention")
    * ![](../../.gitbook/assets/savings-threads-guide-1-thread-creation.png)
 4. You will be redirected to [#savings-thread-details-page](../../fundamentals/cost-savings/savings-threads-app-section.md#savings-thread-details-page "mention") where you can see the enriched context
-5. Click [#start-workflow-button](../../fundamentals/cost-savings/savings-threads-app-section.md#start-workflow-button "mention") to create JIRA ticket associated with the created Thread
+5. Click [#start-workflow-button](../../fundamentals/cost-savings/savings-threads-app-section.md#start-workflow-button "mention") to create Jira ticket associated with the created Thread
    * See [#jira-integration](../../fundamentals/settings/slack-integration.md#jira-integration "mention") for instructions on setting up the integration

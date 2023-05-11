@@ -6,13 +6,14 @@ Within your account there can be **Admins** and **Users**.
 The user that creates your account will automatically be an **Admin**.
 {% endhint %}
 
-### **User**
+### **Member**
 
-**Users** have the ability to:
+**Members** have the ability to:
 
 * Use [cost-transparency](../cost-transparency/ "mention") and [unit-metrics](../unit-metrics/ "mention") features in full
 * Create [cost-view.md](../cost-transparency/key-concepts/cost-view.md "mention") and [unit-metric.md](../unit-metrics/key-concepts/unit-metric.md "mention") that are available to **all** other users
 * Create [alerts.md](../notifications/alerts.md "mention") and [reports.md](../notifications/reports.md "mention") that will be delivered **only to them** via email and/or Slack
+* Use [cost-savings](../cost-savings/ "mention") and [tag-assistant](../tag-assistant/ "mention") features in full
 
 ### **Admin**
 

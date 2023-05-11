@@ -69,7 +69,7 @@
   * [Alerts](fundamentals/notifications/alerts.md)
   * [Reports](fundamentals/notifications/reports.md)
 * [Settings](fundamentals/settings/README.md)
-  * [User Profile](fundamentals/settings/user-profile.md)
+  * [Profile](fundamentals/settings/user-profile.md)
   * [User Management](fundamentals/settings/account-and-team-management.md)
   * [Integrations](fundamentals/settings/slack-integration.md)
   * [SSO](fundamentals/settings/sso.md)

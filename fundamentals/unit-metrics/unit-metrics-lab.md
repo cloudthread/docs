@@ -14,6 +14,8 @@ Refer to [creating-custom-unit-metrics.md](../../guides/monitoring-cloud-costs/c
 
 ### Unit Metrics Control Pane
 
+<figure><img src="../../.gitbook/assets/unit-metrics-lab-1-control-pane.png" alt=""><figcaption></figcaption></figure>
+
 This is the top pane of the page that includes:
 
 * Unit Metric name
@@ -50,6 +52,10 @@ Unit Metric cost chart with **current** and **previous** period spend vs. time l
 
 Absolute cost chart for the **numerator** part of unit metric equation with **current** and **previous** period spend vs. time lines ($).
 
+<figure><img src="../../.gitbook/assets/unit-metrics-lab-4-numerator.png" alt=""><figcaption></figcaption></figure>
+
 ### Denominator Chart
 
 Absolute cost chart for the **denominator** part of unit metric equation with **current** and **previous** period spend vs. time lines ($).
+
+<figure><img src="../../.gitbook/assets/unit-metrics-lab-5-denominator.png" alt=""><figcaption></figcaption></figure>
