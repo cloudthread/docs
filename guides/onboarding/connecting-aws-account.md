@@ -1,15 +1,12 @@
 # Connecting AWS Management Account
 
-Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS **billing and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
+Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS **savings, billing, and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
 
 {% hint style="warning" %}
 This is the guide for the **initial and essential** data access setup, which is aimed at **AWS** **Management** **Account** (see [AWS Consolidate Billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) for more information). This setup fully covers:
 
 * **Billing data (CUR)**
-* **Resource monitoring data (CloudWatch)** for resources running within the Management Account
-
-If you have functional **sub-accounts** and want to collect resource monitoring data for them (recommended), see [connecting-aws-sub-accounts.md](connecting-aws-sub-accounts.md "mention") guide.
-{% endhint %}
+* **Savings Opportunity data**
 
 ## Cloudthread AWS access
 
@@ -37,16 +34,14 @@ Cloudthread is using a delegated access role to read data from your account into
 In more detail, Cloudthread needs roughly **5 sets** of permissions / actions:
 
 1. **CUR bucket creation**, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
-2. **Listing organization root ids** to power StackSet functionality so that's it's easy to integrate many sub accounts to power unit metics.
-3. **CloudWatch read access** to list metrics and collect CloudWatch data:
-   * This can be edited in [data-collection.md](../../fundamentals/settings/data-collection.md "mention") settings
-   * CloudWatch data gets collected from the
-4. **Cost Explorer complete access** to power the first 24 hours of the tool and trusted advisor maintenance.
-5. **CUR report complete access** to create a cur report and help maintain existing ones.
+2. **Describe account read access** to understand AWS Organizations structure.
+3. **Cost Explorer read access** to power the first 24 hours of the tool.
+4. **CloudWatch read access** to collect CloudWatch data for savings opportunity processing.
+5. **Savings polices with service read access**, to detect the savings opportunities.
 {% endhint %}
 
 {% hint style="warning" %}
-Before connecting your account to Cloudthread we recommend you make sure [AWS Organizations with consolidated billing](https://aws.amazon.com/organizations/) are **enabled** in your AWS environment.
+Before connecting your account to Cloudthread we recommend you make sure [AWS Organizations with consolidated billing](https://aws.amazon.com/organizations/) are **enabled** in your AWS environment. If you're using AWS Organizations, you will need your organziation [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html).
 {% endhint %}
 
 {% hint style="success" %}
