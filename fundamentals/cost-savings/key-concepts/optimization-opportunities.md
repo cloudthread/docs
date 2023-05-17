@@ -131,7 +131,7 @@ The list below is **live** and updates dynamically as we are implementing new op
 If you are not seeing something that is **important** for you, please let us know [here](https://www.cloudthread.io/contact-us).
 {% endhint %}
 
-{% embed url="https://docs.google.com/spreadsheets/d/1idSzjpVyMLdWQDtbhFkgkZyTdHvXyJ4m4dIPpRTSu6I/edit?usp=sharing" %}
+{% embed url="https://docs.google.com/spreadsheets/d/1idSzjpVyMLdWQDtbhFkgkZyTdHvXyJ4m4dIPpRTSu6I/edit?usp=sharing" fullWidth="true" %}
 Cloudthread Optimization Opportunities
 {% endembed %}
 

@@ -2,7 +2,6 @@
 
 Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS **savings, billing, and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
 
-{% hint style="warning" %}
 This is the guide for the **initial and essential** data access setup, which is aimed at **AWS** **Management** **Account** (see [AWS Consolidate Billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) for more information). This setup fully covers:
 
 * **Billing data (CUR)**
@@ -82,8 +81,6 @@ Choose this option if:
 
 <figure><img src="../../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
 
-
-
 **a.2. You have many accounts managed by** [**AWS Organizations**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
 
 1. Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html)
@@ -97,7 +94,7 @@ Choose this option if:
 Once you are redirected to AWS Cloud Formation ([next step](connecting-aws-account.md#3.-redirect-to-aws)), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
 {% endhint %}
 
-#### b.  You have an existing Cost and Usage Report set up and want to use it
+#### b. You have an existing Cost and Usage Report set up and want to use it
 
 <figure><img src="../../.gitbook/assets/connecting-aws-account-7-existing-report.png" alt=""><figcaption></figcaption></figure>
 
@@ -175,7 +172,7 @@ If you used AWS Organizations setup options (a.2 and b.2 above), make sure to [E
 
 Once you initiate CF stack creation, it will take up to an hour to setup the required resources and policies for Cloudthread to generate initial insights. Your AWS console will show something like this:
 
-![AWS console after CF stack launch](../../.gitbook/assets/connecting-aws-account-3-aws-cf-screen-2.png)
+![AWS console after CF stack launch](../../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-2.png)
 
 <figure><img src="../../.gitbook/assets/connecting-aws-account-8-success.png" alt=""><figcaption></figcaption></figure>
 
@@ -192,7 +189,7 @@ AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours)
 <figure><img src="../../.gitbook/assets/connecting-aws-account-10-welcome-dash.png" alt=""><figcaption><p>Cloudthread Inltial Dashboard</p></figcaption></figure>
 
 {% hint style="warning" %}
-Some sections of the app are grayed out right after the integration due to CUR integration timeline.&#x20;
+Some sections of the app are grayed out right after the integration due to CUR integration timeline.
 {% endhint %}
 
 This means that you'll have high level cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready.

@@ -2,18 +2,19 @@
 
 * [☁ What Is Cloudthread](README.md)
 * [🚀 Quick Start](quick-start.md)
+* [🎁 AWS Save or Get Paid Eligibility and Onboarding Checklist](aws-save-or-get-paid-eligibility-and-onboarding-checklist.md)
 
 ## 🗺 Guides
 
 * [Onboarding](guides/onboarding/README.md)
   * [Connecting AWS Management Account](guides/onboarding/connecting-aws-account.md)
-  * [Connecting AWS Sub-Accounts](guides/onboarding/connecting-aws-sub-accounts.md)
   * [Adding new Users](guides/onboarding/managing-account-and-team-1.md)
   * [Setting up Teams](guides/onboarding/setting-up-teams.md)
 * [Optimizing Cloud Costs](guides/optimizing-cloud-costs/README.md)
   * [Analyzing Optimization Opportunities](guides/optimizing-cloud-costs/analyzing-optimization-opportunities.md)
   * [Creating Saving Threads](guides/optimizing-cloud-costs/creating-saving-threads.md)
   * [Creating Custom Optimization Opportunities](guides/optimizing-cloud-costs/creating-custom-optimization-opportunities.md)
+  * [Supported Optimization Opportunities](guides/optimizing-cloud-costs/supported-optimization-opportunities.md)
 * [Monitoring Cloud Costs](guides/monitoring-cloud-costs/README.md)
   * [Creating Cost Views](guides/monitoring-cloud-costs/creating-custom-cost-views.md)
   * [Creating Unit Metrics](guides/monitoring-cloud-costs/creating-custom-unit-metrics.md)

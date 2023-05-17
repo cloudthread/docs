@@ -26,7 +26,11 @@ Cloudthread currently supports only [Jira project management](https://www.atlass
 
 ### Jira Server
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/settings-integrations-2-jira-server.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 #### Detailed instructions&#x20;
 

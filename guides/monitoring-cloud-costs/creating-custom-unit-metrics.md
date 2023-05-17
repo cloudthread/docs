@@ -30,7 +30,7 @@ Creating custom [unit-metric.md](../../fundamentals/unit-metrics/key-concepts/un
 2. Set the **Numerator** Source and Filters:
    * CUR source – billing data from Cost Usage Report ($), default option
      * Service, Usage Type and Operation filters available
-   * CloudWatch source – monitoring data, requires [connecting-aws-sub-accounts.md](../onboarding/connecting-aws-sub-accounts.md "mention")
+   * CloudWatch source – monitoring data, requires [Broken link](broken-reference "mention")
      * Namespace, Account, Region and Tag filters available
    * Custom Data source – any data pushed to Cloudthread through [custom-data-api.md](../../fundamentals/custom-data-api.md "mention")
      * Stream Token and Dimension filters available

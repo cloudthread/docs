@@ -48,7 +48,11 @@ By clicking on the **Thread ID** in the tables above, you will be redirected to 
 
 The button for creating a **JIRA ticket** based on the Thread. It starts the implementation workflow and changes the thread status to **Active.**
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/savings-threads-section-3-thread-details-workflow.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 {% hint style="warning" %}
 **JIRA integration** is required. See [#jira-integration](../settings/slack-integration.md#jira-integration "mention") for details.

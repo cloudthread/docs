@@ -10,7 +10,11 @@ Cloudthread is supporting only **AWS** at the moment. **Google Cloud** integrati
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to get connected to your cloud environment. The account creation process is quite standard and requires you to sign-up with email, Google or GitHub.
 
+<div align="center">
+
 <figure><img src="../../.gitbook/assets/onboarding-1-sign-up.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## 2. Connect your cloud environments
 
@@ -24,8 +28,8 @@ Connecting cloud environments is essential for Cloudthread to deliver insights a
 [connecting-aws-account.md](connecting-aws-account.md)
 {% endcontent-ref %}
 
-{% content-ref url="connecting-aws-sub-accounts.md" %}
-[connecting-aws-sub-accounts.md](connecting-aws-sub-accounts.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### GCP

@@ -43,7 +43,11 @@ This is needed for fetching tag catalog from the GitHub repository. Clicking the
 
 This creates a new Tags Catalog. The idea is that **one tag catalog covers one repository**, so that different repositories can be tagged differently.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/tag-catalog-1-create-new.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 ### Tags Catalog Table
 

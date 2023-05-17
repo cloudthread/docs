@@ -26,19 +26,31 @@ This is the top pane of the page that includes:
 
 Allows for choosing the cost type and adding/removing cost components such as Taxes, Credits, Refunds, Discounts, Fees as well as Amortization.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/rule-editor-2-cost-type.png" alt="" width="225"><figcaption></figcaption></figure>
+
+</div>
 
 #### Month Picker
 
 Needed for showing the total cost per rule.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/rule-editor-3-month-picker.png" alt="" width="284"><figcaption></figcaption></figure>
+
+</div>
 
 ### Tags Summary Pane
 
 This pane summarizes all Custom Tags you have created in Rules Editor.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/rule-editor-4-tags-summary.png" alt="" width="374"><figcaption></figcaption></figure>
+
+</div>
 
 #### Export Costs Button
 
@@ -48,7 +60,11 @@ The button saves the costs distributed by tags (by cost allocation rules) in CSV
 
 This is the interface for creating and editing the [cost-allocation-rules.md](key-concepts/cost-allocation-rules.md "mention").
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/rule-editor-5-rule-editor.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 The interface has **2 major steps**:
 

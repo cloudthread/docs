@@ -12,7 +12,7 @@ In order to start with Cloudthread, follow these 3 steps:
 
 1. Create an account at [app.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)
 2. Connect your AWS payer account: [connecting-aws-account.md](guides/onboarding/connecting-aws-account.md "mention")
-3. Connect your AWS sub-accounts: [connecting-aws-sub-accounts.md](guides/onboarding/connecting-aws-sub-accounts.md "mention")
+3. Connect your AWS sub-accounts: [Broken link](broken-reference "mention")
 
 ### GCP
 
