@@ -11,7 +11,7 @@ Cloudthread's AWS integrations are all Cloudformation Stack based.
 There are four options:
 1. New Cost and Usage report for a single AWS account
 2. New Cost and Usage report for AWS master and sub-acounts (AWS Organizations)
-3. Existing Cost and Usage report for a single account
+3. Existing Cost and Usage report for a single AWS account
 4. Existing Cost and Usage report for AWS master and sub-acounts (AWS Organizations)
 
 You can generate these templates in the Settings > Data Collection part of the platform.
