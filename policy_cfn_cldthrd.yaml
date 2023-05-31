@@ -103,6 +103,15 @@ Resources:
                         - "cur:DescribeReportDefinitions"
                       Resource:
                         - "*"
+            Roles:
+                - Ref: "CloudthreadCostUsageRole"
+    RolePoliciesCostUsageReportBucketAccess:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-costandusagereportbucket-access"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
                     - Effect: "Allow"
                       Action:
                         - "s3:*"
@@ -189,6 +198,7 @@ Resources:
         - RolePoliciesCostExplorerCU
         - CostUsageReportBucket
         - RolePoliciesCostUsageReportAccess
+        - RolePoliciesCostUsageReportBucketAccess
         - CostUsageReportBucketPolicy
         - CostUsageReport
         Type: Custom::RegisterRole
@@ -286,6 +296,16 @@ Resources:
                         - "ec2:Search*"
                         - "autoscaling:Describe*"
                         - "autoscaling:Get*"
+                        - "autoscaling-plans:Describe*"
+                        - "autoscaling-plans:Get*"
+                      Resource:
+                        - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "ec2:GetConsoleOutput"
+                        - "ec2:GetPasswordData"
+                        - "ec2:GetConsoleScreenshot"
+                        - "ec2:GetInstanceUefiData"
                       Resource:
                         - "*"
             Roles:
@@ -334,7 +354,6 @@ Resources:
                     - Effect: "Allow"
                       Action:
                         - "rds:Describe*"
-                        - "rds:Download*"
                         - "rds:List*"
                       Resource:
                         - "*"
@@ -358,6 +377,13 @@ Resources:
                         - "s3-object-lambda:List*"
                       Resource:
                         - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "s3:GetObject*"
+                        - "s3-object-lambda:GetObject*"
+                        - "s3-object-lambda:GetObject*"
+                      Resource:
+                        - "*"
             Roles:
                 - Ref: "CloudthreadCostOptimizationRole"
     RolePoliciesDetectDynamoDBOpportunities:
@@ -375,6 +401,14 @@ Resources:
                         - "dax:Describe*"
                         - "dax:Get*"
                         - "dax:List*"
+                      Resource:
+                        - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "dynamodb:GetItem*"
+                        - "dynamodb:GetRecords"
+                        - "dynamodb:GetShardIterator"
+                        - "dax:GetItem*"
                       Resource:
                         - "*"
             Roles:
@@ -406,6 +440,14 @@ Resources:
                         - "states:Describe*"
                         - "states:Get*"
                         - "states:List*"
+                      Resource:
+                        - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "states:ListExecutions"
+                        - "states:DescribeExecution"
+                        - "states:DescribeMapRun"
+                        - "states:GetExecutionHistory"
                       Resource:
                         - "*"
             Roles:
@@ -504,6 +546,14 @@ Resources:
                         - "logs:Describe*"
                         - "logs:Get*"
                         - "logs:List*"
+                      Resource:
+                        - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "logs:FilterLogEvents"
+                        - "logs:GetLogEvents"
+                        - "logs:GetQueryResults"
+                        - "logs:GetLogRecord"
                       Resource:
                         - "*"
             Roles:
