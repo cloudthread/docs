@@ -183,7 +183,6 @@ Resources:
                                     Action:
                                       - "s3:GetObject*"
                                       - "s3-object-lambda:GetObject*"
-                                      - "s3-object-lambda:GetObject*"
                                     Resource:
                                       - "*"
                           Roles:
@@ -795,7 +794,6 @@ Resources:
                     - Effect: "Deny"
                       Action:
                         - "s3:GetObject*"
-                        - "s3-object-lambda:GetObject*"
                         - "s3-object-lambda:GetObject*"
                       Resource:
                         - "*"
