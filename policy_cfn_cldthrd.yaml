@@ -592,6 +592,66 @@ Resources:
                         - "*"
             Roles:
                 - Ref: "CloudthreadCostOptimizationRole"
+    RolePoliciesDetectRoute53Opportunities:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-detect-route53-opportunities"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "route53:Describe*"
+                        - "route53:Get*"
+                        - "route53:List*"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadCostOptimizationRole"
+    RolePoliciesDetectMWAAOpportunities:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-detect-mwaa-opportunities"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "airflow:Describe*"
+                        - "airflow:Get*"
+                        - "airflow:List*"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadCostOptimizationRole"
+    RolePoliciesDetectRedshiftOpportunities:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyName: "cloudthread-detect-redshift-opportunities"
+            PolicyDocument:
+                Version: "2012-10-17"
+                Statement:
+                    - Effect: "Allow"
+                      Action:
+                        - "redshift:Describe*"
+                        - "redshift:Get*"
+                        - "redshift:List*"
+                        - "redshift-serverless:Describe*"
+                        - "redshift-serverless:Get*"
+                        - "redshift-serverless:List*"
+                      Resource:
+                        - "*"
+                    - Effect: "Deny"
+                      Action:
+                        - "redshift:ListSavedQueries"
+                        - "redshift:DescribeHsmClientCertificates"
+                        - "redshift:DescribeHsmClientCertificates"
+                        - "redshift:DescribeSavedQueries"
+                        - "redshift:DescribeQuery"
+                      Resource:
+                        - "*"
+            Roles:
+                - Ref: "CloudthreadCostOptimizationRole"
     RegisterCostOptimizationRole:
         DependsOn:
         - CloudthreadCostOptimizationRole
@@ -614,6 +674,9 @@ Resources:
         - RolePoliciesDetectCloudwatchOpportunities
         - RolePoliciesDetectEFSOpportunities
         - RolePoliciesDetectCloudtrailOpportunities
+        - RolePoliciesDetectRoute53Opportunities
+        - RolePoliciesDetectMWAAOpportunities
+        - RolePoliciesDetectRedshiftOpportunities
         Type: Custom::RegisterRole
         Properties:
             ServiceToken: foo
