@@ -1,4 +1,4 @@
-# Creating Custom Optimization Opportunities
+# Creating Manual Savings Opportunities
 
 Cloudthread **automatically** analyzes your cloud environment and identifies [optimization-opportunities.md](../../fundamentals/cost-savings/key-concepts/optimization-opportunities.md "mention"). However, the platform also supports creation of **custom** opportunities for **ad-hoc** optimization needs (see [#optimization-type](../../fundamentals/cost-savings/key-concepts/optimization-opportunities.md#optimization-type "mention") for more details).
 
@@ -21,8 +21,12 @@ Creating custom [optimization-opportunities.md](../../fundamentals/cost-savings/
 ## Detailed instructions
 
 1. Navigate to [opportunities-explorer.md](../../fundamentals/cost-savings/opportunities-explorer.md "mention") section in [cost-savings](../../fundamentals/cost-savings/ "mention") space in the menu to the left to review the concrete optimization opportunities
-2. Click [#create-new-opportunity-button](../../fundamentals/cost-savings/opportunities-explorer.md#create-new-opportunity-button "mention")
-3. Fill in the form by entering estimated **Cost Impact**, Opportunity **Description,** Opportunity **Difficulty** as well as by assigning [savings-threads.md](../../fundamentals/cost-savings/key-concepts/savings-threads.md "mention"), Resource ID, Opportunity **Type** and Recommendation
-   * ![](../../.gitbook/assets/custom-opportunity-guide-1-creation-form.png)
-   * As you can see you can form the optimization opportunity from scratch and assign it to actual cloud resource that Cloudthread platform sees in your cloud environment
+2. Click [#new-manual-opportunity-button](../../fundamentals/cost-savings/opportunities-explorer.md#new-manual-opportunity-button "mention")
+3.  Fill in the form by entering estimated **Cost Impact**, Opportunity **Description,** Opportunity **Difficulty** as well as by assigning [savings-threads.md](../../fundamentals/cost-savings/key-concepts/savings-threads.md "mention"), Resource ID, Opportunity **Type** and Recommendation
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/manual-opportunities-1-create.png" alt="" width="563"><figcaption></figcaption></figure>
+
+    </div>
 4. You will see the custom opportunity in [opportunities-explorer.md](../../fundamentals/cost-savings/opportunities-explorer.md "mention")

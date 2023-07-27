@@ -1,4 +1,4 @@
-# Optimization Opportunities
+# Savings Opportunities
 
 **Optimization Opportunity** is a concrete **recommendation** on the **cost optimization action** for a **specific** cloud **resource** (or group of resources for Rate Optimization).
 
@@ -29,11 +29,11 @@ Optimization **type** defines the nature of the cost savings recommendation. Dif
 {% hint style="info" %}
 Cloudthread currently supports **3 major types** of Optimization Opportunities:
 
-**Usage** Opportunities
+**Usage Optimization** Opportunities
 
 * Actions altering actual cloud resources (e.g. changing VM specs, storage retention policies, removing unused resources)
 
-**Rate** Opportunities
+**Rate Optimization** Opportunities
 
 * Actions targeting financial concepts, mainly commitment-based discounts (e.g. [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) for AWS, [Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts) for GCP)
 
@@ -41,6 +41,41 @@ Cloudthread currently supports **3 major types** of Optimization Opportunities:
 
 * Ad-hoc opportunities for custom tracking needs. See [creating-custom-optimization-opportunities.md](../../../guides/optimizing-cloud-costs/creating-custom-optimization-opportunities.md "mention") for more details.
 {% endhint %}
+
+#### Rate Optimization settings
+
+Rate optimization opportunities can be set up for a desired configuration of cloud commitments.
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/savings-opportunity-2-rate-settings.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+The settings window can be opened by clicking `Rate Optimization Settings` button at the top right corner of [opportunities-explorer.md](../opportunities-explorer.md "mention") section.
+
+{% hint style="info" %}
+Currently the settings of AWS [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) can be adjusted.
+{% endhint %}
+
+These are the attributes of AWS [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) hat can be changed:
+
+* Reserved Instances
+  * Term: 1 year or 3 years
+  * Payment: No Upfront, Partial Upfront, All Upfront
+  * EC2 Offering Class
+* Savings Plans
+  * Term: 1 year or 3 years
+  * Payment: No Upfront, Partial Upfront, All Upfront
+  * Lookback
+
+#### Usage Optimization settings
+
+See [savings-opportunities-settings.md](../../settings/savings-opportunities-settings.md "mention") for more details.
+
+{% content-ref url="../../settings/savings-opportunities-settings.md" %}
+[savings-opportunities-settings.md](../../settings/savings-opportunities-settings.md)
+{% endcontent-ref %}
 
 #### Estimated savings
 
@@ -122,6 +157,10 @@ Code snippets or automation setup.
 * **Code snippets for Terraform**
 * **Code snippets for CLI**
 * **Opt-in automation if applicable**
+
+## Savings Opportunities Settings
+
+Savings Opportunities detection criteria can be adjusted in [settings](../../settings/ "mention").
 
 ## Supported Opportunities
 

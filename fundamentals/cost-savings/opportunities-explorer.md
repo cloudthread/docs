@@ -6,17 +6,58 @@ description: App Section
 
 **Opportunities Explorer** is the section of the app where you can manage [optimization-opportunities.md](key-concepts/optimization-opportunities.md "mention").
 
-<figure><img src="../../.gitbook/assets/opportunity-explorer-1.png" alt=""><figcaption><p>Cloudthread Opportunities Explorer</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/opportunities-explorer-1.png" alt=""><figcaption><p>Cloudthread Opportunities Explorer</p></figcaption></figure>
 
 ## Key Features
 
-### Create New Opportunity Button
+### New Manual Opportunity Button
 
 Cloudthread allows for creation of custom optimization opportunities. This button starts the creation flow. Refer to [creating-custom-optimization-opportunities.md](../../guides/optimizing-cloud-costs/creating-custom-optimization-opportunities.md "mention") for more details.
 
-### Unassigned Opportunities Table
+### Teams Dropdown
 
-List of all discovered and custom opportunities that were not assigned to any thread:
+Allows to choose a [teams.md](../settings/teams.md "mention"). See [setting-up-teams.md](../../guides/onboarding/setting-up-teams.md "mention") for more information.
+
+### Platform Selector
+
+Filters [#opportunities-table](opportunities-explorer.md#opportunities-table "mention") for the cloud provider.
+
+{% hint style="info" %}
+Currently Cloudthread platform supports **AWS** and **GCP**.
+{% endhint %}
+
+### Rate Optimization Settings
+
+Rate optimization opportunities can be set up for a desired configuration of cloud commitments.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/savings-opportunity-2-rate-settings.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+The settings window can be opened by clicking `Rate Optimization Settings` button at the top right corner of [opportunities-explorer.md](opportunities-explorer.md "mention") section.
+
+{% hint style="info" %}
+Currently the settings of AWS [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) can be adjusted.
+{% endhint %}
+
+These are the attributes of AWS [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) hat can be changed:
+
+* Reserved Instances
+  * Term: 1 year or 3 years
+  * Payment: No Upfront, Partial Upfront, All Upfront
+  * EC2 Offering Class
+* Savings Plans
+  * Term: 1 year or 3 years
+  * Payment: No Upfront, Partial Upfront, All Upfront
+  * Lookback
+
+### Opportunities Table
+
+List of all discovered and custom opportunities.
+
+Table fields:
 
 * Opportunity ID
 * Record ID
@@ -54,17 +95,11 @@ Redirects to a form for adding opportunities to an existing Thread (see [savings
 
 #### Archive Selected Button
 
-Moves selected opportunities to [#archived-opportunities-table](opportunities-explorer.md#archived-opportunities-table "mention"). This functionality allows to **ignore** the opportunities that are **irrelevant** and will not be implemented.
+Archives selected opportunities. This functionality allows to **ignore** the opportunities that are **irrelevant** and will not be implemented.
 
 {% hint style="info" %}
 Opportunities can be **archived** by clicking trash bin button in Actions column at the end of the table.
-{% endhint %}
 
-### Archived Opportunities Table
-
-The table with matching structure tot he above containing archived opportunities.
-
-{% hint style="info" %}
 Archived opportunities can be **restored** by clicking restore button in Actions column at the end of the table.
 {% endhint %}
 

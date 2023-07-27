@@ -22,6 +22,35 @@ In order to use [savings-threads.md](../cost-savings/key-concepts/savings-thread
 Cloudthread currently supports only [Jira project management](https://www.atlassian.com/software/jira) integration. Both **Cloud** and **Server** versions are supported.
 {% endhint %}
 
+### Jira Webhook
+
+{% hint style="info" %}
+Some helpful information about adding a new webhook you can find in official [Jira documentation](https://developer.atlassian.com/cloud/jira/platform/webhooks/).
+{% endhint %}
+
+#### Detailed Instructions
+
+1.  In Jira  go into Settings → System
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-4-jira-webhook.png" alt=""><figcaption></figcaption></figure>
+2.  In Jira go into Advanced → Webhooks
+
+    ![](../../.gitbook/assets/settings-integrations-5-jira-webhook.png)
+3.  Click on Create a `WebHooks` button
+
+    ![](../../.gitbook/assets/settings-integrations-8-jira-webhook.png)
+4.  Copy webhook URL from Cloudthread → Settings → Integrations → JIRA Webhook URL
+
+    ![](../../.gitbook/assets/settings-integrations-6-jira-webhook.png)
+5.  Put Cloudthread WebHook URL into URL field in `Create a WebHook` UI in Jira cloud
+
+
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-9-jira-webhook.png" alt=""><figcaption></figcaption></figure>
+6.  Select ‘updated’ and ‘deleted’ events for Jira issues. You are allowed to write a specific JQL query for the related project to reduce the amount of events that are sent to Cloudthread
+
+    <img src="../../.gitbook/assets/settings-integrations-7-jira-webhook.png" alt="" data-size="original">
+
 ### Jira Cloud
 
 ### Jira Server

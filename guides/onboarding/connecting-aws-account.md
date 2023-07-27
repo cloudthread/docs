@@ -1,8 +1,8 @@
 # Connecting AWS Management Account
 
-Connecting AWS account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's AWS **savings, billing, and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
+Connecting cloud account is an **essential** part of Cloudthread onboarding process and the most fundamental part of the setup. You cannot skip this step – your organization's cloud **savings, billing, and usage data** is essential for the platform to deliver value, i.e. help you to increase efficiency of your cloud spend.
 
-This is the guide for the **initial and essential** data access setup, which is aimed at **AWS** **Management** **Account** (see [AWS Consolidate Billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) for more information). This setup fully covers:
+This is the guide for the **initial** data access setup, which is aimed at **AWS** **Management** **Account** (see [AWS Consolidate Billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) for more information). This setup fully covers:
 
 * **Billing data (CUR)**
 * **Savings Opportunity data**
@@ -24,7 +24,7 @@ Cloudthread is using a delegated access role to read data from your account into
   * To read saved CUR files
 * AWS Services (EC2, RDS, ElastiCache, OpenSearch, etc.)
   * To generate usage optimization recommendations
-* [AWS Trusted Advisor](http://localhost:5000/s/Q8QqeF6WFPo2rNkc3ND6/the-basics/collections) (if enabled)
+* [AWS Trusted Advisor](http://127.0.0.1:5000/s/Q8QqeF6WFPo2rNkc3ND6/the-basics/collections) (if enabled)
   * To gather cost optimization recommendations suggested by AWS
 * [AWS Compute Optimizer](https://docs.aws.amazon.com/compute-optimizer/latest/ug/what-is-compute-optimizer.html)
   * To gather compute optimization recommendations suggested by AWS
@@ -57,13 +57,25 @@ In order for Cloudthread start functioning and delivering value, AWS Management 
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to get connected to your cloud environment through either creating a new Cost and Usage Report (CUR) or using the existing one.
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-1-aws-instructions.png" alt=""><figcaption><p>Connect Cloudthread via AWS CF Stack</p></figcaption></figure>
+### 2. Choose an AWS integration option
 
-### 2. Choose an integration option
+On the cloud environment integration page you open up the **AWS** dropdown.
 
-#### a. You do not have any existing Cost and Usage Report (or want to use a new one)
+<figure><img src="../../.gitbook/assets/connecting-aws-account-1-instructions.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-2-new-report.png" alt=""><figcaption></figcaption></figure>
+You will see the detailed instructions and a choice of AWS integration options covering most common situations:
+
+[#a.-you-do-not-have-any-existing-cost-and-usage-report-or-want-to-use-a-new-one](connecting-aws-account.md#a.-you-do-not-have-any-existing-cost-and-usage-report-or-want-to-use-a-new-one "mention")
+
+* a.1. You have only one account to integrate
+* a.2. You have many accounts managed by [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+[#b.-you-have-an-existing-cost-and-usage-report-set-up-and-want-to-use-it](connecting-aws-account.md#b.-you-have-an-existing-cost-and-usage-report-set-up-and-want-to-use-it "mention")
+
+* b.1. You have only one account to integrate
+* b.2. You have many accounts managed by [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+#### A. You do not have any existing Cost and Usage Report (or want to use a new one)
 
 Choose this option if:
 
@@ -75,28 +87,55 @@ Choose this option if:
   * **Resource ID** level
 * You **have** Cost and Usage Report set up with settings above for your AWS billing account, but do not want to use it for some reason
 
-**a.1. You have only one account to integrate**
+**A.1. You have only one account to integrate**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+If you have only one account to integrate, choose the relevant option in the integration options menu.
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
 
-**a.2. You have many accounts managed by** [**AWS Organizations**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-a1.png" alt="" width="563"><figcaption></figcaption></figure>
 
-1. Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html)
-2. Proceed to CloudFormation stack setup
+</div>
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-4-root-id.png" alt=""><figcaption></figcaption></figure>
+Click `Go to New Report Template` to get redirected to your AWS console with ClouFormation settings already prefilled for you.
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-a1-dialogue.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+{% hint style="warning" %}
+Make sure to log into the **AWS account** you want to integrate.
+{% endhint %}
+
+**A.2. You have many accounts managed by** [**AWS Organizations**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+If you have multiple accounts to integrate, choose the relevant option in the integration options menu.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-a2.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html), click `Save Stack` and proceed to CloudFormation stack setup (click `Go to New Report Template` to get redirected to AWS CloudFormation with prefilled settings).
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-a2-dialogue.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 {% hint style="warning" %}
 Once you are redirected to AWS Cloud Formation ([next step](connecting-aws-account.md#3.-redirect-to-aws)), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
 {% endhint %}
 
-#### b. You have an existing Cost and Usage Report set up and want to use it
+{% hint style="info" %}
+If you have multiple accounts not tied together through [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html), use [data-collection.md](../../fundamentals/settings/data-collection.md "mention") settings to add more accounts through **ad-hoc** single account integration option.
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-7-existing-report.png" alt=""><figcaption></figcaption></figure>
+#### B. You have an existing Cost and Usage Report set up and want to use it
 
 Choose this option if:
 
@@ -106,24 +145,53 @@ Choose this option if:
   * **Overwrite Report** file versioning
   * **Resource ID** level
 
-b.1. You have only one account to integrate
+{% hint style="info" %}
+For the report settings input:
 
-* Input the details of your Cost and Usage report
-* Proceed to CloudFormation stack setup
+**Report name** is the name of CUR report folder
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-5-report-details.png" alt=""><figcaption></figcaption></figure>
+**Report prefix** is the path to CUR folder within the bucket (everything without the last `"/")`
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+**Report bucket** is S3 bucket name
 
-b.2. You have many accounts managed by [AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+<img src="../../.gitbook/assets/connecting-aws-account-2-report-settings.png" alt="" data-size="original">
+{% endhint %}
 
-* Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html)
-* Input the details of your Cost and Usage report
-* Proceed to CloudFormation stack setup
+**B.1. You have only one account to integrate**
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-6-org-report-details.png" alt=""><figcaption></figcaption></figure>
+If you have only one account to integrate, choose the relevant option in the integration options menu.
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-3-go-to-template.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-b1.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+Input the details of your existing Cost and Usage report and proceed to CloudFormation stack setup (click `Go to New Report Template` to get redirected to AWS CloudFormation with prefilled settings).
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-b1-dialogue.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
+**B.2. You have many accounts managed by** [**AWS Organizations**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_introduction.html)
+
+If you have multiple accounts to integrate, choose the relevant option in the integration options menu.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-b2.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+Input your [Root ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs\_getting-started\_concepts.html), input the details of your Cost and Usage report and proceed to CloudFormation stack setup (click `Go to New Report Template` to get redirected to AWS CloudFormation with prefilled settings).
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-b2-dialogue.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 {% hint style="warning" %}
 Once you are redirected to AWS Cloud Formation ([next step](connecting-aws-account.md#3.-redirect-to-aws)), make sure to [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html).
@@ -174,30 +242,36 @@ Once you initiate CF stack creation, it will take up to an hour to setup the req
 
 ![AWS console after CF stack launch](../../.gitbook/assets/connecting-aws-account-2-aws-cf-screen-2.png)
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-8-success.png" alt=""><figcaption></figcaption></figure>
+Monitor the CloudFormation creation log and troubleshoot as necessary.
 
 ### 5. Come back to Cloudthread App
 
-Once the initial setup is complete, you will be able to see first cost insights in the app.
+If the AWS integration went through (CloudFormation creation log finished with no errors), you will see the **success** message in Cloudthread app.&#x20;
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-9-welcome.png" alt=""><figcaption><p>Cloudthread App Welcome</p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-2-created.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
+
+Clock `Continue` to start using the app and seeing the first cost insights.
+
+<figure><img src="../../.gitbook/assets/connecting-aws-account-3-welcome.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 AWS Cost and Usage Report (CUR) is being created (which can take up to 48 hours).
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/connecting-aws-account-10-welcome-dash.png" alt=""><figcaption><p>Cloudthread Inltial Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/connecting-aws-account-3-savings-2.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Some sections of the app are grayed out right after the integration due to CUR integration timeline.
 {% endhint %}
 
-This means that you'll have high level cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready.
+This means that you'll have high level savings and cost analytics available through the Cost Explorer API immediately when you login and that more granular resource level data will only be available when CUR data is ready.
 
-{% hint style="info" %}
+{% hint style="success" %}
 Once the CUR file is ready Cloudthread will **notify** you, and you will be able to see deeper insights on the platform.
+
+**Note:** Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to **backfill** it.
 {% endhint %}
-
-![Cloudthread App](../../.gitbook/assets/connecting-aws-account-11-dash.png)
-
-Often, when CUR file is created it does not have all the historical data – your AWS support must be contacted to **backfill** it.

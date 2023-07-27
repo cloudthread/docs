@@ -15,7 +15,7 @@ Adding an Events Overlay to your absolute cloud cost chart allows to:
 
 [events-overlay.md](../../fundamentals/cost-transparency/key-concepts/events-overlay.md "mention") relies on [custom-data-api.md](../../fundamentals/custom-data-api.md "mention") for the events data upload. Below are the instructions:
 
-1. Please, refer to the [API](http://localhost:5000/o/TmVItW5TwUC23RxcuDg9/s/KuhDuXL0YPX22VMOHZWV/ "mention") documentation for detailed instructions on how to setup a data stream
+1. Please, refer to the [API](http://127.0.0.1:5000/o/TmVItW5TwUC23RxcuDg9/s/KuhDuXL0YPX22VMOHZWV/ "mention") documentation for detailed instructions on how to setup a data stream
 2. Once you have set up the data stream, you will be able to use the **events data stream objects**
 3. Go to the [costs-overview.md](../../fundamentals/cost-transparency/costs-overview.md "mention") and click on the "Events" checkbox at the top of [#absolute-cost-chart](../../fundamentals/cost-transparency/costs-overview.md#absolute-cost-chart "mention")
 4. See the events presented in form of blue vertical lines on the chart

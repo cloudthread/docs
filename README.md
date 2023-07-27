@@ -15,7 +15,7 @@ Whether you're just getting started with **Cloud Financial Management** or you'r
 
 {% tabs %}
 {% tab title="Cost Savings Insights" %}
-<figure><img src=".gitbook/assets/what-is-cloudthread-4-cost-savings.png" alt=""><figcaption><p>Cloudthread Cost Savings Insights</p></figcaption></figure>
+<figure><img src=".gitbook/assets/what-is-cloudthread-1-savings-hub.png" alt=""><figcaption><p>Cloudthread Cost Savings Insights</p></figcaption></figure>
 
 {% content-ref url="guides/optimizing-cloud-costs/creating-saving-threads.md" %}
 [creating-saving-threads.md](guides/optimizing-cloud-costs/creating-saving-threads.md)
@@ -23,7 +23,7 @@ Whether you're just getting started with **Cloud Financial Management** or you'r
 {% endtab %}
 
 {% tab title="Cloud Cost Analytics" %}
-<figure><img src=".gitbook/assets/what-is-cloudthread-1-cost-transparency.png" alt=""><figcaption><p>Cloudthread Cost Summary Dashboard</p></figcaption></figure>
+<figure><img src=".gitbook/assets/what-is-cloudthread-1-cost-lab.png" alt=""><figcaption><p>Cloudthread Cost Summary Dashboard</p></figcaption></figure>
 
 {% content-ref url="guides/monitoring-cloud-costs/creating-custom-dashboards.md" %}
 [creating-custom-dashboards.md](guides/monitoring-cloud-costs/creating-custom-dashboards.md)
@@ -31,7 +31,7 @@ Whether you're just getting started with **Cloud Financial Management** or you'r
 {% endtab %}
 
 {% tab title="Root Cause Analysis" %}
-<figure><img src=".gitbook/assets/what-is-cloudthread-2-cost-transparency.png" alt=""><figcaption><p>Cloudthread Cost Analytics Dashboard</p></figcaption></figure>
+<figure><img src=".gitbook/assets/what-is-cloudthread-1-cost-lab-filter.png" alt=""><figcaption><p>Cloudthread Cost Analytics Dashboard</p></figcaption></figure>
 
 {% content-ref url="guides/monitoring-cloud-costs/performing-root-cause-analysis.md" %}
 [performing-root-cause-analysis.md](guides/monitoring-cloud-costs/performing-root-cause-analysis.md)
@@ -39,7 +39,7 @@ Whether you're just getting started with **Cloud Financial Management** or you'r
 {% endtab %}
 
 {% tab title="Unit Metrics" %}
-<figure><img src=".gitbook/assets/what-is-cloudthread-5-unit-metrics.png" alt=""><figcaption><p>Cloudthread Unit Metrics</p></figcaption></figure>
+<figure><img src=".gitbook/assets/what-is-cloudthread-1-unit-metrics.png" alt=""><figcaption><p>Cloudthread Unit Metrics</p></figcaption></figure>
 
 {% content-ref url="guides/monitoring-cloud-costs/creating-custom-unit-metrics.md" %}
 [creating-custom-unit-metrics.md](guides/monitoring-cloud-costs/creating-custom-unit-metrics.md)
@@ -47,7 +47,7 @@ Whether you're just getting started with **Cloud Financial Management** or you'r
 {% endtab %}
 
 {% tab title="Tag Assistant" %}
-<figure><img src=".gitbook/assets/what-is-cloudthread-3-tag-assistant.png" alt=""><figcaption><p>Cloudthread Tag Assistant</p></figcaption></figure>
+<figure><img src=".gitbook/assets/what-is-cloudthread-1-tags.png" alt=""><figcaption><p>Cloudthread Tag Assistant</p></figcaption></figure>
 
 {% content-ref url="guides/tagging-cloud-resources/setting-up-tag-catalog.md" %}
 [setting-up-tag-catalog.md](guides/tagging-cloud-resources/setting-up-tag-catalog.md)
@@ -79,12 +79,18 @@ If you are just starting with cloud cost management (a.k.a. FinOps, Cloud Financ
 
 ## Starting takes just 10 min
 
-You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [connecting-aws-account.md](guides/onboarding/connecting-aws-account.md "mention") section for a fast onboarding experience.
+You can get started with **advanced cloud cost management** within just **10 minutes**! [Create an account](https://app.core.cloudthread.io/sign-up) and refer to [onboarding](guides/onboarding/ "mention") section for a fast onboarding experience.
 
-{% hint style="warning" %}
-Cloudthread is supporting only **AWS** at the moment. **Google Cloud** integration is on the way. If you are using other cloud providers, please let us know [here](https://www.cloudthread.io/contact-us).
+{% hint style="success" %}
+Cloudthread supports **AWS** and **GCP** – you can find the set up steps for both provides in the sections below.&#x20;
 {% endhint %}
 
-## Support
+{% content-ref url="guides/onboarding/connecting-aws-account.md" %}
+[connecting-aws-account.md](guides/onboarding/connecting-aws-account.md)
+{% endcontent-ref %}
+
+{% content-ref url="guides/onboarding/connecting-gcp-billing-account.md" %}
+[connecting-gcp-billing-account.md](guides/onboarding/connecting-gcp-billing-account.md)
+{% endcontent-ref %}
 
 If you ever need help setting things up or have feature requests, don't hesitate to reach out to us at [hey@cloudthread.io](mailto:hey@cloudthread.io)

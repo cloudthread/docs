@@ -2,7 +2,11 @@
 
 This is the section of [.](./ "mention") that allows to modify **User Profile** information.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/settings-user-profile-1.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Changeable profile features
 

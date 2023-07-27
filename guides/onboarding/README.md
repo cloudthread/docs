@@ -10,9 +10,9 @@ Cloudthread is supporting only **AWS** at the moment. **Google Cloud** integrati
 
 After your account is [created](https://app.core.cloudthread.io/sign-up/) and confirmed via email, you'll be prompted to get connected to your cloud environment. The account creation process is quite standard and requires you to sign-up with email, Google or GitHub.
 
-<div align="center">
+<div align="left">
 
-<figure><img src="../../.gitbook/assets/onboarding-1-sign-up.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onboarding-1-sign-up.png" alt="" width="283"><figcaption></figcaption></figure>
 
 </div>
 
@@ -20,7 +20,7 @@ After your account is [created](https://app.core.cloudthread.io/sign-up/) and co
 
 Connecting cloud environments is essential for Cloudthread to deliver insights and automation. Further in this guide you will find detailed instructions on how to set up AWS and GCP connections.
 
-<figure><img src="../../.gitbook/assets/onboarding-2-setup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onboarding_all_1.png" alt=""><figcaption></figcaption></figure>
 
 ### AWS
 
@@ -28,10 +28,8 @@ Connecting cloud environments is essential for Cloudthread to deliver insights a
 [connecting-aws-account.md](connecting-aws-account.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 ### GCP
 
-Coming soon.
+{% content-ref url="connecting-gcp-billing-account.md" %}
+[connecting-gcp-billing-account.md](connecting-gcp-billing-account.md)
+{% endcontent-ref %}

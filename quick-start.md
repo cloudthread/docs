@@ -8,21 +8,22 @@
 
 ### AWS
 
-In order to start with Cloudthread, follow these 3 steps:
-
 1. Create an account at [app.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)
-2. Connect your AWS payer account: [connecting-aws-account.md](guides/onboarding/connecting-aws-account.md "mention")
-3. Connect your AWS sub-accounts: [Broken link](broken-reference "mention")
+2. Connect your AWS Management Account: [connecting-aws-account.md](guides/onboarding/connecting-aws-account.md "mention")
+   * Connect your AWS sub-accounts: [#aws](fundamentals/settings/data-collection.md#aws "mention")
 
 ### GCP
 
-Coming soon!
+1. Create an account at [app.cloudthread.io/sign-up](https://app.cloudthread.io/sign-up)
+2. Connect your GCP Billing Project: [connecting-gcp-billing-account.md](guides/onboarding/connecting-gcp-billing-account.md "mention")
 
 ## Getting Started
 
 ### Guides: Head-start
 
-Follow our handy guides to get started on the basics as quickly as possible:
+{% hint style="success" %}
+Follow our handy **guides** to get started on the basics as quickly as possible.
+{% endhint %}
 
 {% content-ref url="guides/monitoring-cloud-costs/creating-custom-cost-views.md" %}
 [creating-custom-cost-views.md](guides/monitoring-cloud-costs/creating-custom-cost-views.md)
@@ -46,7 +47,13 @@ Follow our handy guides to get started on the basics as quickly as possible:
 
 ### Fundamentals: Deep-dive
 
-Learn the fundamentals of Cloudthread to get a deeper understanding of our main features:
+{% hint style="success" %}
+Learn the fundamentals of Cloudthread to get a deeper understanding of our **main features.**
+{% endhint %}
+
+{% content-ref url="fundamentals/cost-savings/" %}
+[cost-savings](fundamentals/cost-savings/)
+{% endcontent-ref %}
 
 {% content-ref url="fundamentals/cost-transparency/" %}
 [cost-transparency](fundamentals/cost-transparency/)
@@ -58,10 +65,6 @@ Learn the fundamentals of Cloudthread to get a deeper understanding of our main 
 
 {% content-ref url="fundamentals/tag-assistant/" %}
 [tag-assistant](fundamentals/tag-assistant/)
-{% endcontent-ref %}
-
-{% content-ref url="fundamentals/cost-savings/" %}
-[cost-savings](fundamentals/cost-savings/)
 {% endcontent-ref %}
 
 {% content-ref url="fundamentals/notifications/" %}

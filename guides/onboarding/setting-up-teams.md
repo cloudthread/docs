@@ -21,15 +21,41 @@ Setting up teams allows to:
 ## Detailed instructions <a href="#detailed-instructions" id="detailed-instructions"></a>
 
 1. Go to [settings](../../fundamentals/settings/ "mention") section from the left menu pane
-2. Choose [teams.md](../../fundamentals/settings/teams.md "mention") tab
-3. Fill in Team Name, Slack Channel and Cost Columns (if present)
-4. Set up the **global team filter**
-   * This filter will appear in [cost-view-library.md](../../fundamentals/cost-transparency/cost-view-library.md "mention") under Team Global Filters section, it can be edited in the same as [cost-view.md](../../fundamentals/cost-transparency/key-concepts/cost-view.md "mention") are
-5. Click "Save Team"
-6. See the team appear in the table in Settings and in the Admin Team Assumption drop-down at the left menu pane
-7. Add [cost-view.md](../../fundamentals/cost-transparency/key-concepts/cost-view.md "mention") to the newly created team from the table in the Settings as necessary
+2.  Choose [teams.md](../../fundamentals/settings/teams.md "mention") tab
+
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/setting-teams-1-settings.png" alt="" width="563"><figcaption></figcaption></figure>
+
+    </div>
+3. Click `Create New Team`
+4.  Fill in Team Name, add Slack channel (if applicable, see [#slack-integration](../../fundamentals/settings/slack-integration.md#slack-integration "mention") for details)
+
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/setting-teams-1-team-setup.png" alt="" width="563"><figcaption></figcaption></figure>
+
+    </div>
+5. Set up the **global team filter**
+   * There are three separate filter buckets: AWS, GCP and Custom Data (see [custom-data-api.md](../../fundamentals/custom-data-api.md "mention") for details)
+   * The filter is editable by Admin after the team is created
+6. Click `Save Team`
+7.  See the team appear in the table in Settings and in the Admin Team Assumption drop-down at the left menu pane
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/setting-teams-1-team-setup-2.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
+8. Add [cost-view.md](../../fundamentals/cost-transparency/key-concepts/cost-view.md "mention") to the newly created team as necessary
    * These Cost Views will be available for the team with the global filter applied on top (in addition to any existing filters)
    * By default, the Team members have no previously created custom Cost Views available to them
-8. Assume the created team through the drop-down at the left menu pane to check if everything was set up correctly
+9. Assume the created team through the drop-down at the left menu pane to check if everything was set up correctly
 
-<figure><img src="../../.gitbook/assets/managing-team-access_demo.gif" alt=""><figcaption><p>Setting up Team Access</p></figcaption></figure>
+{% hint style="success" %}
+Team global filter is applied across all the features of Cloudthread, i.e. Savings Hub and Unit Metrics will be restricted based on filter rules.
+{% endhint %}
