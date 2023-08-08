@@ -2,15 +2,15 @@
 description: App Section
 ---
 
-# Rule Editor
+# Rule Lab
 
-**Rule Editor** is the section of the app where you can define [cost-allocation-rules.md](key-concepts/cost-allocation-rules.md "mention").
+**Rule Lab** is the section of the app where you can define [cost-allocation-rules.md](key-concepts/cost-allocation-rules.md "mention").
 
-<figure><img src="../../.gitbook/assets/cost-transparency-rules-editor-1.png" alt=""><figcaption><p>Cloudthread Rule Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rules-lab-1.png" alt=""><figcaption><p>Cloudthread Rule Lab</p></figcaption></figure>
 
 ## Key Features
 
-### Rule Editor Control Pane
+### Rule Lab Control Pane
 
 <figure><img src="../../.gitbook/assets/rule-ditor-1-control-pane.png" alt=""><figcaption></figcaption></figure>
 
@@ -44,7 +44,7 @@ Needed for showing the total cost per rule.
 
 ### Tags Summary Pane
 
-This pane summarizes all Custom Tags you have created in Rules Editor.
+This pane summarizes all Custom Tags you have created in Rule Lab.
 
 <div align="left">
 
@@ -56,7 +56,7 @@ This pane summarizes all Custom Tags you have created in Rules Editor.
 
 The button saves the costs distributed by tags (by cost allocation rules) in CSV format.
 
-### Rule Editor Interface
+### Rule Lab Interface
 
 This is the interface for creating and editing the [cost-allocation-rules.md](key-concepts/cost-allocation-rules.md "mention").
 
