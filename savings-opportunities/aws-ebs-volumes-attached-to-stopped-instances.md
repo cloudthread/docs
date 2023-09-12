@@ -1,37 +1,33 @@
 # AWS EBS Volumes Attached to Stopped Instances
 
-## Key Features
-
-### Source
-
-AWS
-
-### Service
-
-Amazon EC2
-
-### Difficulty
-
-Easy
-
-{% hint style="info" %}
-**Easy**, **Medium** or **Hard**
+{% hint style="success" %}
+See [optimization-opportunities.md](../fundamentals/cost-savings/key-concepts/optimization-opportunities.md "mention") for more details on the concept.
 {% endhint %}
 
-### Type
+## Key Metadata
 
-Usage
+### Source: `AWS`
+
+### Service: `Amazon EC2`
+
+### Difficulty: `Easy`
 
 {% hint style="info" %}
-**Usage** or **Rate**
+**Easy:** Zero downtime, zero performance risks
+
+**Medium:** Zero downtime, potential performance trade-offs
+
+**Hard:** Downtime required, potential performance trade-offs
 {% endhint %}
 
-### Description
-
-Cloudthread scans EC2 for instances older than 1 days that are in the \`stopped\` state, and gathers attached volumes.
+### Type: `Usage`
 
 {% hint style="info" %}
-Intro blurb of what Savings Opportunity is trying to do.
+**Usage:** Actions altering actual cloud resources (e.g. changing VM specs, storage retention policies, removing unused resources)
+
+**Rate:** Actions targeting financial concepts, mainly commitment-based discounts (e.g. [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) and [Savings Plans](https://aws.amazon.com/savingsplans/) for AWS, [Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts) for GCP)
+
+**Custom:** Ad-hoc opportunities for custom tracking needs. See [creating-custom-optimization-opportunities.md](../guides/optimizing-cloud-costs/creating-custom-optimization-opportunities.md "mention") for more details.
 {% endhint %}
 
 ## Details
@@ -40,16 +36,12 @@ Intro blurb of what Savings Opportunity is trying to do.
 
 Cloudthread scans EC2 for instances older than 1 days that are in the \`stopped\` state, and gathers attached volumes.
 
-{% hint style="info" %}
-Human readable description of how the Savings Opportunity is detected.
-{% endhint %}
-
 ### Opportunity Threshold Metrics
 
 * VolumeReadOps
-  * Default value: 0
+  * **Default value:** `0`
 * VolumeWriteOps
-  * Default value: 0
+  * **Default value:** `0`
 
 {% hint style="info" %}
 What metrics the Savings Opportunity is referencing.
@@ -57,27 +49,19 @@ What metrics the Savings Opportunity is referencing.
 
 ### How Estimated Monthly Savings is Calculated
 
-The daily cost impact for this opportunity is the average daily cost of the volume ($5.029869) between 2023-08-09 and 2023-09-06 minus the cost of archiving a snapshot of the same volume size for one day ($0.894783). Note that this is an upper bound for snapshot cost - snapshots are typically smaller than the full volume size.
+The daily cost impact for this opportunity is the `average daily cost of the volume` ($) between `period start date` and `period end date` minus the `cost of archiving a snapshot` of the same volume size for one day ($).&#x20;
 
-{% hint style="info" %}
-Describe how savings is calculated. Include source or reference links.
+{% hint style="warning" %}
+Note that this is an **upper bound** for snapshot cost - snapshots are typically smaller than the full volume size.
 {% endhint %}
 
 ### Example
 
-\<aside> ℹ️ Numerical example of savings calculated.
-
-\</aside>
-
-XYZ
+The daily cost impact for this opportunity is the average daily cost of the volume ($5.029869) between 2023-08-09 and 2023-09-06 minus the cost of archiving a snapshot of the same volume size for one day ($0.894783). Note that this is an upper bound for snapshot cost - snapshots are typically smaller than the full volume size.
 
 ### Record ID Explanation
 
-\<aside> ℹ️ Record ID Explanation
-
-\</aside>
-
-XYZ
+An ID of EBS volume, e.g. `vol-0c2aecd978c03dd7a`
 
 ### Actions You Can Take
 
