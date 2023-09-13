@@ -1,4 +1,4 @@
-# AWS EBS Volumes Attached to Stopped Instances
+# AWS Unattached EBS Volumes
 
 {% hint style="success" %}
 See [optimization-opportunities.md](../fundamentals/cost-savings/key-concepts/optimization-opportunities.md "mention") for more details on the concept.
@@ -11,6 +11,8 @@ See [optimization-opportunities.md](../fundamentals/cost-savings/key-concepts/op
 ### Service: `Amazon EC2`
 
 ### Difficulty: `Easy`
+
+### Regions: ALL
 
 {% hint style="info" %}
 **Easy:** Zero downtime, zero performance risks
@@ -34,22 +36,27 @@ See [optimization-opportunities.md](../fundamentals/cost-savings/key-concepts/op
 
 ### How Opportunity is Detected
 
-Cloudthread scans EC2 for instances older than 1 days that are in the \`stopped\` state, and gathers attached volumes.
+Cloudthread scans EC2 for EBS volumes with status \`available\`.
 
-### Opportunity Threshold Metrics
+### Opportunity Thresholds Metrics
+
+* Waiting Period Days
+  * **Default value:** `1`
+* Priority
+  * **Default value:** `1`
+
+### Attached Context Metrics
 
 * VolumeReadOps
-  * **Default value:** `0`
 * VolumeWriteOps
-  * **Default value:** `0`
 
 {% hint style="info" %}
-What metrics the Savings Opportunity is referencing.
+What metrics Cloudthread attaches to the Savings Opportunity.
 {% endhint %}
 
-### How Estimated Monthly Savings is Calculated
+### How Estimated Savings is Calculated
 
-The daily cost impact for this opportunity is the `average daily cost of the volume` ($) between `period start date` and `period end date` minus the `cost of archiving a snapshot` of the same volume size for one day ($).&#x20;
+The daily cost impact for this opportunity is the average daily cost of the volume between minus the cost of archiving a snapshot of the same volume size for one day.
 
 {% hint style="warning" %}
 Note that this is an **upper bound** for snapshot cost - snapshots are typically smaller than the full volume size.
@@ -57,7 +64,9 @@ Note that this is an **upper bound** for snapshot cost - snapshots are typically
 
 ### Example
 
-The daily cost impact for this opportunity is the average daily cost of the volume ($5.029869) between 2023-08-09 and 2023-09-06 minus the cost of archiving a snapshot of the same volume size for one day ($0.894783). Note that this is an upper bound for snapshot cost - snapshots are typically smaller than the full volume size.
+daily-volume-cost = $5.029869
+daily-archived-snapshot-cost = ($-gb-per-month / 30) * volume-size-gib * gib-to-gb-conversion = $0.894783
+daily-cost-impact = $5.029869 - $0.894783
 
 ### Record ID Explanation
 
@@ -66,14 +75,4 @@ An ID of EBS volume, e.g. `vol-0c2aecd978c03dd7a`
 ### Actions You Can Take
 
 Generate a snapshot of the volume, archive the generated snapshot, then delete the volume.
-
-#### CLI code
-
-```jsx
-XYZ
-```
-
-### Other Notes
-
-XYZ
 
