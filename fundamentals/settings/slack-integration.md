@@ -2,7 +2,11 @@
 
 **Integrations** section of [.](./ "mention") has **Slack** and **Jira** integrations available.
 
-<figure><img src="../../.gitbook/assets/settings-integration-1.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/settings-integration-1.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
 
 ## Slack Integration
 
@@ -10,7 +14,11 @@ In order to setup **Slack** for [alerts.md](../notifications/alerts.md "mention"
 
 After that you will be redirected to the Slack setup page.
 
-![Slack setup screen](<../../.gitbook/assets/image (11).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (11).png" alt="Slack setup screen" width="375">
+
+</div>
 
 Once you have Slack setup, you will have your workspace channels available in [setting-up-alerts-and-reports.md](../../guides/monitoring-cloud-costs/setting-up-alerts-and-reports.md "mention").
 
@@ -30,28 +38,81 @@ Some helpful information about adding a new webhook you can find in official [Ji
 
 #### Detailed Instructions
 
-1.  In Jira  go into Settings → System
+1.  In Jira go into Settings → System
 
-    <figure><img src="../../.gitbook/assets/settings-integrations-4-jira-webhook.png" alt=""><figcaption></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-4-jira-webhook.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
 2.  In Jira go into Advanced → Webhooks
 
-    ![](../../.gitbook/assets/settings-integrations-5-jira-webhook.png)
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-5-jira-webhook.png" alt="" width="240"><figcaption></figcaption></figure>
+
+    </div>
 3.  Click on Create a `WebHooks` button
 
-    ![](../../.gitbook/assets/settings-integrations-8-jira-webhook.png)
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-8-jira-webhook.png" alt="" width="229"><figcaption></figcaption></figure>
+
+    </div>
 4.  Copy webhook URL from Cloudthread → Settings → Integrations → JIRA Webhook URL
 
-    ![](../../.gitbook/assets/settings-integrations-6-jira-webhook.png)
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-6-jira-webhook.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
 5.  Put Cloudthread WebHook URL into URL field in `Create a WebHook` UI in Jira cloud
 
 
 
-    <figure><img src="../../.gitbook/assets/settings-integrations-9-jira-webhook.png" alt=""><figcaption></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-9-jira-webhook.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
 6.  Select ‘updated’ and ‘deleted’ events for Jira issues. You are allowed to write a specific JQL query for the related project to reduce the amount of events that are sent to Cloudthread
 
-    <img src="../../.gitbook/assets/settings-integrations-7-jira-webhook.png" alt="" data-size="original">
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-7-jira-webhook.png" alt="" width="129"><figcaption></figcaption></figure>
+
+    </div>
 
 ### Jira Cloud
+
+![](../../.gitbook/assets/settings-integrations-1-jira-cloud.png)
+
+#### Detailed instructions&#x20;
+
+1. Once you click `Integrate` in Integrations section of Settings, you will be redirected to Atlassian sign-in
+2. Sign in or create an account for JIRA cloud
+3.  Accept access request
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-2.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
+4. Come back to Cloudthread app to verify that integration is successful
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-3.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 ### Jira Server
 
