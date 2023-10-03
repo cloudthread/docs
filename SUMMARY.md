@@ -2,8 +2,6 @@
 
 * [☁ What Is Cloudthread](README.md)
 * [🚀 Quick Start](quick-start.md)
-* [💰 Savings Opportunities](savings-opportunities/README.md)
-  * [AWS EBS Volumes Attached to Stopped Instances](savings-opportunities/aws-ebs-volumes-attached-to-stopped-instances.md)
 
 ## 🗺 Guides
 
