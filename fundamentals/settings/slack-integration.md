@@ -30,13 +30,59 @@ In order to use [savings-threads.md](../cost-savings/key-concepts/savings-thread
 Cloudthread currently supports only [Jira project management](https://www.atlassian.com/software/jira) integration. Both **Cloud** and **Server** versions are supported.
 {% endhint %}
 
+### Jira Cloud
+
+![](../../.gitbook/assets/settings-integrations-1-jira-cloud.png)
+
+#### Detailed instructions&#x20;
+
+1. Once you click `Integrate` in Integrations section of Settings, you will be redirected to Atlassian sign-in
+2. Sign in or create an account for JIRA cloud
+3.  Accept access request
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-2.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
+4. Come back to Cloudthread app to verify that integration is successful
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-3.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
+### Jira Server
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/settings-integrations-2-jira-server.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
+#### Detailed instructions&#x20;
+
+1. Go to Jira Administration > Applications > Application Links
+2. Click `Create Link` and select `External application` + `Direction Incoming`
+3. For Name - set to whatever they want (`Cloudthread` is fine)
+4. For Redirect URL  - set to [`https://app.cloudthread.io/settings/third-party-integrations?provider=jira_server`](https://app.cloudthread.io/settings/third-party-integrations?provider=jira\_server)
+5. For Application permissions - set to `Write`
+6. Click `Save`
+7. Go to Cloudthread and Settings >Integrations and click `JIRA Server`
+8. Enter:
+9. Client ID from step 6
+10. Client Secret from step 6
+11. Jira server url including https:// and no trailing slash (e.g. [`https://mycompany.atlassian.server.com`](https://mycompany.atlassian.server.com/))
+12. Follow through integration flow
+
 ### Jira Webhook
 
 {% hint style="info" %}
 Some helpful information about adding a new webhook you can find in official [Jira documentation](https://developer.atlassian.com/cloud/jira/platform/webhooks/).
 {% endhint %}
 
-#### Detailed Instructions
+#### Detailed Instructions for Jira Cloud
 
 1.  In Jira go into Settings → System
 
@@ -90,49 +136,3 @@ Some helpful information about adding a new webhook you can find in official [Ji
     <figure><img src="../../.gitbook/assets/settings-integrations-7-jira-webhook.png" alt="" width="129"><figcaption></figcaption></figure>
 
     </div>
-
-### Jira Cloud
-
-![](../../.gitbook/assets/settings-integrations-1-jira-cloud.png)
-
-#### Detailed instructions&#x20;
-
-1. Once you click `Integrate` in Integrations section of Settings, you will be redirected to Atlassian sign-in
-2. Sign in or create an account for JIRA cloud
-3.  Accept access request
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-2.png" alt="" width="375"><figcaption></figcaption></figure>
-
-    </div>
-4. Come back to Cloudthread app to verify that integration is successful
-
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/settings-integrations-1-jira-cloud-3.png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-### Jira Server
-
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/settings-integrations-2-jira-server.png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-#### Detailed instructions&#x20;
-
-1. Go to Jira Administration > Applications > Application Links
-2. Click `Create Link` and select `External application` + `Direction Incoming`
-3. For Name - set to whatever they want (`Cloudthread` is fine)
-4. For Redirect URL  - set to [`https://app.cloudthread.io/settings/third-party-integrations?provider=jira_server`](https://app.cloudthread.io/settings/third-party-integrations?provider=jira\_server)
-5. For Application permissions - set to `Write`
-6. Click `Save`
-7. Go to Cloudthread and Settings >Integrations and click `JIRA Server`
-8. Enter:
-9. Client ID from step 6
-10. Client Secret from step 6
-11. Jira server url including https:// and no trailing slash (e.g. [`https://mycompany.atlassian.server.com`](https://mycompany.atlassian.server.com/))
-12. Follow through integration flow
