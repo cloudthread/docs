@@ -73,7 +73,7 @@
   * [Profile](fundamentals/settings/user-profile.md)
   * [Savings Opportunities Settings](fundamentals/settings/savings-opportunities-settings.md)
   * [User Management](fundamentals/settings/account-and-team-management.md)
-  * [Integrations](fundamentals/settings/slack-integration.md)
+  * [Integrations](fundamentals/settings/integrations.md)
   * [SSO](fundamentals/settings/sso.md)
   * [Payment](fundamentals/settings/payment.md)
   * [Pull Data Collection](fundamentals/settings/data-collection.md)
