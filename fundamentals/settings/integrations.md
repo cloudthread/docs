@@ -61,9 +61,9 @@ Cloudthread currently supports only [Jira project management](https://www.atlass
 
 </div>
 
-The following instructions are for version 9.11 <a src='https://confluence.atlassian.com/adminjiraserver/configure-an-incoming-link-1115659067.html'>in the Jira docs.</a>
+The following instructions are for version 9.11 in the Application Link in official [Jira documentation](https://app.cloudthread.io/settings/third-party-integrations?provider=jira\_server).
 
-For older versions, please follow the Jira docs.
+For older versions, please follow the Jira documentation.
 
 #### Detailed instructions&#x20;
 
