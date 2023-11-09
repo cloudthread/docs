@@ -61,11 +61,11 @@ Cloudthread currently supports only [Jira project management](https://www.atlass
 
 </div>
 
-#### Detailed instructions&#x20;
-
-The following instructions are for version 9.11 here: https://confluence.atlassian.com/adminjiraserver/configure-an-incoming-link-1115659067.html
+The following instructions are for version 9.11 <a src='https://confluence.atlassian.com/adminjiraserver/configure-an-incoming-link-1115659067.html'>in the Jira docs.</a>
 
 For older versions, please follow the Jira docs.
+
+#### Detailed instructions&#x20;
 
 1. Go to Jira Administration > Applications > Application Links
 2. Click `Create Link` and select `External application` + `Direction Incoming`
