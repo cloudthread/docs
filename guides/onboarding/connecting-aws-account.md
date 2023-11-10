@@ -33,7 +33,7 @@ Cloudthread is using a delegated access role to read data from your account into
 In more detail, Cloudthread needs roughly **5 sets** of permissions / actions:
 
 1. **CUR bucket creation**, with complete access to this bucket (and only this bucket). This allows us to maintain the bucket policy overtime for any AWS changes that are required to maintain the CUR connection, and read CUR data.
-2. **Describe account read access** to understand AWS Organizations structure.
+2. **Describe account read access** to understand AWS Organizations structure and gather account names and tags.
 3. **Cost Explorer read access** to power the first 24 hours of the tool.
 4. **CloudWatch read access** to collect CloudWatch data for savings opportunity processing.
 5. **Savings polices with service read access**, to detect the savings opportunities.

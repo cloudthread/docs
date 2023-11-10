@@ -25,11 +25,13 @@ You can generate these templates in the Settings > Data Collection part of the p
 
 ### New Cost and Usage report
 
-This stack template is for companies who do not already have a Cost and Usage report that matches Cloudthread's requirements. This template should be run in your main account if you're not using AWS Organizations, or in your organization root account if you are using AWS Organizations.
+This stack template is for companies who do not already have a Cost and Usage report that matches Cloudthread's requirements. This template should be run in your main account if you're not using AWS Organizations, or in your organization root account if you are using AWS Organizations. If you're using AWS Organizations your organization Root ID will be required.
 
-### Master Account templates with an Existing Cost and Usage Report
+### Existing Cost and Usage Report
 
 This stack template is for companies who have an existing Cost and Usage report that matches Cloudthread's requirements. You will be required to submit your report name, report prefix, and report bucket in the creation form. This template should be run in your main account if you're not using AWS Organizations, or in your organization root account if you are using AWS Organizations. If you're using AWS Organizations your organization Root ID will be required.
+
+Exact permissions can be found in [Cloudthread Policy](../../policy\_cfn\_cldthrd.yaml)
 
 ## Kubernetes
 
